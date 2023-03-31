@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Сергей Асаул](https://up.htmlacademy.ru/adaptive/28/user/2248995).
-* Наставник: [Артур Литовко](https://htmlacademy.ru/profile/id6927).
+* Наставник: [Михаил Данюшин](https://htmlacademy.ru/profile/id225742).
 
 ---
 
