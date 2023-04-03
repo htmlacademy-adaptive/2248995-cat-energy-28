@@ -12,23 +12,22 @@
       <a class="main-header__logo" href="index.html">
         <img width="33" height="37" decoding="async" src="../source/img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
       </a>
-      <a class="main-header__logo-text logo-text" href="index.html">
+      <a class="main-header__logo-text" href="index.html">
         <img src="..//source//img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17" decoding="async">
       </a>
       <nav class="main-nav">
-        <h1 class="page-title">Cat energy</h1>
         <button class="main-nav__toogle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-nav__wrapper wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
+            <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--current">
               <a class="main-nav__link" href="#">Подбор программы</a>
             </li>
           </ul>
@@ -36,15 +35,101 @@
       </nav>
     </header>
     <main>
-      <h2 class="form-title">Подбор программы</h2>
-      <section class="">
-        <div></div>
+      <h1 class="form-title">Подбор программы</h1>
+      <p>Заполните анкету, и мы подберем<br>
+        программу питания для вашего кота</p>
+      <section class="data">
+        <div class="data__wrapper wrapper">
+          <form action="https://echo.htmlacademy.ru/courses" method="post">
+            <div class="data__list-cat">
+              <label class="data__item-cat">
+                <span class="data__text">имя:*</span>
+                <input class="data__field" type="text" placeholder="барсик" required>
+              </label>
+              <label class="data__item-cat">
+                <span class="data__text">вес (кг):*</span>
+                <input class="data__field" type="number" placeholder="7" required>
+              </label>
+              <label class="data__item-cat">
+                <span class="data__text">возраст (лет):</span>
+                <input class="data__field" type="number" placeholder="7">
+              </label>
+            </div>
+            <div class="data__choice">
+              <label class="data__choice-weight">
+                <input class="data__choice-field" type="radio" checked>
+                <span class="data__choice-text">похудение</span>
+              </label>
+              <label class="data__choice-weight">
+                <input class="data__choice-field" type="radio">
+                <span class="data__choice-text">Набор массы</span>
+              </label>
+              <label class="data__choice-weight">
+                <input class="data__choice-field" type="radio">
+                <span class="data__choice-text">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </div>
+            <fieldset>
+              <legend class="data__title">Контактные данные (владельца кота)</legend>
+              <ul class="data__list-user">
+                <li class="data__item-user">
+                  <label>
+                    <span class="data__text-user">E-mail:*</span>
+                    <input class="data__field-user" type="email" placeholder="kuklachev@gmail.com">
+                    <svg class="data__img-user"></svg>
+                  </label>
+                </li>
+                <li class="data__item-user">
+                  <label>
+                    <span class="data__text-user">Телефон:*</span>
+                    <input class="data__field-user" type="tel" placeholder="8 (960) 900-60-90">
+                    <svg class="data__img-user data__img-user--tel"></svg>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend class="data__title">Комментарий</legend>
+              <textarea name="text" cols="50" rows="5">Расскажите обо всех повадках кота</textarea>
+            </fieldset>
+            <fieldset>
+              <legend class="data__title">Дополнительно</legend>
+              <ul class="add__list">
+                <li class="add__item">
+                  <label>
+                    <input class="add__field" type="checkbox" checked>
+                    <span class="add__mark"></span>
+                    <span class="add__text">сахарозаменитель</span>
+                  </label>
+                </li>
+                <li class="add__item">
+                  <label>
+                    <input class="add__field" type="checkbox">
+                    <span class="add__mark"></span>
+                    <span class="add__text">питьевая вода</span>
+                  </label>
+                </li>
+                <li class="add__item">
+                  <label>
+                    <input class="add__field" type="checkbox">
+                    <span class="add__mark"></span>
+                    <span class="add__text">молоко</span>
+                  </label>
+                </li>
+                <li class="add__item">
+                  <label>
+                    <input class="add__field" type="checkbox">
+                    <span class="add__mark"></span>
+                    <span class="add__text">витамины</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="data__buttton button" type="submit" value="Отправить">отправить заявку</button>
+            <span class="data__tip">* — Обязательные поля</span>
+          </form>
+        </div>
       </section>
-
-
-
-
-
       <section class="cooperation">
         <div class="cooperation__wrapper wrapper">
           <h3 class="cooperation__title">приглашаем к сотрудничеству дилеров!</h3>
@@ -59,7 +144,7 @@
       </section>
     </main>
     <footer class="footer">
-      <a class="main-footer__logo-text logo-text logo-text--xl" href="index.html">
+      <a class="main-footer__logo-text" href="index.html">
         <img src="..//source//img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17" decoding="async">
       </a>
       <ul class="footer__socials socials">
