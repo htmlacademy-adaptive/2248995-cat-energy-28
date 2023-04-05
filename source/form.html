@@ -42,46 +42,62 @@
         <div class="data__wrapper wrapper">
           <form class="data__form form" action="https://echo.htmlacademy.ru/courses" method="post">
             <fieldset class="form__fieldset">
-              <label class="form__label">
-                <span class="form__span">имя:*</span>
-                <input class="form__input" type="text" placeholder="барсик" required name="name">
-              </label>
-              <label class="form__label">
-                <span class="form__span">вес (кг):*</span>
-                <input class="form__input" type="number" placeholder="7" required name="weight">
-              </label>
-              <label class="form__label">
-                <span class="form__span">возраст (лет):</span>
-                <input class="form__input" type="number" placeholder="7" name="age">
-              </label>
+              <ul class="form__list">
+                <li class="form__input-text">
+                  <label class="form__label">
+                    <span class="form__text">имя:*</span>
+                    <input class="form__input" type="text" placeholder="барсик" required name="name">
+                  </label>
+                </li>
+                <li class="form__input-text">
+                  <label class="form__label">
+                    <span class="form__text">вес (кг):*</span>
+                    <input class="form__input" type="number" placeholder="7" required name="weight">
+                  </label>
+                </li>
+                <li class="form__input-text">
+                  <label class="form__label">
+                    <span class="form__text">возраст (лет):</span>
+                    <input class="form__input" type="number" placeholder="7" name="age">
+                  </label>
+                </li>
+              </ul>
             </fieldset>
-            <fieldset class="form__fieldset orm__fieldset--choice">
-              <label class="form__label">
-                <input class="form__input" type="radio" checked name="weight-loss">
-                <span class="form__span">похудение</span>
-              </label>
-              <label class="form__label">
-                <input class="form__input" type="radio" name="weight-gain">
-                <span class="form__span">Набор массы</span>
-              </label>
-              <label class="form__label">
-                <input class="form__input" type="radio" name="dont-know">
-                <span class="form__span">Не знаю (Нужен ваш совет)</span>
-              </label>
+            <fieldset class="form__fieldset form__fieldset--choice">
+              <ul class="form__list">
+                <li class="form__radio">
+                  <label class="form__label">
+                    <input class="form__input" type="radio" checked name="choice" value="weight-loss">
+                    <span class="form__text">похудение</span>
+                  </label>
+                </li>
+                <li class="form__radio">
+                  <label class="form__label">
+                    <input class="form__input" type="radio" name="choice" value="weight-gain">
+                    <span class="form__text">Набор массы</span>
+                  </label>
+                </li>
+                <li class="form__radio">
+                  <label class="form__label">
+                    <input class="form__input" type="radio" name="choice" value="dont-know">
+                    <span class="form__text">Не знаю (Нужен ваш совет)</span>
+                  </label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--user">
               <legend class="form__legend">Контактные данные (владельца кота)</legend>
               <ul class="form__list">
-                <li class="form__item">
-                  <label>
-                    <span class="form__span">E-mail:*</span>
+                <li class="form__input-user">
+                  <label class="form__label">
+                    <span class="form__text">E-mail:*</span>
                     <input class="form__input" type="email" placeholder="kuklachev@gmail.com" name="e-mail" required>
                     <svg class="form__img"></svg>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__input-user">
                   <label class="form__label">
-                    <span class="form__span">Телефон:*</span>
+                    <span class="form__text">Телефон:*</span>
                     <input class="form__input" type="tel" placeholder="8 (960) 900-60-90" name="tel" required>
                     <svg class="form__img form__img--tel"></svg>
                   </label>
@@ -89,40 +105,40 @@
               </ul>
             </fieldset>
             <div class="form__comment">
-              <label class="form__label">
-                <span class="form__span">Комментарий</span>
+              <label class="form__comment-text">
+                <span class="form__text">Комментарий</span>
                 <textarea class="form__textarea" name="comment" cols="50" rows="5">Расскажите обо всех повадках кота</textarea>
               </label>
             </div>
             <fieldset class="form__fieldset form__fieldset--add">
               <legend class="form__title">Дополнительно</legend>
               <ul class="form__list">
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="form__label">
                     <input class="form__input" type="checkbox" checked name="сахарозаменитель">
                     <span class="form__mark"></span>
-                    <span class="form__span">сахарозаменитель</span>
+                    <span class="form__text">сахарозаменитель</span>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="form__label">
                     <input class="form__input" type="checkbox" name="питьевая вода">
                     <span class="form__mark"></span>
-                    <span class="form__span">питьевая вода</span>
+                    <span class="form__text">питьевая вода</span>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="form__label">
                     <input class="form__input" type="checkbox" name="молоко">
                     <span class="form__mark"></span>
-                    <span class="form__span">молоко</span>
+                    <span class="form__text">молоко</span>
                   </label>
                 </li>
-                <li class="form__item">
+                <li class="form__checkbox">
                   <label class="form__label">
                     <input class="form__input" type="checkbox" name="витамины">
                     <span class="form__mark"></span>
-                    <span class="form__span">витамины</span>
+                    <span class="form__text">витамины</span>
                   </label>
                 </li>
               </ul>
