@@ -1,0 +1,26 @@
+.hero {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #68B738;
+  opacity: 85%;
+  color: #fff;
+  padding: 27px 35px 20px;
+}
+
+&__slogan {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-style: regular;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+&__title {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-style: regular;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}

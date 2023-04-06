@@ -1,1 +1,8 @@
-// Начните писать стили здесь
+//базовые стили
+@import "./base/fonts.scss";
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/wrapper.scss";
+@import "./blocks/body.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/button.scss";
