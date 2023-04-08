@@ -1,0 +1,17 @@
+.advantages__title {
+  font-family: $fontoswald;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  margin-bottom: 42px;
+  margin-top: 20px;
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+}
+
+.advantages__item:not(:last-child) {
+  margin-bottom: 26px;
+}
