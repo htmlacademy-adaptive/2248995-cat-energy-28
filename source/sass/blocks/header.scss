@@ -2,3 +2,9 @@
   display: flex;
   padding: 10px 20px 17px;
 }
+
+.header__logo-text,
+.header__logo {
+  display: block;
+  flex-shrink: 0;
+}

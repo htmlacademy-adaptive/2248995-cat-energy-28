@@ -1,6 +1,11 @@
+.example {
+  padding: 25px 20px 40px;
+}
+
 .example__wrapper {
   background-color: $colorgreydark;
   width: 280px;
+  padding: 25px 20px 40px;
 }
 
 .example__title {
@@ -8,5 +13,4 @@
   font-size: 36px;
   line-height: 40px;
   margin: 0;
-  margin-top: 25px;
 }
