@@ -1,5 +1,6 @@
 .variants-food {
   display: flex;
+  margin-top: 20px;
 }
 
 .variants-food__item {
@@ -11,13 +12,39 @@
 }
 
 .variants-food__title {
+  position: relative;
   color: $black;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
   font-family: $fontoswald;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 72px;
   margin: 0;
-  margin-top: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    left:0;
+    top:24px;
+    border-radius: 50%;
+    display: block;
+    width: 53px;
+    height: 50px;
+    background-color: $green;
+    background-image: url("../img/main/cat-slim.svg");
+  }
+}
+
+.variants-food__title::after {
+  position: absolute;
+  background-image: url("../img/main/cat-slim.svg");
+}
+
+.variants-food__title--pro::after {
+  position: absolute;
+  background-image: url("..img/main/cat-pro.svg");
 }
 
 .variants-food__link {

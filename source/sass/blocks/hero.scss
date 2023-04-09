@@ -1,33 +1,37 @@
 .hero {
-  width: 320px;
   margin: 0 auto;
   background-color: $green;
   opacity: 85%;
-  color: #fff;
+  color: $white;
   padding: 27px 35px 20px;
-}
-
-.hero__slogan {
-  font-family: $fontoswald;
-  font-weight: 400;
-  font-style: regular;
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
+  background-image: linear-gradient(to bottom, $green 320px, $white 135px);
 }
 
 .hero__title {
   margin: 0;
   font-family: "Oswald", sans-serif;
-  font-style: regular;
+  font-style: normal;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.hero__slogan {
+  font-family: $fontoswald;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 29px;
+  display: flex;
+  justify-content: center;
 }
 
 .hero__button {
   width: 280px;
-  padding: 7px 44px;
+  padding: 7px 73px;
 }

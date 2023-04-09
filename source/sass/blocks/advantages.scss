@@ -1,17 +1,36 @@
+.advantages{
+  padding-bottom: 49px;
+  margin-top: 20px;
+}
+
 .advantages__title {
   font-family: $fontoswald;
   font-size: 36px;
   line-height: 40px;
   margin: 0;
   margin-bottom: 42px;
-  margin-top: 20px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .advantages__list {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-.advantages__item:not(:last-child) {
-  margin-bottom: 26px;
+.advantages__item {
+  padding-left: 80px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $green;
+    width: 60px;
+    height: 60px;
+    left: 0;
+    }
+    &:not(:last-child) {
+      margin-bottom: 26px;
+      }
 }
