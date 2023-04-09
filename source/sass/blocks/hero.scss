@@ -1,14 +1,14 @@
 .hero {
   width: 320px;
   margin: 0 auto;
-  background-color: $colorgreen;
+  background-color: $green;
   opacity: 85%;
   color: #fff;
   padding: 27px 35px 20px;
 }
 
 .hero__slogan {
-  font-family: "Oswald", sans-serif;
+  font-family: $fontoswald;
   font-weight: 400;
   font-style: regular;
   font-size: 14px;
