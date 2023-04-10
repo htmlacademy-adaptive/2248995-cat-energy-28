@@ -18,20 +18,45 @@
   padding: 0;
 }
 
-.advantages__item {
-  padding-left: 80px;
+.advantages__item--leaf,
+.advantages__item--powder,
+.advantages__item--fork,
+.advantages__item--watch {
   position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    background-color: $green;
-    width: 60px;
-    height: 60px;
-    left: 0;
-  }
+  padding-left: 80px;
 
   &:not(:last-child) {
     margin-bottom: 26px;
   }
+}
+
+.advantages__item--leaf::before,
+.advantages__item--powder::before,
+.advantages__item--fork::before,
+.advantages__item--watch::before {
+  position: absolute;
+  content: "";
+  background-color: $green;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.advantages__item--leaf::before {
+  background-image: url("../img/main/leaf.svg");
+}
+
+.advantages__item--powder::before {
+  background-image: url("../img/main/powder.svg");
+}
+
+.advantages__item--fork::before {
+  background-image: url("../img/main/fork.svg");
+}
+
+.advantages__item--watch::before {
+  background-image: url("../img/main/watch.svg");
 }

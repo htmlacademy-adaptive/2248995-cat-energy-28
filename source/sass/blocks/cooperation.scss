@@ -1,6 +1,8 @@
 .cooperation {
   padding-top: 26px;
+  background-color: $grey;
 }
+
 .cooperation__header {
   display: flex;
   flex-wrap: wrap;
@@ -17,6 +19,6 @@
   line-height: 20px;
 }
 
-.cooperation__address{
+.cooperation__address {
   font-style: normal;
 }

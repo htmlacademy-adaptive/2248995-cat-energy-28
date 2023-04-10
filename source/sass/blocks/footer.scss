@@ -1,6 +1,24 @@
 .footer {
   padding: 40px 20px;
   background-color: $grey;
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 1px;
+    background-color: rgba(217, 217, 217, 1);
+  }
+
+  &::before {
+    top: 84px;
+  }
+
+  &::after {
+    bottom: 94px;
+  }
 }
 
 .footer__logo-text {
