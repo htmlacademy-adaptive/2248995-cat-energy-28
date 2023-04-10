@@ -5,6 +5,7 @@
   color: $white;
   padding: 27px 35px 20px;
   background-image: linear-gradient(to bottom, $green 320px, $white 135px);
+
 }
 
 .hero__title {
@@ -32,6 +33,12 @@
 }
 
 .hero__button {
+  margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
   width: 280px;
-  padding: 7px 73px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  justify-content: center;
+
 }

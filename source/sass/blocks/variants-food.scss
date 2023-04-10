@@ -1,6 +1,6 @@
 .variants-food {
   display: flex;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .variants-food__item {
@@ -22,12 +22,13 @@
   font-weight: 400;
   padding-left: 72px;
   margin: 0;
+
   &::before {
     content: "";
     position: absolute;
     background-repeat: no-repeat;
-    left:0;
-    top:24px;
+    left: 0;
+    top: 24px;
     border-radius: 50%;
     display: block;
     width: 53px;

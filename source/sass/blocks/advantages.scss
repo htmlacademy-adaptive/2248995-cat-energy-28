@@ -1,6 +1,5 @@
-.advantages{
+.advantages {
   padding-bottom: 49px;
-  margin-top: 20px;
 }
 
 .advantages__title {
@@ -22,6 +21,7 @@
 .advantages__item {
   padding-left: 80px;
   position: relative;
+
   &::before {
     position: absolute;
     content: "";
@@ -29,8 +29,9 @@
     width: 60px;
     height: 60px;
     left: 0;
-    }
-    &:not(:last-child) {
-      margin-bottom: 26px;
-      }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 26px;
+  }
 }

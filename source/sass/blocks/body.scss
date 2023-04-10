@@ -5,8 +5,8 @@ body {
   line-height: 18px;
   list-style-type: none;
   padding: 0;
-  margin: 0 auto;
   width: 320px;
+  margin: 0 auto;
 }
 
 img {
@@ -18,7 +18,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: $black;
   padding: 0;
   margin: 0;
 }

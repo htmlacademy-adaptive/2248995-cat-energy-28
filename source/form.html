@@ -6,35 +6,35 @@
   <title>Kat energy</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="favicon.ico ">
+  <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/png" href="img/favicon.png">
 </head>
 
 <body>
   <header class="header wrapper">
-    <a class="header__logo logo" href="index.html">
-      <img width="33" height="37" decoding="async" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
-    </a>
-    <a class="header__logo-text logo-text" href="index.html">
-      <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17"
-        decoding="async">
-    </a>
-    <nav class="nav">
-      <button class="nav__toogle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="nav__wrapper wrapper">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="index.html">Главная</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="nav__item main-nav__item--current">
-            <a class="nav__link" href="#">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
+    <div class="header__body">
+      <a class="header__logo logo" href="index.html">
+        <img width="33" height="37" decoding="async" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
+      </a>
+      <a class="header__logo-text logo-text" href="index.html">
+        <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17" decoding="async">
+      </a>
+    </div>
+    <div class="header__burger">
+      <span></span>
+    </div>
+    <nav class="header__nav wrapper">
+      <ul class="header__list">
+        <li class="header__item">
+          <a class="header__link" href="index.html">Главная</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="header__item header__item--current">
+          <a class="header__link" href="#">Подбор программы</a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main class="wrapper">
