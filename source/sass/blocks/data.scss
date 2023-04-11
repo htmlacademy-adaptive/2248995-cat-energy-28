@@ -1,0 +1,19 @@
+.data {
+  padding-top: 27px;
+}
+
+.data__title {
+  font-family: $fontoswald;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 37px;
+}
+
+.data__text {
+  margin: 0;
+  font-family: $fontoswald;
+  text-transform: uppercase;
+  padding-bottom: 39px;
+}

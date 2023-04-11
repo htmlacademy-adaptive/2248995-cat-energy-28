@@ -1,0 +1,35 @@
+.form__fieldset {
+  border: none;
+  padding: 0;
+}
+
+.form__list {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 21px;
+  padding-bottom: 24px;
+
+}
+
+.form__text {
+  font-size: 16px;
+  font-weight: 400px;
+  font-family: $fontoswald;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.form__title {
+  font-family: $fontoswald;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400px;
+}
+
+.form__buttton {
+  border: none;
+  width: 280px;
+  padding: 9px 15px;
+  margin-bottom: 21px;
+}
