@@ -37,15 +37,17 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <section class="catalog wrapper">
+  <main class="wrapper">
+    <section class="catalog">
       <h2 class="catalog__title">Каталог продукции</h2>
-      <div class="catalog__wrapper wrapper">
+      <div class="catalog__wrapper">
         <ul class="catalog__list">
           <li class="catalog__product product">
-            <a class="product__link" href="#">
+            <a class="product__link--img" href="#">
               <img class="product__img" src="../img/main/chicken-500.png" alt="" width="68" height="86"
                 decoding="async">
+            </a>
+            <a class="product__link" href="#">
               <h3 class="product__title">Cat Energy<br>PRO 500 г</h3>
             </a>
             <dl class="product__description">
@@ -59,8 +61,10 @@
             <a class="product__button button" href="#">Заказать</a>
           </li>
           <li class="catalog__product product">
-            <a class="product__link" href="#">
+            <a class="product__link--img" href="#">
               <img class="product__img" src="../img/main/chicken-1000.png" alt="" width="" height="" decoding="async">
+            </a>
+            <a class="product__link" href="#">
               <h3 class="product__title">Cat Energy<br>PRO 1000 г</h3>
             </a>
             <dl class="product__description">
@@ -74,8 +78,10 @@
             <a class="product__button button" href="#">Заказать</a>
           </li>
           <li class="catalog__product product">
-            <a class="product__link" href="#">
+            <a class="product__link--img" href="#">
               <img class="product__img" src="../img/main/fish-500.png" alt="" width="" height="" decoding="async">
+            </a>
+            <a class="add-product__link" href="#">
               <h3 class="product__title">Cat Energy<br>PRO 500 г</h3>
             </a>
             <dl class="product__description">
@@ -89,8 +95,10 @@
             <a class="product__button button" href="#">Заказать</a>
           </li>
           <li class="catalog__product product">
-            <a class="product__link" href="#">
+            <a class="product__link--img" href="#">
               <img class="product__img" src="../img/main/fish-1000.png" alt="" width="" height="" decoding="async">
+            </a>
+            <a class="add-product__link" href="#">
               <h3 class="product__title">Cat Energy<br>PRO 1000 г</h3>
             </a>
             <dl class="product__description">
@@ -104,8 +112,10 @@
             <a class="product__button button" href="#">Заказать</a>
           </li>
           <li class="catalog__product product">
-            <a class="product__link" href="#">
+            <a class="product__link--img" href="#">
               <img class="product__img" src="../img/main/fish-500.png" alt="" width="" height="" decoding="async">
+            </a>
+            <a class="add-product__link" href="#">
               <h3 class="product__title">Cat Energy<br>SLIM 500 г</h3>
             </a>
             <dl class="product__description">
@@ -119,8 +129,10 @@
             <a class="product__button button" href="#">Заказать</a>
           </li>
           <li class="catalog__product product">
-            <a class="product__link" href="#">
+            <a class="product__link--img" href="#">
               <img class="product__img" src="../img/main/buckwheat-500.png" alt="" width="" height="" decoding="async">
+            </a>
+            <a class="add-product__link" href="#">
               <h3 class="product__title">Cat Energy<br>SLIM 1000 г</h3>
             </a>
             <dl class="product__description">
@@ -134,8 +146,10 @@
             <a class="product__button button" href="#">Заказать</a>
           </li>
           <li class="catalog__product product">
-            <a class="product__link" href="#">
+            <a class="product__link--img" href="#">
               <img class="product__img" src="../img/main/rice-500.png" alt="" width="" height="" decoding="async">
+            </a>
+            <a class="add-product__link" href="#">
               <h3 class="product__title">Cat Energy<br>SLIM 500 г</h3>
             </a>
             <dl class="product__description">
@@ -148,7 +162,7 @@
             </dl>
             <a class="product__button button" href="#">Заказать</a>
           </li>
-          <li class="catalog__product product--to-all">
+          <li class="catalog__product product product--to-all">
             <a class="product__link" href="#">
               <p class="product__title">Показать еще 100500 товаров</p>
             </a>
@@ -159,7 +173,7 @@
       </div>
     </section>
     <section class="add-product">
-      <div class="add-product__wrapper wrapper">
+      <div class="add-product__wrapper">
         <h2 class="add-product__main-title">Дополнительные товары</h2>
         <ul class="add-product__list">
           <li class="add-product__item">
@@ -198,7 +212,7 @@
       </div>
     </section>
     <section class="promotion">
-      <div class="promotion__wrapper wrapper">
+      <div class="promotion__wrapper">
         <h2 class="promotion__title visually-hidden">Подарок для кота при заказе всего сразу</h2>
         <a class="promotion__link" href="#">
           <p class="promotion__text">Закажите все <br>
@@ -209,7 +223,7 @@
       </div>
     </section>
     <section class="cooperation">
-      <div class="cooperation__wrapper">
+      <div>
         <div class="cooperation__header">
           <h3 class="cooperation__title">приглашаем <br> к сотрудничеству <br> дилеров!</h3>
           <address class="cooperation__address">ул. Большая <br>
