@@ -2,6 +2,8 @@
   padding: 40px 20px;
   background-color: $grey;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   &::after,
   &::before {
@@ -23,6 +25,10 @@
 
 .footer__logo-text {
   padding-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__socials {

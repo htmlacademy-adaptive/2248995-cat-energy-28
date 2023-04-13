@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -21,10 +27,4 @@ a {
   color: $black;
   padding: 0;
   margin: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }

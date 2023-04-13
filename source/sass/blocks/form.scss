@@ -1,6 +1,8 @@
 .form__fieldset {
   border: none;
   padding: 0;
+  display: flex;
+
 }
 
 .form__list {
@@ -9,6 +11,17 @@
   margin: 0;
   padding-top: 21px;
   padding-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__list .form__input-text:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.form__input-text {
+  display: flex;
+  flex-direction: row;
 }
 
 .form__text {
@@ -17,6 +30,7 @@
   font-family: $fontoswald;
   line-height: 16px;
   text-transform: uppercase;
+  margin-right: 13px;
 }
 
 .form__title {
@@ -31,4 +45,33 @@
   width: 280px;
   padding: 9px 15px;
   margin-bottom: 21px;
+}
+
+.form__tip {
+  display: flex;
+  justify-content: center;
+}
+
+.form__input {
+  border: 1px solid $greydark;
+}
+
+[placeholder] {
+  text-transform: uppercase;
+  padding: 14px 20px 13px;
+  font-family: $fontoswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 1);
+}
+
+.form__input::-webkit-outer-spin-button,
+.form__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form__input[type=number] {
+  -moz-appearance: textfield;
 }

@@ -11,6 +11,11 @@
   padding-bottom: 18px;
 }
 
+.variants-food__item:not(:last-child) {
+  margin-bottom: 20px;
+
+}
+
 .variants-food__title {
   position: relative;
   color: $black;
@@ -22,6 +27,8 @@
   font-weight: 400;
   padding-left: 72px;
   margin: 0;
+  margin-bottom: 29px;
+  padding-top: 30px;
 
   &::before {
     content: "";
@@ -53,4 +60,30 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 12px;
+    background-image: url("../img/main/cat-arrow.svg");
+    top: 5px;
+    left: 100px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 240px;
+    background-color: rgba(217, 217, 217, 1);
+    height: 1px;
+    top: -19px;
+    left: 0;
+  }
+}
+
+.variants-food__text {
+  margin: 0;
+  margin-bottom: 42px;
 }

@@ -18,10 +18,7 @@
   padding: 0;
 }
 
-.advantages__item--leaf,
-.advantages__item--powder,
-.advantages__item--fork,
-.advantages__item--watch {
+.advantages__item {
   position: relative;
   padding-left: 80px;
 
@@ -30,10 +27,7 @@
   }
 }
 
-.advantages__item--leaf::before,
-.advantages__item--powder::before,
-.advantages__item--fork::before,
-.advantages__item--watch::before {
+.advantages__item::before {
   position: absolute;
   content: "";
   background-color: $green;
