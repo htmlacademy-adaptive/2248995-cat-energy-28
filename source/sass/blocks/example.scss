@@ -1,6 +1,6 @@
 .example {
   padding: 25px 20px 40px;
-  background-color: $greydark;
+  background-color: rgba(234, 234, 234, 1);
 }
 
 .example__title {
@@ -9,4 +9,54 @@
   line-height: 40px;
   margin: 0;
   font-weight: 400;
+}
+
+.example__button {
+  border: none;
+  background-color: rgba(234, 234, 234, 1);
+}
+
+.example__img {
+  background-color: rgba(234, 234, 234, 1);
+}
+
+.example__stats {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.example__stats-number {
+  font-family: $fontoswald;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-style: normal;
+  margin-bottom: 9px;
+}
+
+.example__stats-item {
+  margin: 0;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.example__stats-description {
+  margin: 0;
+}
+
+.example__total {
+  font-family: $fontoswald;
+  display: flex;
+  font-size: 14px;
+  line-height: 20Ppx;
+  font-weight: 400;
+  text-transform: uppercase;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 20px;
 }

@@ -9,6 +9,7 @@
   padding-left: 20px;
   padding-right: 33px;
   padding-bottom: 18px;
+  position: relative;
 }
 
 .variants-food__item:not(:last-child) {
@@ -37,23 +38,24 @@
     left: 0;
     top: 24px;
     border-radius: 50%;
-    display: block;
     width: 53px;
     height: 50px;
     background-color: $green;
-    background-image: url("../img/main/cat-slim.svg");
   }
 }
 
-.variants-food__title::after {
+.variants-food__img {
   position: absolute;
-  background-image: url("../img/main/cat-slim.svg");
+  top: 21px;
+  left: 28px;
+  z-index: 1;
 }
 
-.variants-food__title--pro::after {
-  position: absolute;
-  background-image: url("..img/main/cat-pro.svg");
+.variants-food__img--pro {
+  top: 35px;
+  left: 12px;
 }
+
 
 .variants-food__link {
   font-family: $fontoswald;
@@ -71,19 +73,20 @@
     top: 5px;
     left: 100px;
   }
+}
 
-  &::before {
+.variants-food__text {
+  position: relative;
+  margin: 0;
+  margin-bottom: 42px;
+
+  &::after {
     position: absolute;
     content: "";
     width: 240px;
     background-color: rgba(217, 217, 217, 1);
     height: 1px;
-    top: -19px;
+    bottom: -23px;
     left: 0;
   }
-}
-
-.variants-food__text {
-  margin: 0;
-  margin-bottom: 42px;
 }
