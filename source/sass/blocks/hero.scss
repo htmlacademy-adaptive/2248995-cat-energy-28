@@ -1,14 +1,19 @@
 .hero {
   margin: 0 auto;
-  background-color: $green;
   opacity: 85%;
   color: $white;
-  padding: 27px 35px 20px;
+  padding: 27px 0 20px;
+  position: relative;
+}
 
-
+.hero__main {
+  position: absolute;
+  top: 40px;
+  left: 20px;
 }
 
 .hero__title {
+  display: flex;
   margin: 0;
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -16,6 +21,8 @@
   line-height: 36px;
   font-weight: 400;
   margin-bottom: 25px;
+  justify-content: center;
+
 }
 
 .hero__slogan {
@@ -33,12 +40,10 @@
 }
 
 .hero__button {
-  margin-left: -15px;
   display: flex;
   flex-wrap: wrap;
   width: 280px;
   padding-top: 11px;
   padding-bottom: 11px;
   justify-content: center;
-
 }
