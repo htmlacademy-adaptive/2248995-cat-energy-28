@@ -1,0 +1,90 @@
+.form__fieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+
+}
+
+.form__list {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 21px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__list .form__input-text:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.form__input-text {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  input {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.form__text {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: $fontoswald;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-right: 13px;
+  flex-shrink: 0;
+}
+
+.form__title {
+  font-family: $fontoswald;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400px;
+}
+
+.form__buttton {
+  border: none;
+  width: 280px;
+  padding: 9px 15px;
+  margin-bottom: 21px;
+}
+
+.form__tip {
+  display: flex;
+  justify-content: center;
+}
+
+.form__input {
+  border: 1px solid $greydark;
+}
+
+[placeholder] {
+  text-transform: uppercase;
+  padding: 14px 20px 13px;
+  font-family: $fontoswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 1);
+}
+
+.form__input::-webkit-outer-spin-button,
+.form__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.form__input[type=number] {
+  -moz-appearance: textfield;
+}

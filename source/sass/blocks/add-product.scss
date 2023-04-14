@@ -1,0 +1,46 @@
+.add-product {
+  margin: 0;
+  padding-top: 25px;
+}
+
+.add-product__main-title {
+  font-family: $fontoswald;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.add-product__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.add-product__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+}
+
+.add-product__title {
+  font-family: $fontoswald;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 13px;
+}
+
+.add-product__description {
+  display: grid;
+  grid-template-columns: 200px 80px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.add-product__button {
+  margin: 0;
+  display: flex;
+}

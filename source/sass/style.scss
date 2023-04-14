@@ -1,1 +1,21 @@
-// Начните писать стили здесь
+//базовые стили
+@import "./variables.scss";
+@import "./base/fonts.scss";
+@import "./base/utils.scss";
+@import "./blocks/header.scss";
+@import "./blocks/wrapper.scss";
+@import "./blocks/body.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/button.scss";
+@import "./blocks/variants-food.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/example.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/cooperation.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/product.scss";
+@import "./blocks/add-product.scss";
+@import "./blocks/promotion.scss";
+@import "./blocks/data.scss";
+@import "./blocks/form.scss";

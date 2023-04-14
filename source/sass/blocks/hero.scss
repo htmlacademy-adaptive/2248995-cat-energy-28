@@ -1,0 +1,44 @@
+.hero {
+  margin: 0 auto;
+  background-color: $green;
+  opacity: 85%;
+  color: $white;
+  padding: 27px 35px 20px;
+
+
+}
+
+.hero__title {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.hero__slogan {
+  font-family: $fontoswald;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 29px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__button {
+  margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  justify-content: center;
+
+}
