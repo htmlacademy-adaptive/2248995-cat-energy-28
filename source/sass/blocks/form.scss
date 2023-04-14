@@ -2,7 +2,6 @@
   border: none;
   padding: 0;
   display: flex;
-
 }
 
 .form__list {
@@ -36,6 +35,27 @@
   }
 }
 
+.form__fieldset--choice .form__list {
+  display: grid;
+  grid-template-columns: 280px;
+  row-gap: 13px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 1px;
+    top: 120px;
+    left: -20px;
+    background-color: $greydark;
+  }
+}
+
+.form__input-user:not(:last-child) {
+  margin-bottom: 14px;
+}
+
 .form__text {
   font-size: 16px;
   font-weight: 400;
@@ -50,7 +70,11 @@
   font-family: $fontoswald;
   font-size: 24px;
   line-height: 26px;
-  font-weight: 400px;
+  font-weight: 400;
+}
+
+.form__comment .form__title {
+  margin-bottom: 34px;
 }
 
 .form__buttton {
