@@ -1,6 +1,7 @@
 .variants-food {
   display: flex;
   margin-bottom: 20px;
+  margin-top: 185px;
 }
 
 .variants-food__item {
@@ -14,7 +15,6 @@
 
 .variants-food__item:not(:last-child) {
   margin-bottom: 20px;
-
 }
 
 .variants-food__title {

@@ -2,14 +2,12 @@
   border: none;
   padding: 0;
   display: flex;
-
 }
 
 .form__list {
   padding: 0;
   list-style-type: none;
   margin: 0;
-  padding-top: 21px;
   padding-bottom: 24px;
   display: flex;
   flex-wrap: wrap;
@@ -36,6 +34,28 @@
   }
 }
 
+.form__fieldset--choice .form__list {
+  display: grid;
+  grid-template-columns: 280px;
+  row-gap: 13px;
+  position: relative;
+  padding-top: 22px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 320px;
+    height: 1px;
+    top: 120px;
+    left: -20px;
+    background-color: $greydark;
+  }
+}
+
+.form__input-user:not(:last-child) {
+  margin-bottom: 14px;
+}
+
 .form__text {
   font-size: 16px;
   font-weight: 400;
@@ -50,7 +70,13 @@
   font-family: $fontoswald;
   font-size: 24px;
   line-height: 26px;
-  font-weight: 400px;
+  font-weight: 400;
+}
+
+.form__comment-text {
+  display: grid;
+  row-gap: 37px;
+  margin-bottom: 22px;
 }
 
 .form__buttton {
@@ -58,6 +84,47 @@
   width: 280px;
   padding: 9px 15px;
   margin-bottom: 21px;
+}
+
+.form__fieldset--add .form__list {
+  flex-direction: column;
+}
+
+.form__fieldset--user legend {
+  margin-bottom: 35px;
+
+}
+
+.form__checkbox:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.form__fieldset--add ul {
+  margin-top: 13px;
+}
+
+.form__input-user {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  input {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.form__svg {
+  position: absolute;
+  left: 245px;
+  top: 15px
 }
 
 .form__tip {
