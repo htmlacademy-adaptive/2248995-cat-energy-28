@@ -1,15 +1,24 @@
 .hero {
   margin: 0 auto;
-  opacity: 85%;
   color: $white;
-  padding: 27px 0 20px;
+  padding: 0 0 20px;
   position: relative;
+}
+
+.hero__header {
+  display: block;
+
+  @include tw() {
+    display: none;
+  }
 }
 
 .hero__main {
   position: absolute;
   top: 40px;
   left: 20px;
+
+  @include tw() {}
 }
 
 .hero__title {
@@ -22,6 +31,14 @@
   font-weight: 400;
   margin-bottom: 25px;
   justify-content: center;
+
+  @include tw() {
+    color: $black;
+    font-size: 60px;
+    line-height: 60px;
+    display: block;
+    margin-left: 100px;
+  }
 }
 
 .hero__slogan {
@@ -36,6 +53,22 @@
   margin-bottom: 29px;
   display: flex;
   justify-content: center;
+
+  @include tw() {
+    color: $black;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 100px;
+    display: inline-block;
+  }
+}
+
+.hero__img {
+
+  @include tw() {
+    width: 709px;
+    height: 609px;
+  }
 }
 
 .hero__button {
@@ -45,4 +78,13 @@
   padding-top: 11px;
   padding-bottom: 11px;
   justify-content: center;
+
+  @include tw() {
+    position: absolute;
+    top: 220px;
+    left: 100px;
+    width: 244px;
+    height: 54px;
+    align-items: center;
+  }
 }

@@ -21,6 +21,19 @@
   &::after {
     bottom: 94px;
   }
+
+  @include tw() {
+    display: grid;
+    grid-template-columns: 150px 150px 170px;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .footer__logo-text {
@@ -29,6 +42,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  @include tw() {
+    align-self: center;
+  }
 }
 
 .footer__socials {

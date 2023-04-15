@@ -2,6 +2,10 @@
   display: flex;
   margin-bottom: 20px;
   margin-top: 185px;
+
+  @include tw() {
+    margin-top: 865px;
+  }
 }
 
 .variants-food__item {

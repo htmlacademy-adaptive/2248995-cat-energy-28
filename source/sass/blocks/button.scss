@@ -1,6 +1,11 @@
 .button {
-  background-color: $green;
+  background-color: rgba(104, 183, 56, 1);
   color: $white;
   text-transform: uppercase;
   font-family: $fontoswald;
+
+  @include tw() {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
