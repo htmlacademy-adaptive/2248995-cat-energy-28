@@ -1,14 +1,47 @@
 .example {
   padding: 25px 20px 40px;
   background-color: rgba(234, 234, 234, 1);
+
+  @include tw() {
+    background-color: rgba(255, 255, 255, 1);
+    padding-left: 0;
+    padding-top: 30px;
+  }
 }
 
 .example__title {
+  position: relative;
   font-family: $fontoswald;
   font-size: 36px;
   line-height: 40px;
   margin: 0;
+  margin-bottom: 40px;
   font-weight: 400;
+
+  @include tw() {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 768px;
+      height: 1px;
+      background-color: $greydark;
+      top: -20px;
+      left: -30px;
+    }
+  }
+}
+
+.example__text {
+  margin: 0;
+
+  @include tw() {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__button {
@@ -18,6 +51,12 @@
 
 .example__img {
   background-color: rgba(234, 234, 234, 1);
+
+  @include tw() {
+    width: 560px;
+    height: 512px;
+    background-image: linear-gradient(padding);
+  }
 }
 
 .example__stats {
@@ -39,7 +78,6 @@
 
 .example__stats-item {
   margin: 0;
-
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -59,4 +97,11 @@
   justify-content: center;
   margin: 0;
   margin-bottom: 20px;
+
+  @include tw() {
+    font-size: 20px;
+    justify-content: flex-end;
+    width: 174px;
+    margin: 0;
+  }
 }

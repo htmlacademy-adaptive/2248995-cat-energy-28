@@ -6,4 +6,8 @@
   @include tw() {
     padding: 0 30px;
   }
+
+  @include dw() {
+    padding: 0 110px;
+  }
 }

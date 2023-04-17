@@ -5,6 +5,7 @@
 
   @include tw() {
     margin-top: 865px;
+    margin-bottom: 45px;
   }
 }
 
@@ -13,8 +14,13 @@
   row-gap: 20px;
   padding-left: 20px;
   padding-right: 33px;
-  padding-bottom: 18px;
+  padding-bottom: 22px;
   position: relative;
+
+  @include tw() {
+    padding-bottom: 57px;
+    padding-left: 52px;
+  }
 }
 
 .variants-food__item:not(:last-child) {
@@ -35,6 +41,13 @@
   margin-bottom: 29px;
   padding-top: 30px;
 
+  @include tw() {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 77px;
+    padding-left: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -42,9 +55,16 @@
     left: 0;
     top: 24px;
     border-radius: 50%;
-    width: 53px;
+    width: 50px;
     height: 50px;
-    background-color: $green;
+    background-color: rgba(104, 183, 56, 1);
+
+    @include tw() {
+      left: 410px;
+      top: 87px;
+      width: 200px;
+      height: 200px;
+    }
   }
 }
 
@@ -53,11 +73,23 @@
   top: 21px;
   left: 28px;
   z-index: 1;
+
+  @include tw() {
+    left: 420px;
+    top: 70px;
+    width: 268px;
+    height: 194px;
+  }
 }
 
 .variants-food__img--pro {
   top: 35px;
   left: 12px;
+
+  @include tw() {
+    left: 430px;
+    top: 95px;
+  }
 }
 
 
@@ -68,6 +100,11 @@
   text-transform: uppercase;
   position: relative;
 
+  @include tw() {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -76,6 +113,11 @@
     background-image: url("../img/main/cat-arrow.svg");
     top: 5px;
     left: 100px;
+
+    @include tw() {
+      top: 10px;
+      left: 125px;
+    }
   }
 }
 
@@ -83,6 +125,13 @@
   position: relative;
   margin: 0;
   margin-bottom: 42px;
+
+  @include tw() {
+    margin-bottom: 52px;
+    width: 340px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &::after {
     position: absolute;
@@ -92,5 +141,9 @@
     height: 1px;
     bottom: -23px;
     left: 0;
+
+    @include tw() {
+      display: none;
+    }
   }
 }

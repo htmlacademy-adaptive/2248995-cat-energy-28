@@ -1,5 +1,9 @@
 .cooperation {
   background-color: $grey;
+
+  @include tw() {
+    background-color: rgba(255, 255, 255, 1);
+  }
 }
 
 .cooperation__header {
@@ -37,9 +41,13 @@
 }
 
 .cooperation__img {
+  border: none;
+  display: block;
+  margin: 0;
+  height: 362px;
+  width: 100%;
 
   @include tw() {
-    width: 100%;
     height: 400px;
   }
 }
