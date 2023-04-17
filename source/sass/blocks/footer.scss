@@ -5,6 +5,16 @@
   display: flex;
   flex-direction: column;
 
+  @include tw() {
+    padding-top: 67px;
+    padding-bottom: 60px;
+  }
+
+  @include dw() {
+    padding-top: 71px;
+    padding-bottom: 71px;
+  }
+
   &::after,
   &::before {
     position: absolute;
@@ -45,11 +55,18 @@
 
   @include tw() {
     align-self: center;
+    padding: 0;
+    width: 142px;
+    height: 26px;
   }
 }
 
 .footer__socials {
   padding-bottom: 40px;
+
+  @include tw() {
+    padding: 0;
+  }
 }
 
 .footer__copyright-link {
@@ -57,4 +74,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @include tw() {
+    padding: 0;
+  }
 }
