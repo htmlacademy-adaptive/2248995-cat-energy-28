@@ -60,7 +60,7 @@
     background-color: rgba(104, 183, 56, 1);
 
     @include tw() {
-      left: 410px;
+      left: 400px;
       top: 87px;
       width: 200px;
       height: 200px;
@@ -75,7 +75,7 @@
   z-index: 1;
 
   @include tw() {
-    left: 420px;
+    left: 410px;
     top: 70px;
     width: 268px;
     height: 194px;
@@ -87,7 +87,7 @@
   left: 12px;
 
   @include tw() {
-    left: 430px;
+    left: 420px;
     top: 95px;
   }
 }

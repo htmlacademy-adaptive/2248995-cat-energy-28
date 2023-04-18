@@ -21,6 +21,17 @@
 .add-product__item {
   padding-top: 13px;
   padding-bottom: 19px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: rgba(235, 235, 235, 1);
+    height: 1px;
+    top: 0;
+    left: 0;
+  }
 }
 
 .add-product__title {

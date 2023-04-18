@@ -2,29 +2,24 @@
   padding: 19px 0 25px;
   display: grid;
   grid-template-columns: 140px 140px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 320px;
+    background-color: rgba(235, 235, 235, 1);
+    height: 1px;
+    bottom: 0;
+    left: -20px;
+  }
 
   &--to-all {
-    position: relative;
     padding-top: 78px;
     padding-bottom: 25px;
     text-align: center;
     font-size: 16px;
     line-height: 20px;
-
-    &::after,
-    &::before {
-      position: absolute;
-      content: "";
-      width: 30px;
-      height: 2px;
-      background-color: rgba(211, 211, 211, 1);
-      top: 39px;
-      right: 125px;
-    }
-
-    &::after {
-      transform: rotate(90deg);
-    }
   }
 }
 
@@ -75,6 +70,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: rgba(211, 211, 211, 1);
+    top: -135px;
+    left: 125px;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
 }
 
 .product__text {

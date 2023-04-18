@@ -15,19 +15,14 @@
   padding-bottom: 37px;
   position: relative;
 
-  &::before,
   &::after {
     position: absolute;
     content: "";
     width: 320px;
     height: 1px;
-    top: -20px;
+    top: 340px;
     left: 0;
     background-color: $greydark;
-  }
-
-  &::after {
-    top: 340px;
   }
 }
 

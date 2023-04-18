@@ -1,6 +1,6 @@
 .example {
   position: relative;
-  padding: 25px 20px 40px;
+  padding: 25px 0 40px;
   background-color: rgba(234, 234, 234, 1);
 
   @include tw() {
@@ -39,6 +39,7 @@
 
 .example__text {
   margin: 0;
+  margin-bottom: 34px;
 
   @include tw() {
     font-size: 16px;
@@ -81,8 +82,8 @@
 .example__stats {
   margin: 0;
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
+  gap: 32px;
 }
 
 .example__stats-number {
@@ -97,13 +98,37 @@
 
 .example__stats-item {
   margin: 0;
-  flex-direction: row;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  width: 124px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 124px;
+    height: 56px;
+    border: 1px solid rgba(205, 205, 205, 1);
+    border-radius: 3px;
+    top: -13px;
+    left: 0;
+  }
 }
 
 .example__stats-description {
   margin: 0;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 80px;
+  background-color: rgba(234, 234, 234, 1);
+  z-index: 1;
+  font-size: 12px;
+  line-height: 12px;
 }
 
 .example__total {
