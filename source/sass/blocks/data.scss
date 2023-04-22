@@ -1,9 +1,37 @@
 .data {
   padding-top: 27px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 320px;
+    background-color: rgba(235, 235, 235, 1);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+
+    @include tw() {
+      display: none;
+    }
+  }
+
+  @include tw() {
+    padding-top: 64px;
+  }
+
+  @include dw() {
+    padding-top: 73px;
+  }
 }
 
 .data__section {
   padding-bottom: 32px;
+
+  @include tw() {
+    padding: 0 67px 0 70px;
+  }
 }
 
 .data__title {
@@ -15,6 +43,12 @@
   padding-bottom: 37px;
   position: relative;
 
+  @include tw() {
+    font-size: 60px;
+    line-height: 60px;
+    padding-left: 69px;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -23,6 +57,10 @@
     top: 340px;
     left: 0;
     background-color: $greydark;
+
+    @include tw() {
+      display: none;
+    }
   }
 }
 
@@ -31,4 +69,10 @@
   font-family: $fontoswald;
   text-transform: uppercase;
   padding-bottom: 39px;
+
+  @include tw() {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 69px;
+  }
 }

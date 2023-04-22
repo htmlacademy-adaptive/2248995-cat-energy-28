@@ -11,19 +11,19 @@
 </head>
 
 <body>
-  <header class="header wrapper">
+  <header class="header header--nojs wrapper">
     <div class="header__body">
       <a class="header__logo logo" href="index.html">
-        <img width="33" height="37" decoding="async" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
+        <img width="33" height="37" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
       </a>
       <a class="header__logo-text logo-text" href="index.html">
         <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17">
       </a>
     </div>
-    <div class="header__burger">
-      <span></span>
-    </div>
     <nav class="header__nav">
+      <button class="header__burger" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <ul class="header__list">
         <li class="header__item header__item--current">
           <a class="header__link" href="#">Главная</a>
@@ -43,8 +43,10 @@
         <img src="img/main/cat-energy.svg" width="320" height="302" alt="Облизывающийся кот.">
       </div>
       <div class="hero__main">
-        <h2 class="hero__title"> Функциональное<br> питание для котов</h2>
-        <p class="hero__slogan">Занялся собой? Займись котом!</p>
+        <div>
+          <h2 class="hero__title"> Функциональное<br> питание для котов</h2>
+          <p class="hero__slogan">Занялся собой? Займись котом!</p>
+        </div>
         <img class="hero__img" src="/img/header/cat-energy.svg" width="280" height="270"
           alt="Корм для кота в стаканчике.">
         <a class="hero__button button" href="form.html">Подобрать программу</a>
@@ -115,30 +117,34 @@
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
           по-прежнему спит по 16 часов в день.
         </p>
-        <div class="example__stats">
-          <dl class="example__stats-item">
-            <dt class="example__stats-number">5 кг</dt>
-            <dd class="example__stats-description">снижение <br> веса</dd>
-          </dl>
-          <dl class="example__stats-item">
-            <dt class="example__stats-number">60 дней</dt>
-            <dd class="example__stats-description">затрачено <br> времени</dd>
-          </dl>
+        <div class="example__stats-total">
+          <div class="example__stats">
+            <dl class="example__stats-item">
+              <dt class="example__stats-number">5 кг</dt>
+              <dd class="example__stats-description">снижение веса</dd>
+            </dl>
+            <dl class="example__stats-item">
+              <dt class="example__stats-number">60 дней</dt>
+              <dd class="example__stats-description">затрачено времени</dd>
+            </dl>
+          </div>
+          <div class="example__eat">
+            <p class="example__total">Затраты на питание:</p>
+            <p class="example__total">15 000 РУБ.</p>
+          </div>
         </div>
-        <p class="example__total">Затраты на питание: 15 000 РУБ.</p>
         <img class="example__img" src="img/main/slides.svg" alt="Худой или толстый кот." width="280" height="256"
           decoding="async" loading="lazy">
-        <button class="example__button">
-          <svg class="example__svg" width="40" height="226" viewBox="0 0 40 256" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <rect x="18" width="4" height="256" rx="2" fill="#666666" />
-            <rect x="1" y="109" width="38" height="38" rx="19" fill="white" />
-            <path d="M16 119L8 128L16 137V119Z" fill="#666666" />
-            <path d="M32 128L24 119V137L32 128Z" fill="#666666" />
-            <rect x="1" y="109" width="38" height="38" rx="19" stroke="#666666" stroke-width="2" />
-          </svg>
-        </button>
       </div>
+      <button class="example__button">
+        <svg width="40" height="226" viewBox="0 0 40 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" width="4" height="256" rx="2" fill="#666666" />
+          <rect x="1" y="109" width="38" height="38" rx="19" fill="white" />
+          <path d="M16 119L8 128L16 137V119Z" fill="#666666" />
+          <path d="M32 128L24 119V137L32 128Z" fill="#666666" />
+          <rect x="1" y="109" width="38" height="38" rx="19" stroke="#666666" stroke-width="2" />
+        </svg>
+      </button>
     </section>
     <section class="cooperation">
       <div class="cooperation__wrapper">

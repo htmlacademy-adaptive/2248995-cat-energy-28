@@ -6,60 +6,9 @@
   position: relative;
   z-index: 4;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    background-color: rgba(235, 235, 235, 1);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-  }
-
   @include tw() {
     display: inline-flex;
   }
-}
-
-.header__burger {
-  position: absolute;
-  top: -10px;
-  right: 20px;
-
-  @include tw() {
-    display: none;
-    position: relative;
-    width: 24px;
-    height: 16px;
-  }
-}
-
-.header__burger span {
-  position: absolute;
-  background-color: $black;
-  width: 24px;
-  height: 1.5px;
-  right: 0;
-  top: 30px;
-}
-
-.header__burger::before,
-.header__burger::after {
-  content: "";
-  position: absolute;
-  background-color: $black;
-  width: 24px;
-  height: 1.5px;
-  right: 0;
-}
-
-.header__burger::before {
-  top: 50px;
-  z-index: 3;
-}
-
-.header__burger::after {
-  top: 40px;
 }
 
 .header__body {
@@ -73,20 +22,52 @@
   @include tw() {
     gap: 13px;
   }
+
+  @include dw() {
+    padding-top: 70px;
+  }
 }
 
-.header__item--current {
-  position: relative;
+.header__nav {
+  background-color: $white;
+  height: 65px;
+
+  @include tw() {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 17px;
+    margin-left: auto;
+  }
+
+  @include dw() {
+    padding-top: 70px;
+  }
 }
 
-.header__item--current::after {
+.header__burger {
   position: absolute;
+  top: 24px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  width: 24px;
+  height: 16px;
+  display: block;
+
+  @include tw() {
+    display: none;
+    position: relative;
+  }
+}
+
+.header__burger::after {
   content: "";
-  width: 100%;
-  background-color: #68B738;
-  height: 2px;
-  top: 28px;
-  left: 0;
+  position: absolute;
+  background-color: $black;
+  width: 24px;
+  height: 1.5px;
+  right: 0;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
 }
 
 .header__list {
@@ -95,11 +76,11 @@
   padding: 0;
   margin: 0;
   gap: 33px;
+  justify-content: center;
 
   @include tw() {
     display: flex;
   }
-
 }
 
 .header__item {
@@ -110,24 +91,39 @@
   text-transform: uppercase;
   display: block;
   margin-bottom: 10px;
+
+  @include tw() {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @include dw() {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
+
+
+.header__item--current {
+  position: relative;
+
+  @include tw() {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      background-color: #68b738;
+      height: 2px;
+      top: 35px;
+      left: 0;
+    }
+  }
+}
+
 
 .header__logo-text,
 .header__logo {
   display: block;
   flex-shrink: 0;
   z-index: 3;
-}
-
-.header__nav {
-  background-color: $white;
-  height: 100%;
-  display: none;
-
-  @include tw() {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 22px;
-    margin-left: auto;
-  }
 }

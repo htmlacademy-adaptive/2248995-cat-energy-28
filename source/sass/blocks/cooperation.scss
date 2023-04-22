@@ -4,6 +4,10 @@
   @include tw() {
     background-color: rgba(255, 255, 255, 1);
   }
+
+  @include dw() {
+    position: relative;
+  }
 }
 
 .cooperation__header {
@@ -14,6 +18,15 @@
 
   @include tw() {
     padding: 56px 70px;
+  }
+
+  @include dw() {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 1);
   }
 }
 

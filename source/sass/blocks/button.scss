@@ -3,6 +3,7 @@
   color: $white;
   text-transform: uppercase;
   font-family: $fontoswald;
+  text-align: center;
 
   @include tw() {
     font-size: 20px;

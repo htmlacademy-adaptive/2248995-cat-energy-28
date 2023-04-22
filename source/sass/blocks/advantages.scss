@@ -34,9 +34,8 @@
   }
 
   @include dw() {
-    display: flex;
-    column-gap: 95px;
-
+    grid-template-columns: 230px 246px 248px 250px;
+    column-gap: 94px;
   }
 }
 
@@ -48,11 +47,6 @@
 
     @include tw() {
       margin-bottom: 0;
-    }
-
-    @include tw() {
-      font-size: 16px;
-      line-height: 24px;
     }
   }
 }
@@ -76,6 +70,8 @@
 .advantages__text {
   margin: 0;
   padding-left: 80px;
+  font-size: 16px;
+  line-height: 24px;
 
   @include tw() {
     padding: 0;
@@ -109,7 +105,7 @@
   height: 280px;
   background-repeat: no-repeat;
   top: 0;
-  left: 126px;
+  left: 120px;
   z-index: -1;
 }
 

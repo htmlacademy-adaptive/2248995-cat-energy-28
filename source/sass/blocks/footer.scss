@@ -6,13 +6,11 @@
   flex-direction: column;
 
   @include tw() {
-    padding-top: 67px;
-    padding-bottom: 60px;
+    padding: 56px 30px;
   }
 
   @include dw() {
-    padding-top: 71px;
-    padding-bottom: 71px;
+    padding: 67px 110px;
   }
 
   &::after,
@@ -46,7 +44,7 @@
   }
 }
 
-.footer__logo-text {
+.footer__logo-text img {
   padding-bottom: 40px;
   display: flex;
   flex-wrap: wrap;

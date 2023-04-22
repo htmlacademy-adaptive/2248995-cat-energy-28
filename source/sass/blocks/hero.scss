@@ -1,8 +1,8 @@
 .hero {
   margin: 0 auto;
   color: $white;
-  padding: 0 0 20px;
   position: relative;
+  padding: 0;
 }
 
 .hero__header {
@@ -14,11 +14,19 @@
 }
 
 .hero__main {
-  position: absolute;
+  position: relative;
   top: 40px;
   left: 20px;
 
-  @include tw() {}
+  div {
+    position: absolute;
+    top: -120px;
+    margin-bottom: 29px;
+
+    @include tw() {
+      position: static;
+    }
+  }
 }
 
 .hero__title {
@@ -39,6 +47,11 @@
     display: block;
     margin-left: 100px;
   }
+
+  @include dw() {
+    margin-left: 140px;
+    margin-top: 80px;
+  }
 }
 
 .hero__slogan {
@@ -50,7 +63,6 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  margin-bottom: 29px;
   display: flex;
   justify-content: center;
 
@@ -61,13 +73,25 @@
     margin-left: 100px;
     display: inline-block;
   }
+
+  @include dw() {
+    margin-left: 140px;
+  }
 }
 
 .hero__img {
+  margin-top: -190px;
 
   @include tw() {
     width: 709px;
     height: 609px;
+    margin: 0;
+  }
+
+  @include dw() {
+    top: 0;
+    left: 400px;
+    z-index: -1;
   }
 }
 
@@ -78,6 +102,7 @@
   padding-top: 11px;
   padding-bottom: 11px;
   justify-content: center;
+  margin-bottom: 60px;
 
   @include tw() {
     position: absolute;
@@ -86,5 +111,10 @@
     width: 244px;
     height: 54px;
     align-items: center;
+  }
+
+  @include dw() {
+    top: 300px;
+    left: 140px;
   }
 }

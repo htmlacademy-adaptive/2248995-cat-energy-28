@@ -11,6 +11,29 @@
   padding-bottom: 24px;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+
+  @include tw() {
+    padding-bottom: 72px;
+  }
+}
+
+
+.form__fieldset-dw {
+  @include dw() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.form__fieldset--user .form__list {
+  @include dw() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 77px;
+    align-items: start;
+  }
 }
 
 .form__list .form__input-text:not(:last-child) {
@@ -41,16 +64,31 @@
   position: relative;
   padding-top: 22px;
 
+  @include tw() {
+    border: 1px solid rgba(231, 231, 231, 1);
+    width: 630px;
+    height: 196px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    margin-bottom: 75px;
+  }
+
   &::before {
     position: absolute;
     content: "";
-    width: 320px;
+    width: calc(100% + 40px);
     height: 1px;
     top: 120px;
     left: -20px;
     background-color: $greydark;
+
+    @include tw() {
+      display: none;
+    }
   }
 }
+
 
 .form__input-user:not(:last-child) {
   margin-bottom: 14px;
@@ -64,6 +102,11 @@
   text-transform: uppercase;
   margin-right: 13px;
   flex-shrink: 0;
+
+  @include tw() {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__title {
@@ -71,36 +114,52 @@
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+
+  @include tw() {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form__comment-text {
   display: grid;
   row-gap: 37px;
   margin-bottom: 22px;
+  margin-left: 1px;
+
+  @include tw() {
+    row-gap: 76px;
+  }
 }
 
-.form__buttton {
-  border: none;
-  width: 280px;
-  padding: 9px 15px;
-  margin-bottom: 21px;
-}
-
-.form__fieldset--add .form__list {
-  flex-direction: column;
+.form__checkbox .form__text {
+  padding-left: 60px;
 }
 
 .form__fieldset--user legend {
   margin-bottom: 35px;
-
 }
 
 .form__checkbox:not(:last-child) {
   margin-bottom: 12px;
+
+  @include dw() {
+    margin-right: 124px;
+  }
+}
+
+.form__fieldset--add {
+  position: relative;
 }
 
 .form__fieldset--add ul {
   margin-top: 13px;
+
+  @include tw() {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 57px;
+  }
 }
 
 .form__input-user {
@@ -121,15 +180,15 @@
   }
 }
 
-.form__svg {
+.form__label svg {
   position: absolute;
-  left: 245px;
-  top: 15px
-}
+  right: 15px;
+  top: 15px;
 
-.form__tip {
-  display: flex;
-  justify-content: center;
+  @include tw() {
+    right: 20px;
+    top: 20px;
+  }
 }
 
 .form__input {
@@ -144,6 +203,50 @@
   font-size: 16px;
   line-height: 18px;
   color: rgba(68, 68, 68, 1);
+
+  @include tw() {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 55px 10px 20px;
+  }
+}
+
+.form__button-tip {
+  width: 100%;
+
+  @include tw() {
+    display: flex;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+}
+
+.form__button {
+  border: none;
+  min-width: 282px;
+  padding: 9px 15px;
+  margin-bottom: 21px;
+
+
+  @include tw() {
+    padding: 16px 40px;
+    margin-bottom: 0;
+    margin-right: 64px;
+  }
+
+  @include dw() {
+    width: 568px;
+    margin-right: 84px;
+  }
+}
+
+.form__tip {
+  display: flex;
+  justify-content: center;
+}
+
+.cooperation--form {
+  background-color: rgba(242, 242, 242, 1);
 }
 
 .form__input::-webkit-outer-spin-button,
