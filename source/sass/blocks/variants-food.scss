@@ -37,14 +37,14 @@
     background-color: rgba(104, 183, 56, 1);
 
     @include tw() {
-      right: 10px;
+      left: 452px;
       top: 87px;
       width: 200px;
       height: 200px;
     }
 
     @include dw() {
-      left: 0;
+      left: 52px;
       top: 47px;
       width: 100px;
       height: 100px;
@@ -127,7 +127,7 @@
     top: 95px;
   }
 
-  @include tw() {
+  @include dw() {
     left: 36px;
     top: 73px;
     width: 134px;

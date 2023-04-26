@@ -6,6 +6,7 @@ $greydark: rgba(234, 234, 234, 1);
 $fontoswald: "Oswald", sans-serif;
 $tw: 768px;
 $dw: 1200px;
+$mw: 767px;
 
 @mixin tw {
   @media (min-width: $tw) {
@@ -15,6 +16,12 @@ $dw: 1200px;
 
 @mixin dw {
   @media (min-width: $dw) {
+    @content;
+  }
+}
+
+@mixin mw {
+  @media (max-width: $dw) {
     @content;
   }
 }

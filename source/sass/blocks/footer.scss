@@ -1,6 +1,9 @@
 .footer {
   padding: 40px 20px;
   background-color: $grey;
+}
+
+.footer__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -17,17 +20,17 @@
   &::before {
     position: absolute;
     content: "";
-    width: 280px;
+    width: 100%;
     height: 1px;
     background-color: rgba(217, 217, 217, 1);
   }
 
   &::before {
-    top: 84px;
+    top: 106px;
   }
 
   &::after {
-    bottom: 94px;
+    bottom: 115px;
   }
 
   @include tw() {
@@ -48,8 +51,7 @@
   padding-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
 
   @include tw() {
     align-self: center;

@@ -3,13 +3,23 @@
   color: $white;
   position: relative;
   padding: 0;
+  margin-top: 160px;
 }
 
 .hero__header {
-  display: block;
+  width: 100%;
 
   @include tw() {
     display: none;
+  }
+
+  @include dw() {
+    position: absolute;
+    display: block;
+    width: 720px;
+    height: 694px;
+    right: -44px;
+    top: -278px;
   }
 }
 
@@ -17,15 +27,26 @@
   position: relative;
   top: 40px;
   left: 20px;
+  margin-bottom: 100px;
+
+  @include tw() {
+    margin-bottom: 40px;
+  }
 
   div {
     position: absolute;
     top: -120px;
-    margin-bottom: 29px;
+    margin-bottom: 20px;
 
     @include tw() {
       position: static;
     }
+  }
+}
+
+.hero__title-slogan {
+  @include dw() {
+    margin-right: 100px;
   }
 }
 
@@ -76,22 +97,27 @@
 
   @include dw() {
     margin-left: 140px;
+    margin-bottom: 52px;
   }
 }
 
 .hero__img {
+  width: 100%;
   margin-top: -190px;
 
   @include tw() {
     width: 709px;
     height: 609px;
     margin: 0;
+    margin-left: 10px;
   }
 
   @include dw() {
-    top: 0;
-    left: 400px;
-    z-index: -1;
+    height: 499px;
+    position: absolute;
+    top: -119px;
+    left: 498px;
+    z-index: 2;
   }
 }
 
@@ -102,19 +128,25 @@
   padding-top: 11px;
   padding-bottom: 11px;
   justify-content: center;
-  margin-bottom: 60px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: -60px;
+
 
   @include tw() {
     position: absolute;
-    top: 220px;
-    left: 100px;
+    top: 321px;
+    left: 120px;
     width: 244px;
-    height: 54px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     align-items: center;
   }
 
   @include dw() {
-    top: 300px;
-    left: 140px;
+    position: static;
+    margin: 0;
+    margin-bottom: 267px;
+    margin-left: 160px;
   }
 }

@@ -11,3 +11,18 @@
     padding: 0 110px;
   }
 }
+
+.variants-food__wrapper,
+.example__wrapper,
+.advantages__wrapper,
+.footer__wrapper,
+.header__wrapper,
+.hero__wrapper,
+.promotion__wrapper,
+.add-product__wrapper,
+.catalog__wrapper,
+.catalog__title,
+.data__section {
+  max-width: 1440px;
+  margin: 0 auto;
+}

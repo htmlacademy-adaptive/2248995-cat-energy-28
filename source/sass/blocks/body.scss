@@ -13,10 +13,9 @@ body {
   padding: 0;
   margin: 0;
 
-  @include dw() {}
-
-  max-width: 1440px;
-  margin: 0 auto;
+  @include dw() {
+    margin: 0 auto;
+  }
 }
 
 img {

@@ -44,7 +44,7 @@
   width: calc(100% + 60px);
   height: 1px;
   background-color: $greydark;
-  top: -20px;
+  top: -43px;
   left: -30px;
 
   @include dw() {
@@ -72,27 +72,26 @@
 .example__button {
   position: absolute;
   border: none;
-  top: 360px;
-  left: 135px;
+  top: 0;
+  left: 122px;
+  padding: 0;
 
   @include tw() {
-    top: 353px;
-    left: 285px;
+    left: 335px;
+  }
+
+  @include dw() {
+    left: 920px;
+    top: -599px;
   }
 }
 
 .example__button svg {
-  position: absolute;
-  height: 256px;
-  top: 10px;
+  height: 246px;
 
   @include tw() {
-    left: 180px;
-  }
-
-  @include dw() {
-    top: -200px;
-    right: 150px;
+    width: 40px;
+    height: 512px;
   }
 }
 
@@ -110,8 +109,8 @@
 
   @include dw() {
     position: absolute;
-    top: 30px;
-    right: 110px;
+    top: -600px;
+    right: 0;
     background-image: linear-gradient(to bottom, #ffffff 120px, #eaeaea 120px);
   }
 }
@@ -217,6 +216,7 @@
   @include tw() {
     flex-direction: column;
     justify-content: flex-start;
+    gap: 9px;
   }
 
   @include dw() {
@@ -245,4 +245,8 @@
     justify-content: flex-end;
     margin: 0;
   }
+}
+
+.example__img-button {
+  position: relative;
 }

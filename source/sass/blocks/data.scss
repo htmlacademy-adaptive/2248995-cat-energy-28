@@ -46,7 +46,6 @@
   @include tw() {
     font-size: 60px;
     line-height: 60px;
-    padding-left: 69px;
   }
 
   &::after {
@@ -73,6 +72,5 @@
   @include tw() {
     font-size: 20px;
     line-height: 30px;
-    padding-left: 69px;
   }
 }
