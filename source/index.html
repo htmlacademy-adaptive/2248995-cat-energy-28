@@ -11,41 +11,43 @@
 </head>
 
 <body>
-  <header class="header wrapper header__wrapper">
-    <div class="header__body ">
-      <a class="header__logo logo" href="index.html">
-        <img width="33" height="37" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
-      </a>
-      <a class="header__logo-text logo-text" href="index.html">
-        <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17">
-      </a>
+  <header class="header wrapper">
+    <div class="header__block header__wrapper wrapper">
+      <div class="header__body">
+        <a class="header__logo logo" href="index.html">
+          <img width="33" height="37" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
+        </a>
+        <a class="header__logo-text logo-text" href="index.html">
+          <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17">
+        </a>
+      </div>
+      <nav class="header__nav">
+        <button class="header__burger" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="header__list">
+          <li class="header__item header__item--current header__item--index header__item--color">
+            <a class="header__link" href="#">Главная</a>
+          </li>
+          <li class="header__item header__item--color">
+            <a class="header__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="header__item header__item--color">
+            <a class="header__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="header__nav header__nav-opened header__nav-nojs">
-      <button class="header__burger" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="header__list">
-        <li class="header__item header__item--current header__item--index header__item--color">
-          <a class="header__link" href="#">Главная</a>
-        </li>
-        <li class="header__item header__item--color">
-          <a class="header__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="header__item header__item--color">
-          <a class="header__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
   </header>
   <main>
     <section class="hero hero__wrapper">
-      <img class="hero__header" src="img/main/cat-energy.svg" width="320" height="302" alt="Облизывающийся кот.">
+      <img class="hero__header" src="img/main/cat.jpg" width="320" height="302" alt="Облизывающийся кот.">
       <div class="hero__main">
         <div class="hero__title-slogan">
           <h2 class="hero__title"> Функциональное<br> питание для котов</h2>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
         </div>
-        <img class="hero__img" src="/img/header/cat-energy.svg" width="280" height="270"
+        <img class="hero__img" src="/img/main/cat-energy.png" width="280" height="270"
           alt="Корм для кота в стаканчике.">
       </div>
       <a class="hero__button button" href="form.html">Подобрать программу</a>
@@ -460,12 +462,12 @@
     </div>
   </footer>
 
-  <script src="script.js"">
+  <script>
     const header = document.querySelector('.header');
     const button = header.querySelector('.header__burger');
 
     button.addEventListener('click', () => {
-      header.classList.toggle('header__nav-nojs')
+      header.classList.toggle('header--nav-opened')
     })
   </script>
 </body>

@@ -113,10 +113,77 @@
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 1;
+
 
   @include tw() {
     font-size: 36px;
     line-height: 36px;
+  }
+}
+
+.form__fieldset--add .form__title {
+  width: 160px;
+
+  @include tw() {
+    width: 250px;
+  }
+}
+
+.form__comment-text .form__title {
+  width: 144px;
+
+  @include tw() {
+    width: 214px;
+  }
+}
+
+.form__fieldset--user .form__title {
+  width: 200px;
+
+  @include tw() {
+    width: 540px;
+  }
+}
+
+.form__fieldset--add .form__border {
+  border-bottom: 2px solid rgba(104, 183, 56, 1);
+  width: calc(100% + 40px);
+  position: absolute;
+  top: -10px;
+
+  @include tw() {
+    width: calc(100% + 60px);
+    left: -30px;
+    top: -17px;
+  }
+}
+
+.form__comment-text .form__border {
+  border-bottom: 2px solid rgba(104, 183, 56, 1);
+  width: calc(100% + 40px);
+  position: absolute;
+  top: 15px;
+
+  @include tw() {
+    width: calc(100% + 60px);
+    left: -30px;
+    top: 15px;
+  }
+}
+
+.form__fieldset--user .form__border {
+  border-top: 2px solid rgba(104, 183, 56, 1);
+  width: calc(100% + 40px);
+  position: absolute;
+  top: -71px;
+
+  @include tw() {
+    width: calc(100% + 60px);
+    left: -30px;
+    top: -52px;
   }
 }
 
@@ -125,9 +192,11 @@
   row-gap: 37px;
   margin-bottom: 22px;
   margin-left: 1px;
+  position: relative;
 
   @include tw() {
     row-gap: 76px;
+    margin-left: 3px;
   }
 }
 
@@ -147,6 +216,7 @@
   }
 }
 
+.form__fieldset--user,
 .form__fieldset--add {
   position: relative;
 }
@@ -242,10 +312,6 @@
 .form__tip {
   display: flex;
   justify-content: center;
-}
-
-.cooperation--form {
-  background-color: rgba(242, 242, 242, 1);
 }
 
 .form__input::-webkit-outer-spin-button,

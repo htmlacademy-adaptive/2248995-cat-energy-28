@@ -11,31 +11,33 @@
 </head>
 
 <body>
-  <header class="header wrapper header__wrapper">
-    <div class="header__body ">
-      <a class="header__logo logo" href="index.html">
-        <img width="33" height="37" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
-      </a>
-      <a class="header__logo-text logo-text" href="index.html">
-        <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17">
-      </a>
+  <header class="header wrapper">
+    <div class="header__block header__wrapper wrapper">
+      <div class="header__body ">
+        <a class="header__logo logo" href="index.html">
+          <img width="33" height="37" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
+        </a>
+        <a class="header__logo-text logo-text" href="index.html">
+          <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17">
+        </a>
+      </div>
+      <nav class="header__nav header__nav-opened header__nav-nojs">
+        <button class="header__burger" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="index.html">Главная</a>
+          </li>
+          <li class="header__item ">
+            <a class="header__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="header__item header__item--current">
+            <a class="header__link" href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="header__nav header__nav-opened header__nav-nojs">
-      <button class="header__burger" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="header__list">
-        <li class="header__item">
-          <a class="header__link" href="index.html">Главная</a>
-        </li>
-        <li class="header__item ">
-          <a class="header__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="header__item header__item--current">
-          <a class="header__link" href="#">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
   </header>
   <main class="data">
     <section class="data__section wrapper">
@@ -92,6 +94,7 @@
           </div>
           <fieldset class="form__fieldset form__fieldset--user">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
+            <span class="form__border"></span>
             <ul class="form__list">
               <li class="form__input-user">
                 <label class="form__label">
@@ -122,12 +125,14 @@
           <div class="form__comment">
             <label class="form__comment-text">
               <span class="form__title">Комментарий</span>
+              <span class="form__border"></span>
               <textarea class="form__textarea" name="comment" cols="35" rows="7"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </div>
           <fieldset class="form__fieldset form__fieldset--add">
             <legend class="form__title">Дополнительно</legend>
+            <span class="form__border"></span>
             <ul class="form__list">
               <li class="form__checkbox">
                 <label class="form__label">
@@ -166,7 +171,7 @@
         </form>
       </div>
     </section>
-    <section class="cooperation cooperation--form">
+    <section class="cooperation cooperation--color">
       <div class="cooperation__wrapper">
         <div class="cooperation__header">
           <h3 class="cooperation__title">приглашаем <br> к сотрудничеству <br> дилеров!</h3>

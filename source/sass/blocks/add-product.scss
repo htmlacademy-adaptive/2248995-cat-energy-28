@@ -1,6 +1,30 @@
 .add-product {
   padding-top: 25px;
+  position: relative;
 
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: 40px;
+    left: 270px;
+
+    @include tw() {
+      left: 468px;
+      top: 50px;
+    }
+
+    @include dw() {
+      left: 547px;
+      top: 47px;
+    }
+  }
+
+  @include tw() {
+    margin-bottom: 69px;
+  }
 }
 
 .add-product__main-title {
@@ -11,18 +35,11 @@
   margin: 0;
   margin-bottom: 36px;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: rgba(104, 183, 56, 1);
-  }
-
   @include tw() {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
+    margin-left: 67px;
   }
 
   @include dw() {
@@ -37,11 +54,14 @@
 
   @include tw() {
     border: 1px solid rgba(205, 205, 205, 1);
+    padding-left: 38px;
+    padding-right: 38px;
   }
 
   @include dw() {
     border: none;
     max-width: 895px;
+    padding: 0;
   }
 }
 

@@ -1,7 +1,7 @@
 .product {
   padding: 19px 0 25px;
   display: grid;
-  grid-template-columns: 140px 140px;
+  grid-template-columns: 1fr 1fr;
   position: relative;
 
   @include tw() {
@@ -20,7 +20,7 @@
 .product::after {
   position: absolute;
   content: "";
-  width: 320px;
+  width: 100%;
   background-color: rgba(235, 235, 235, 1);
   height: 1px;
   left: -20px;
@@ -75,7 +75,6 @@
   @include tw() {
     font-size: 20px;
     line-height: 24px;
-    padding-top: 161px;
     text-align: center;
   }
 }
@@ -87,41 +86,29 @@
 }
 
 .product__description {
-  display: grid;
-  grid-template-columns: 50px 88px;
-  grid-column: 2/3;
-  grid-row: 2/3;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 22px;
   font-size: 12px;
   line-height: 16px;
 
   @include tw() {
-    grid-template-columns: 50px 92px;
-    column-gap: 100px;
-    grid-column: 1/3;
     font-size: 16px;
   }
 
-  @include dw() {
-    column-gap: 29px;
-  }
-}
+  @include dw() {}
 
-.product__value {
-  position: relative;
+  div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 
-  @include tw() {
-    margin-bottom: 16px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      width: 250px;
-      height: 1px;
-      background-color: rgba(205, 205, 205, 1);
-      bottom: -9px;
-      left: 0;
+    @include tw() {
+      padding-top: 7px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid rgba(205, 205, 205, 1);
     }
   }
 }
@@ -132,6 +119,12 @@
   }
 }
 
+.product__desc {
+  @include tw() {
+    justify-self: end;
+  }
+}
+
 .product__button {
   text-align: center;
   padding: 10px 20px;
@@ -139,7 +132,7 @@
   grid-row: 3/4;
 
   @include tw() {
-    width: 248px;
+    width: 100%;
   }
 
   @include dw() {
@@ -154,7 +147,7 @@
   font-weight: 400;
   font-family: $fontoswald;
   color: $black;
-  width: 280px;
+  width: 100%;
   padding: 10px 60px;
   display: flex;
   flex-wrap: wrap;
@@ -162,13 +155,9 @@
   position: relative;
 
   @include tw() {
-    width: 248px;
     padding: 10px 20px;
   }
 
-  @include dw() {
-    width: 168px;
-  }
 
   &::after,
   &::before {
@@ -183,7 +172,7 @@
     @include tw() {
       width: 60px;
       top: -282px;
-      left: 93px;
+      left: 113px;
     }
 
     @include dw() {
@@ -211,7 +200,6 @@
     width: 165px;
     text-align: center;
     margin-bottom: 87px;
-    text-align: center;
   }
 }
 
@@ -224,6 +212,11 @@
   @include tw() {
     display: flex;
     width: 100%;
+    margin-bottom: 161px;
+  }
+
+  @include dw() {
+    padding: 0;
   }
 }
 

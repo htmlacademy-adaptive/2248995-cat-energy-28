@@ -52,7 +52,7 @@
 
   @include tw() {
     display: grid;
-    grid-template-columns: repeat(2, 324px);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
     row-gap: 141px;
   }

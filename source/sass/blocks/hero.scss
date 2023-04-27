@@ -3,7 +3,10 @@
   color: $white;
   position: relative;
   padding: 0;
-  margin-top: 160px;
+
+  @include dw() {
+    margin-top: 111px;
+  }
 }
 
 .hero__header {
@@ -18,15 +21,14 @@
     display: block;
     width: 720px;
     height: 694px;
-    right: -44px;
-    top: -278px;
+    right: 29px;
+    top: -281px;
   }
 }
 
 .hero__main {
   position: relative;
   top: 40px;
-  left: 20px;
   margin-bottom: 100px;
 
   @include tw() {
@@ -109,11 +111,12 @@
     width: 709px;
     height: 609px;
     margin: 0;
-    margin-left: 10px;
+    margin-left: 32px;
   }
 
   @include dw() {
     height: 499px;
+    width: 552px;
     position: absolute;
     top: -119px;
     left: 498px;
@@ -128,15 +131,15 @@
   padding-top: 11px;
   padding-bottom: 11px;
   justify-content: center;
-  margin: 0 auto;
   margin-bottom: 20px;
   margin-top: -60px;
+  margin-left: 20px;
 
 
   @include tw() {
     position: absolute;
     top: 321px;
-    left: 120px;
+    left: 102px;
     width: 244px;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -147,6 +150,6 @@
     position: static;
     margin: 0;
     margin-bottom: 267px;
-    margin-left: 160px;
+    margin-left: 142px;
   }
 }

@@ -1,30 +1,63 @@
 .promotion {
   position: relative;
   margin-bottom: 35px;
+  padding-top: 186px;
+  height: 290px;
+  background-image: url("../img/main/promotion-cat.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 100% 62%;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
 
-  div {
-    position: relative;
 
-    @include dw() {
-      position: absolute;
-      top: -289px;
-      right: 110px;
-      width: 245px;
-    }
+  @include tw() {
+    height: 200px;
+    margin-left: 31px;
+    margin-bottom: 76px;
+  }
+
+  @include dw() {
+    position: absolute;
+    right: 114px;
+    width: 245px;
+    height: 289px;
+    top: 1583px;
+    padding: 0;
+    margin: 0;
   }
 }
 
-.promotion__block::before {
-  position: absolute;
-  content: "";
-  width: 78px;
-  height: 80px;
-  background-image: url("../img/main/present.svg");
-  top: 58px;
-  right: 122px;
+.promotion__block {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/main/present.svg");
+    top: -117px;
+    left: 101px;
+    background-repeat: no-repeat;
+
+    @include tw() {
+      left: 79px;
+      top: -132px;
+    }
+
+    @include dw() {
+      left: 203px;
+      top: 434px;
+    }
+  }
 
   @include dw() {
-    right: 79px;
+    position: absolute;
+    top: -361px;
+    right: 110px;
+    width: 245px;
   }
 }
 
@@ -34,9 +67,18 @@
   text-align: center;
   margin: 0;
   color: $white;
-  padding-top: 186px;
-  height: 290px;
-  background-image: url("../img/main/promotion-cat.svg");
-  background-repeat: no-repeat;
-  width: 100%;
+
+  @include tw() {
+    position: absolute;
+    top: -120px;
+    left: 396px;
+    text-align: left;
+  }
+
+  @include dw() {
+    top: 542px;
+    left: 118px;
+    text-align: center;
+    width: 100%;
+  }
 }

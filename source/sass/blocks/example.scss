@@ -7,6 +7,25 @@
   padding-top: 30px;
   z-index: -2;
 
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 60px);
+    height: 1px;
+    background-color: $greydark;
+    top: -15px;
+    left: -30px;
+    display: none;
+
+    @include tw() {
+      display: block;
+    }
+
+    @include dw() {
+      display: none;
+    }
+  }
+
   @include tw() {
     background-image: linear-gradient(to bottom, #ffffff 528px, #eaeaea 528px);
     z-index: -2;
@@ -35,20 +54,6 @@
 
   @include dw() {
     margin-bottom: 146px;
-  }
-}
-
-.example__title::before {
-  position: absolute;
-  content: "";
-  width: calc(100% + 60px);
-  height: 1px;
-  background-color: $greydark;
-  top: -43px;
-  left: -30px;
-
-  @include dw() {
-    display: none;
   }
 }
 
