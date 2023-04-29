@@ -10,6 +10,7 @@
     background-color: rgba(104, 183, 56, 1);
     top: 40px;
     left: 270px;
+    display: none;
 
     @include tw() {
       left: 468px;
@@ -23,7 +24,7 @@
   }
 
   @include tw() {
-    margin-bottom: 69px;
+    margin-bottom: 76px;
   }
 }
 
@@ -39,11 +40,20 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
-    margin-left: 67px;
+    margin-left: 37px;
   }
 
   @include dw() {
     margin-bottom: 81px;
+    margin-left: 0;
+  }
+}
+
+.add-product-block {
+
+  @include dw() {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -56,6 +66,7 @@
     border: 1px solid rgba(205, 205, 205, 1);
     padding-left: 38px;
     padding-right: 38px;
+    margin-bottom: 69px;
   }
 
   @include dw() {
@@ -82,6 +93,7 @@
 
   @include tw() {
     display: grid;
+    grid-template-columns: 325px 1fr;
   }
 
   @include dw() {

@@ -20,7 +20,7 @@
 .product::after {
   position: absolute;
   content: "";
-  width: 100%;
+  width: calc(100% + 20px);
   background-color: rgba(235, 235, 235, 1);
   height: 1px;
   left: -20px;
@@ -36,6 +36,9 @@
   text-align: center;
   font-size: 16px;
   line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
   @include tw() {
     background-color: #ffffff;
@@ -43,10 +46,6 @@
     align-items: center;
     justify-content: flex-end;
   }
-}
-
-.product__link--to-all {
-  display: block;
 }
 
 .product__link {
@@ -59,6 +58,12 @@
     margin-top: -125px;
     margin-bottom: 23px;
   }
+}
+
+.product__link--to-all {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .product__title {
@@ -92,9 +97,11 @@
   margin-bottom: 22px;
   font-size: 12px;
   line-height: 16px;
+  max-width: 350px;
 
   @include tw() {
     font-size: 16px;
+    justify-content: center;
   }
 
   @include dw() {}
@@ -172,7 +179,7 @@
     @include tw() {
       width: 60px;
       top: -282px;
-      left: 113px;
+      left: 94px;
     }
 
     @include dw() {
@@ -213,6 +220,8 @@
     display: flex;
     width: 100%;
     margin-bottom: 161px;
+    justify-content: center;
+    padding: 0;
   }
 
   @include dw() {

@@ -185,6 +185,10 @@
     left: -30px;
     top: -52px;
   }
+
+  @include dw() {
+    width: calc(100% + 138px);
+  }
 }
 
 .form__comment-text {
@@ -210,10 +214,6 @@
 
 .form__checkbox:not(:last-child) {
   margin-bottom: 12px;
-
-  @include dw() {
-    margin-right: 124px;
-  }
 }
 
 .form__fieldset--user,
@@ -222,12 +222,22 @@
 }
 
 .form__fieldset--add ul {
-  margin-top: 13px;
+  display: block;
+  margin-top: 34px;
+  padding: 0;
+  margin-bottom: 34px;
 
   @include tw() {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
     margin-top: 57px;
+    max-width: 900px;
+  }
+
+  @include dw() {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1440px;
   }
 }
 
@@ -293,6 +303,7 @@
 .form__button {
   border: none;
   min-width: 282px;
+  max-width: 400px;
   padding: 9px 15px;
   margin-bottom: 21px;
 
@@ -301,6 +312,7 @@
     padding: 16px 40px;
     margin-bottom: 0;
     margin-right: 64px;
+    max-width: 568px;
   }
 
   @include dw() {

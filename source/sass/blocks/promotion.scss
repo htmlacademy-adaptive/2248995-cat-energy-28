@@ -1,36 +1,12 @@
 .promotion {
   position: relative;
   margin-bottom: 35px;
-  padding-top: 186px;
   height: 290px;
   background-image: url("../img/main/promotion-cat.svg");
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 100% 62%;
-  margin-left: 20px;
-  margin-right: 20px;
   width: 100%;
-
-
-  @include tw() {
-    height: 200px;
-    margin-left: 31px;
-    margin-bottom: 76px;
-  }
-
-  @include dw() {
-    position: absolute;
-    right: 114px;
-    width: 245px;
-    height: 289px;
-    top: 1583px;
-    padding: 0;
-    margin: 0;
-  }
-}
-
-.promotion__block {
-  position: relative;
+  padding-top: 186px;
 
   &::before {
     position: absolute;
@@ -38,26 +14,31 @@
     width: 78px;
     height: 80px;
     background-image: url("../img/main/present.svg");
-    top: -117px;
+    top: 58px;
     left: 101px;
     background-repeat: no-repeat;
 
     @include tw() {
-      left: 79px;
-      top: -132px;
+      top: 59px;
     }
 
     @include dw() {
-      left: 203px;
-      top: 434px;
+      left: 83px;
+      top: 55px;
     }
   }
 
+  @include tw() {
+    background-position: 100% 62%;
+    height: 200px;
+  }
+
   @include dw() {
-    position: absolute;
-    top: -361px;
-    right: 110px;
     width: 245px;
+    margin-bottom: 0;
+    height: 288px;
+    padding: 0;
+    background-size: 110%;
   }
 }
 
@@ -70,14 +51,14 @@
 
   @include tw() {
     position: absolute;
-    top: -120px;
-    left: 396px;
+    top: 71px;
+    left: 439px;
     text-align: left;
   }
 
   @include dw() {
-    top: 542px;
-    left: 118px;
+    top: 184px;
+    left: 5px;
     text-align: center;
     width: 100%;
   }
