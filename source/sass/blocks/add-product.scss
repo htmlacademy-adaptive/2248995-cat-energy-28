@@ -53,7 +53,7 @@
 
   @include dw() {
     display: flex;
-    justify-content: space-between;
+    gap: 80px;
   }
 }
 
