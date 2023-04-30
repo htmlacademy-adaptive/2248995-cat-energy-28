@@ -378,7 +378,7 @@
 }
 
 .form__input[type="checkbox"]:checked+.form__mark::before {
-  background-image: url("../../img/main/checked-small.svg");
+  background-image: url("./../img/main/checked-small.svg");
   background-repeat: no-repeat;
   top: 7px;
   left: 6px;
@@ -388,7 +388,7 @@
   content: "";
 
   @include tw() {
-    background-image: url("../../img/main/checked.svg");
+    background-image: url("./../img/main/checked.svg");
     height: 18px;
     width: 24px;
     top: 9px;

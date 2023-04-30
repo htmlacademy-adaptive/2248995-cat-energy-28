@@ -1,6 +1,10 @@
 .footer {
   padding: 40px 20px;
   background-color: $grey;
+
+  @include tw() {
+    padding: 0;
+  }
 }
 
 .footer__wrapper {
