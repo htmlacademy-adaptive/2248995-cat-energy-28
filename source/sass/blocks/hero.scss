@@ -153,3 +153,11 @@
     margin-left: 142px;
   }
 }
+
+.hero__button:hover {
+  background-color: rgba(94, 170, 47, 1);
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

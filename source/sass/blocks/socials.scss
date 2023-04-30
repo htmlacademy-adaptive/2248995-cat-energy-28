@@ -8,3 +8,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.socials__link:hover {
+  fill: rgba(104, 183, 56, 1);
+
+  &:active {
+    opacity: 30%;
+  }
+}

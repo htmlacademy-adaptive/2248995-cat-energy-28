@@ -50,7 +50,6 @@
 }
 
 .add-product-block {
-
   @include dw() {
     display: flex;
     gap: 80px;
@@ -120,7 +119,6 @@
 
   @include dw() {
     align-self: end;
-
   }
 }
 

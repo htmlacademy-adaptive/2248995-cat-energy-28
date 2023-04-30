@@ -12,7 +12,7 @@
 
   @include dw() {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 570px 570px;
     gap: 80px;
   }
 }
@@ -61,6 +61,10 @@
   }
 }
 
+.variants-food__link:active {
+  opacity: 30%;
+}
+
 .variants-food__item:not(:last-child) {
   margin-bottom: 20px;
 
@@ -93,6 +97,7 @@
   @include dw() {
     padding-top: 77px;
     padding-left: 164px;
+    margin-bottom: 50px;
   }
 }
 
@@ -163,6 +168,36 @@
     }
   }
 }
+
+.variants-food__link:hover::after {
+  width: 32px;
+  height: 12px;
+  background-image: url("../img/main/cat-arrow-lg.svg");
+  background-repeat: no-repeat;
+  top: 5px;
+  left: 100px;
+
+  @include tw() {
+    top: 10px;
+    left: 125px;
+  }
+}
+
+.variants-food__link:active::after {
+  width: 32px;
+  height: 12px;
+  background-image: url("../img/main/cat-arrow-lg.svg");
+  background-repeat: no-repeat;
+  top: 5px;
+  left: 100px;
+  opacity: 30%;
+
+  @include tw() {
+    top: 10px;
+    left: 125px;
+  }
+}
+
 
 .variants-food__text {
   position: relative;
