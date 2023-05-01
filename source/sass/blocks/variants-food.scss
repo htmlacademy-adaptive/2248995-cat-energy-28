@@ -5,6 +5,10 @@
   @include tw() {
     margin-bottom: 45px;
   }
+
+  @include dw() {
+    margin-bottom: 71px;
+  }
 }
 
 .variants-food__wrapper {

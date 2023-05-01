@@ -65,6 +65,14 @@
   }
 }
 
+.footer__logo-text:hover {
+  opacity: 80%;
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
 .footer__socials {
   padding-bottom: 40px;
 
@@ -81,5 +89,13 @@
 
   @include tw() {
     padding: 0;
+  }
+
+  &:hover {
+    fill: rgba(104, 183, 56, 1);
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }

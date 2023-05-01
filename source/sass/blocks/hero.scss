@@ -21,7 +21,7 @@
     display: block;
     width: 720px;
     height: 694px;
-    right: 29px;
+    right: 0;
     top: -281px;
   }
 }
@@ -33,6 +33,10 @@
 
   @include tw() {
     margin-bottom: 40px;
+  }
+
+  @include dw() {
+    padding-left: 190px;
   }
 
   div {
@@ -72,8 +76,9 @@
   }
 
   @include dw() {
-    margin-left: 140px;
+    margin-left: 0;
     margin-top: 80px;
+
   }
 }
 
@@ -98,7 +103,7 @@
   }
 
   @include dw() {
-    margin-left: 140px;
+    margin-left: 0;
     margin-bottom: 52px;
   }
 }
@@ -119,7 +124,7 @@
     width: 552px;
     position: absolute;
     top: -119px;
-    left: 498px;
+    left: 529px;
     z-index: 2;
   }
 }
@@ -149,8 +154,8 @@
   @include dw() {
     position: static;
     margin: 0;
-    margin-bottom: 267px;
-    margin-left: 142px;
+    margin-bottom: 208px;
+    margin-left: 190px;
   }
 }
 

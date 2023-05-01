@@ -368,6 +368,10 @@
   top: -7px;
   left: 0;
 
+  &:hover {
+    border: 1px solid rgba(186, 186, 186, 1);
+  }
+
   @include tw() {
     width: 40px;
     height: 40px;
@@ -409,6 +413,11 @@
   left: 0;
   border-radius: 50%;
 
+  &:hover {
+    border: 1px solid rgba(186, 186, 186, 1);
+  }
+
+
   @include tw() {
     width: 40px;
     height: 40px;
@@ -436,6 +445,23 @@
     left: 10px;
   }
 }
+
+.form__input--error {
+  outline: 1px solid red;
+  outline: none;
+}
+
+.form__input:hover {
+  border: 1px solid rgba(205, 205, 205, 1);
+
+  &:focus {
+    border: none;
+    outline: 1px solid $black;
+    box-sizing: border-box;
+  }
+}
+
+
 
 .form__input::-webkit-outer-spin-button,
 /*stylelint-disable-line*/

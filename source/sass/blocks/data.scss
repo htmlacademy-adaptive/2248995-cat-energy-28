@@ -47,6 +47,10 @@
   @include tw() {
     padding: 0 67px 0 70px;
   }
+
+  @include dw() {
+    padding: 0 110px;
+  }
 }
 
 .data__title {

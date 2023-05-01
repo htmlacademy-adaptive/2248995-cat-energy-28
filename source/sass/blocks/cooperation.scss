@@ -53,6 +53,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    text-align: right;
+  }
+
+  @include dw() {
+    text-align: left;
   }
 }
 
