@@ -234,3 +234,18 @@
   flex-shrink: 0;
   z-index: 3;
 }
+
+.header__logo-text:focus-visible,
+.header__logo:focus-visible,
+.header__link:focus-visible,
+.socials__link:focus-visible,
+.button:focus-visible,
+.variants-food__link:focus-visible,
+.variants-food__link:focus-visible:after,
+.logo-text:focus-visible,
+.footer__copyright-link:focus-visible,
+.form__textarea:focus-visible {
+  border: none;
+  outline: 2px solid orange;
+  outline-offset: 7px;
+}

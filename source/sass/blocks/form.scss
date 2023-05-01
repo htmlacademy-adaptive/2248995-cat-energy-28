@@ -299,8 +299,44 @@
   }
 }
 
+.form__input--error {
+  outline: 1px solid red;
+}
+
+// .form__input--error:focus-visible svg {
+//   stroke: red;
+//   fill: red;
+// }
+
 .form__input {
   border: 1px solid $greydark;
+  outline: none;
+
+  &:hover {
+    border: 1px solid rgba(205, 205, 205, 1);
+    outline: none;
+  }
+
+  &:focus {
+    border: none;
+    outline: 1px solid #000000;
+  }
+
+  &:focus-visible {
+    border: none;
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+  }
+}
+
+.form-input:focus-visible+.form-mark::after {
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: -3px;
+  width: 40px;
+  height: 40px;
+  outline: 5px solid #AF4FFF;
 }
 
 [placeholder] {
@@ -445,22 +481,6 @@
     left: 10px;
   }
 }
-
-.form__input--error {
-  outline: 1px solid red;
-  outline: none;
-}
-
-.form__input:hover {
-  border: 1px solid rgba(205, 205, 205, 1);
-
-  &:focus {
-    border: none;
-    outline: 1px solid $black;
-    box-sizing: border-box;
-  }
-}
-
 
 
 .form__input::-webkit-outer-spin-button,
