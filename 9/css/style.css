@@ -39,10 +39,20 @@
   padding-top: 10px;
   padding-bottom: 17px;
   position: relative;
+  padding: 10px 20px 0;
 }
 @media (min-width: 768px) {
   .header {
-    display: inline-flex;
+    display: flex;
+    padding: 18px 30px 0;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
+    max-width: 1440px;
+    padding: 0;
+    padding-top: 70px;
+    margin: 0 auto;
   }
 }
 
@@ -53,7 +63,7 @@
 @media (min-width: 768px) {
   .header__block {
     flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -70,16 +80,10 @@
     gap: 13px;
   }
 }
-@media (min-width: 1440px) {
-  .header__body {
-    padding-top: 70px;
-  }
-}
 
 .header__nav {
   background-color: #ffffff;
   height: 65px;
-  display: none;
 }
 @media (min-width: 768px) {
   .header__nav {
@@ -88,15 +92,10 @@
     margin-left: auto;
   }
 }
-@media (min-width: 1440px) {
-  .header__nav {
-    padding-top: 70px;
-  }
-}
 
 .header__burger {
   position: absolute;
-  top: 24px;
+  top: 28px;
   right: 20px;
   cursor: pointer;
   border: none;
@@ -168,6 +167,7 @@
   list-style-type: none;
   z-index: 10;
   min-height: 50vh;
+  display: none;
 }
 @media (min-width: 768px) {
   .header__list {
@@ -175,7 +175,12 @@
     flex-wrap: wrap;
     gap: 33px;
     min-height: 4vh;
+    align-items: center;
   }
+}
+
+.header__burger:active .header__list {
+  display: block;
 }
 
 .header__list a {
@@ -260,6 +265,13 @@
   }
 }
 
+.header__link:hover {
+  opacity: 60%;
+}
+.header__link:hover:active {
+  opacity: 30%;
+}
+
 .header__logo-text,
 .header__logo {
   display: block;
@@ -282,7 +294,6 @@
 .example__wrapper,
 .advantages__wrapper,
 .footer__wrapper,
-.header__wrapper,
 .hero__wrapper,
 .promotion__wrapper,
 .add-product__wrapper,
@@ -495,6 +506,13 @@ a {
   }
 }
 
+.hero__button:hover {
+  background-color: #5eaa2f;
+}
+.hero__button:hover:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button {
   background-color: #68b738;
   color: #ffffff;
@@ -507,6 +525,13 @@ a {
     font-size: 20px;
     line-height: 20px;
   }
+}
+
+button:hover {
+  background-color: #5eaa2f;
+}
+button:hover:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .variants-food {
@@ -525,7 +550,7 @@ a {
 @media (min-width: 1440px) {
   .variants-food__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 570px 570px;
     gap: 80px;
   }
 }
@@ -577,6 +602,10 @@ a {
   }
 }
 
+.variants-food__link:active {
+  opacity: 30%;
+}
+
 .variants-food__item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -612,6 +641,7 @@ a {
   .variants-food__title {
     padding-top: 77px;
     padding-left: 164px;
+    margin-bottom: 50px;
   }
 }
 
@@ -681,6 +711,37 @@ a {
 }
 @media (min-width: 768px) {
   .variants-food__link::after {
+    top: 10px;
+    left: 125px;
+  }
+}
+
+.variants-food__link:hover::after {
+  width: 32px;
+  height: 12px;
+  background-image: url("../img/main/cat-arrow-lg.svg");
+  background-repeat: no-repeat;
+  top: 5px;
+  left: 100px;
+}
+@media (min-width: 768px) {
+  .variants-food__link:hover::after {
+    top: 10px;
+    left: 125px;
+  }
+}
+
+.variants-food__link:active::after {
+  width: 32px;
+  height: 12px;
+  background-image: url("../img/main/cat-arrow-lg.svg");
+  background-repeat: no-repeat;
+  top: 5px;
+  left: 100px;
+  opacity: 30%;
+}
+@media (min-width: 768px) {
+  .variants-food__link:active::after {
     top: 10px;
     left: 125px;
   }
@@ -972,7 +1033,7 @@ a {
 }
 @media (min-width: 1440px) {
   .example__button {
-    left: 920px;
+    left: 1077px;
     top: -599px;
   }
 }
@@ -1249,6 +1310,13 @@ a {
   gap: 26px;
   align-items: center;
   justify-content: center;
+}
+
+.socials__link:hover {
+  fill: #68b738;
+}
+.socials__link:hover:active {
+  opacity: 30%;
 }
 
 .cooperation {
@@ -1599,8 +1667,22 @@ a {
   }
 }
 
+.product__button:hover {
+  background-color: #5eaa2f;
+}
+.product__button:hover:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .product__button-all::after {
   transform: rotate(90deg);
+}
+
+.product__button-all:hover {
+  background-color: #ebebeb;
+}
+.product__button-all:hover:active {
+  color: rgba(68, 68, 68, 0.3);
 }
 
 .product__text {
