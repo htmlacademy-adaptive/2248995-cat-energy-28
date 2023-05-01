@@ -11,8 +11,11 @@ body {
   line-height: 18px;
   list-style-type: none;
   padding: 0;
-  width: 320px;
-  margin: 0 auto;
+  margin: 0;
+
+  @include dw() {
+    margin: 0 auto;
+  }
 }
 
 img {

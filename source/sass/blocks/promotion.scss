@@ -1,17 +1,46 @@
 .promotion {
-  margin: 0;
   position: relative;
   margin-bottom: 35px;
-}
+  height: 290px;
+  background-image: url("../img/main/promotion-cat.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  padding-top: 186px;
 
-.promotion::before {
-  position: absolute;
-  content: "";
-  width: 78px;
-  height: 80px;
-  background-image: url("../img/main/present.svg");
-  top: 58px;
-  right: 122px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/main/present.svg");
+    top: 58px;
+    left: 101px;
+    background-repeat: no-repeat;
+
+    @include tw() {
+      top: 59px;
+    }
+
+    @include dw() {
+      left: 83px;
+      top: 55px;
+    }
+  }
+
+  @include tw() {
+    background-position: 100% 62%;
+    height: 200px;
+  }
+
+  @include dw() {
+    width: 245px;
+    margin-bottom: 0;
+    height: 288px;
+    padding: 0;
+    background-size: 110%;
+    background-position: 136% 0%;
+  }
 }
 
 .promotion__text {
@@ -20,7 +49,18 @@
   text-align: center;
   margin: 0;
   color: $white;
-  padding-top: 186px;
-  height: 290px;
-  background-image: url("../img/main/promotion-cat.svg");
+
+  @include tw() {
+    position: absolute;
+    top: 71px;
+    left: 439px;
+    text-align: left;
+  }
+
+  @include dw() {
+    top: 184px;
+    left: 5px;
+    text-align: center;
+    width: 100%;
+  }
 }

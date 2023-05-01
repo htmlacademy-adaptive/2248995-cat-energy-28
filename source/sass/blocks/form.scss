@@ -11,6 +11,28 @@
   padding-bottom: 24px;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+
+  @include tw() {
+    padding-bottom: 72px;
+  }
+}
+
+.form__fieldset-dw {
+  @include dw() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.form__fieldset--user .form__list {
+  @include dw() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 77px;
+    align-items: start;
+  }
 }
 
 .form__list .form__input-text:not(:last-child) {
@@ -36,21 +58,36 @@
 
 .form__fieldset--choice .form__list {
   display: grid;
-  grid-template-columns: 280px;
+  grid-template-columns: 1fr;
   row-gap: 13px;
   position: relative;
   padding-top: 22px;
+  padding-right: 40px;
+
+  @include tw() {
+    border: 1px solid rgba(231, 231, 231, 1);
+    height: 196px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    margin-bottom: 75px;
+  }
 
   &::before {
     position: absolute;
     content: "";
-    width: 320px;
+    width: calc(100% + 40px);
     height: 1px;
-    top: 120px;
+    top: 156px;
     left: -20px;
     background-color: $greydark;
+
+    @include tw() {
+      display: none;
+    }
   }
 }
+
 
 .form__input-user:not(:last-child) {
   margin-bottom: 14px;
@@ -64,6 +101,19 @@
   text-transform: uppercase;
   margin-right: 13px;
   flex-shrink: 0;
+
+  @include tw() {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__radio .form__text {
+  padding-left: 45px;
+
+  @include tw() {
+    padding-left: 60px;
+  }
 }
 
 .form__title {
@@ -71,36 +121,153 @@
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 1;
+
+
+  @include tw() {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__fieldset--add .form__title {
+  width: 160px;
+
+  @include tw() {
+    width: 250px;
+  }
+}
+
+.form__comment-text .form__title {
+  width: 144px;
+
+  @include tw() {
+    width: 214px;
+  }
+}
+
+.form__fieldset--user .form__title {
+  width: 200px;
+
+  @include tw() {
+    width: 540px;
+  }
+}
+
+.form__fieldset--add .form__border {
+  border-bottom: 2px solid rgba(104, 183, 56, 1);
+  width: calc(100% + 40px);
+  position: absolute;
+  top: -10px;
+
+  @include tw() {
+    width: calc(100% + 60px);
+    left: -30px;
+    top: -17px;
+  }
+}
+
+.form__comment-text .form__border {
+  border-bottom: 2px solid rgba(104, 183, 56, 1);
+  width: calc(100% + 40px);
+  position: absolute;
+  top: 15px;
+
+  @include tw() {
+    width: calc(100% + 60px);
+    left: -30px;
+    top: 15px;
+  }
+}
+
+.form__fieldset--user .form__border {
+  border-top: 2px solid rgba(104, 183, 56, 1);
+  width: calc(100% + 40px);
+  position: absolute;
+  top: -71px;
+
+  @include tw() {
+    width: calc(100% + 60px);
+    left: -30px;
+    top: -52px;
+  }
+
+  @include dw() {
+    width: calc(100% + 138px);
+  }
 }
 
 .form__comment-text {
   display: grid;
   row-gap: 37px;
   margin-bottom: 22px;
+  margin-left: 1px;
+  position: relative;
+
+  @include tw() {
+    row-gap: 76px;
+    margin-left: 3px;
+  }
 }
 
-.form__buttton {
-  border: none;
-  width: 280px;
-  padding: 9px 15px;
-  margin-bottom: 21px;
+.form__checkbox .form__text {
+  padding-left: 46px;
+
+  @include tw() {
+    padding-left: 60px;
+  }
 }
 
-.form__fieldset--add .form__list {
-  flex-direction: column;
+.form__fieldset--user {
+  margin-top: 26px;
 }
 
 .form__fieldset--user legend {
   margin-bottom: 35px;
-
 }
 
-.form__checkbox:not(:last-child) {
-  margin-bottom: 12px;
+.form__fieldset--user,
+.form__fieldset--add {
+  position: relative;
 }
 
 .form__fieldset--add ul {
-  margin-top: 13px;
+  display: block;
+  margin-top: 50px;
+  padding: 0;
+  margin-bottom: 50px;
+
+  @include tw() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    margin-top: 57px;
+    max-width: 900px;
+  }
+
+  @include dw() {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1440px;
+    margin-bottom: 61px;
+  }
+}
+
+.form__fieldset--add .form__checkbox:not(:last-child) {
+  margin-bottom: 42px;
+
+  @include dw() {
+    margin-bottom: 0;
+  }
+}
+
+.form__fieldset--choice .form__radio:not(:last-child) {
+  margin-bottom: 13px;
+
+  @include dw() {
+    margin: 0;
+  }
 }
 
 .form__input-user {
@@ -121,10 +288,102 @@
   }
 }
 
-.form__svg {
+.form__label svg {
   position: absolute;
-  left: 245px;
-  top: 15px
+  right: 15px;
+  top: 15px;
+
+  @include tw() {
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.form__input--error {
+  outline: 1px solid red;
+}
+
+// .form__input--error:focus-visible svg {
+//   stroke: red;
+//   fill: red;
+// }
+
+.form__input {
+  border: 1px solid $greydark;
+  outline: none;
+
+  &:hover {
+    border: 1px solid rgba(205, 205, 205, 1);
+    outline: none;
+  }
+
+  &:focus {
+    border: none;
+    outline: 1px solid #000000;
+  }
+
+  &:focus-visible {
+    border: none;
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+  }
+}
+
+.form-input:focus-visible+.form-mark::after {
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: -3px;
+  width: 40px;
+  height: 40px;
+  outline: 5px solid #AF4FFF;
+}
+
+[placeholder] {
+  text-transform: uppercase;
+  padding: 14px 12px 13px 15px;
+  font-family: $fontoswald;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(68, 68, 68, 1);
+
+  @include tw() {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 55px 10px 20px;
+  }
+}
+
+.form__button-tip {
+  width: 100%;
+
+  @include tw() {
+    display: flex;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+}
+
+.form__button {
+  border: none;
+  min-width: 282px;
+  max-width: 400px;
+  padding: 9px 15px;
+  margin-bottom: 21px;
+
+
+  @include tw() {
+    padding: 16px 40px;
+    margin-bottom: 0;
+    margin-right: 64px;
+    max-width: 568px;
+  }
+
+  @include dw() {
+    width: 568px;
+    margin-right: 84px;
+  }
 }
 
 .form__tip {
@@ -132,26 +391,110 @@
   justify-content: center;
 }
 
-.form__input {
-  border: 1px solid $greydark;
+.form__control-input {
+  position: relative;
 }
 
-[placeholder] {
-  text-transform: uppercase;
-  padding: 14px 20px 13px;
-  font-family: $fontoswald;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  color: rgba(68, 68, 68, 1);
+.form__checkbox .form__mark {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(205, 205, 205, 1);
+  top: -7px;
+  left: 0;
+
+  &:hover {
+    border: 1px solid rgba(186, 186, 186, 1);
+  }
+
+  @include tw() {
+    width: 40px;
+    height: 40px;
+    top: -15px;
+    left: 0;
+  }
 }
+
+.form__input[type="checkbox"]:checked+.form__mark::before {
+  background-image: url("./../img/main/checked-small.svg");
+  background-repeat: no-repeat;
+  top: 7px;
+  left: 6px;
+  height: 14px;
+  width: 18px;
+  position: absolute;
+  content: "";
+
+  @include tw() {
+    background-image: url("./../img/main/checked.svg");
+    height: 18px;
+    width: 24px;
+    top: 9px;
+    left: 7px;
+  }
+}
+
+.form__control-radio {
+  position: relative;
+}
+
+.form__radio .form__mark {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(205, 205, 205, 1);
+  top: -7px;
+  left: 0;
+  border-radius: 50%;
+
+  &:hover {
+    border: 1px solid rgba(186, 186, 186, 1);
+  }
+
+
+  @include tw() {
+    width: 40px;
+    height: 40px;
+    top: -15px;
+    left: 0;
+  }
+}
+
+.form__input[type="radio"]:checked+.form__mark::before {
+  border: 1px solid rgba(104, 183, 56, 1);
+  background-color: rgba(104, 183, 56, 1);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  top: 7px;
+  left: 8px;
+  height: 13px;
+  width: 13px;
+  position: absolute;
+  content: "";
+
+  @include tw() {
+    height: 18px;
+    width: 18px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
 
 .form__input::-webkit-outer-spin-button,
+/*stylelint-disable-line*/
 .form__input::-webkit-inner-spin-button {
+  /*stylelint-disable-line*/
   appearance: none;
+  /*stylelint-disable-line*/
   margin: 0;
+  /*stylelint-disable-line*/
 }
 
 .form__input[type=number] {
+  /*stylelint-disable-line*/
   -moz-appearance: textfield;
+  /*stylelint-disable-line*/
 }

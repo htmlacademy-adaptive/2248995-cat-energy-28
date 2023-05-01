@@ -1,5 +1,9 @@
 .advantages {
   padding-bottom: 49px;
+
+  @include tw() {
+    padding-bottom: 30px;
+  }
 }
 
 .advantages__title {
@@ -7,36 +11,76 @@
   font-size: 36px;
   line-height: 40px;
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 60px;
   font-style: normal;
   font-weight: 400;
+
+  @include tw() {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .advantages__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @include tw() {
+    display: grid;
+    grid-template-columns: 247px 250px;
+    column-gap: 153px;
+    row-gap: 37px;
+  }
+
+  @include dw() {
+    grid-template-columns: 230px 246px 248px 250px;
+    column-gap: 91px;
+  }
 }
 
 .advantages__item {
   position: relative;
-  padding-left: 80px;
 
   &:not(:last-child) {
     margin-bottom: 26px;
+
+    @include tw() {
+      margin-bottom: 0;
+    }
   }
 }
 
 .advantages__item::before {
   position: absolute;
   content: "";
-  background-color: $green;
+  background-color: rgba(104, 183, 56, 1);
   left: 0;
   width: 60px;
   height: 60px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  @include tw() {
+    width: 80px;
+    height: 80px;
+  }
 }
+
+.advantages__text {
+  margin: 0;
+  padding-left: 80px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include tw() {
+    padding: 0;
+    padding-top: 115px;
+    width: 245px;
+    padding-bottom: 86px;
+  }
+}
+
 
 .advantages__item--leaf::before {
   background-image: url("../img/main/leaf.svg");
@@ -52,4 +96,51 @@
 
 .advantages__item--watch::before {
   background-image: url("../img/main/watch.svg");
+}
+
+.advantages__item::after {
+  position: absolute;
+  content: "";
+  width: 112px;
+  height: 280px;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 120px;
+  z-index: -1;
+}
+
+.advantages__item--leaf::after {
+  background-image: url("../img/main/advantafes-number-leaf.svg");
+  display: none;
+
+  @include tw() {
+    display: block;
+  }
+}
+
+.advantages__item--powder::after {
+  background-image: url("../img/main/advantafes-number-powder.svg");
+  display: none;
+
+  @include tw() {
+    display: block;
+  }
+}
+
+.advantages__item--fork::after {
+  background-image: url("../img/main/advantafes-number-fork.svg");
+  display: none;
+
+  @include tw() {
+    display: block;
+  }
+}
+
+.advantages__item--watch::after {
+  background-image: url("../img/main/advantafes-number-watch.svg");
+  display: none;
+
+  @include tw() {
+    display: block;
+  }
 }

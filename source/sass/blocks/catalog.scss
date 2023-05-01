@@ -1,3 +1,31 @@
+.catalog {
+  position: relative;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 20px);
+    background-color: rgba(235, 235, 235, 1);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+
+    @include tw() {
+      display: none;
+    }
+  }
+
+  @include tw() {
+    margin-bottom: 43px;
+  }
+
+  @include dw() {
+    margin-bottom: 51px;
+  }
+}
+
 .catalog__title {
   font-family: $fontoswald;
   font-style: normal;
@@ -5,12 +33,33 @@
   font-size: 36px;
   line-height: 36px;
   margin: 0;
-  padding-top: 27px;
+  padding-top: 52px;
   padding-bottom: 41px;
+  position: relative;
+
+  @include tw() {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 163px;
+    padding-top: 64px;
+  }
 }
 
 .catalog__list {
   list-style-type: none;
   padding: 0;
   margin: 0;
+
+  @include tw() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 141px;
+  }
+
+  @include dw() {
+    grid-template-columns: repeat(4, 245px);
+    row-gap: 143px;
+    column-gap: 80px;
+  }
 }

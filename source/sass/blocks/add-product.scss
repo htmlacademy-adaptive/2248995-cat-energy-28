@@ -1,6 +1,31 @@
 .add-product {
-  margin: 0;
   padding-top: 25px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: 40px;
+    left: 270px;
+    display: none;
+
+    @include tw() {
+      left: 468px;
+      top: 50px;
+    }
+
+    @include dw() {
+      left: 547px;
+      top: 47px;
+    }
+  }
+
+  @include tw() {
+    margin-bottom: 76px;
+  }
 }
 
 .add-product__main-title {
@@ -10,17 +35,72 @@
   line-height: 24px;
   margin: 0;
   margin-bottom: 36px;
+
+  @include tw() {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 80px;
+    margin-left: 37px;
+  }
+
+  @include dw() {
+    margin-bottom: 81px;
+    margin-left: 0;
+  }
+}
+
+.add-product-block {
+  @include dw() {
+    display: flex;
+    gap: 80px;
+  }
 }
 
 .add-product__list {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @include tw() {
+    border: 1px solid rgba(205, 205, 205, 1);
+    padding-left: 38px;
+    padding-right: 38px;
+    margin-bottom: 69px;
+  }
+
+  @include dw() {
+    border: none;
+    max-width: 895px;
+    padding: 0;
+  }
 }
 
 .add-product__item {
   padding-top: 13px;
   padding-bottom: 19px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: rgba(235, 235, 235, 1);
+    height: 1px;
+    top: 0;
+    left: 0;
+  }
+
+  @include tw() {
+    display: grid;
+    grid-template-columns: 325px 1fr;
+  }
+
+  @include dw() {
+    grid-template-columns: 288px 285px 244px;
+    column-gap: 40px;
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
 }
 
 .add-product__title {
@@ -31,16 +111,46 @@
   font-weight: 400;
   margin: 0;
   margin-bottom: 13px;
+
+  @include tw() {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include dw() {
+    align-self: end;
+  }
 }
 
 .add-product__description {
   display: grid;
-  grid-template-columns: 200px 80px;
+  grid-template-columns: 200px 81px;
   margin: 0;
   margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include tw() {
+    font-size: 16px;
+  }
+
+  @include dw() {
+    align-self: end;
+  }
 }
 
 .add-product__button {
   margin: 0;
   display: flex;
+  justify-content: center;
+
+  @include tw() {
+    width: 100%;
+  }
+
+  @include dw() {
+    width: 244px;
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
 }

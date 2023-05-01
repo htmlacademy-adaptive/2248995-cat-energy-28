@@ -1,13 +1,33 @@
 .cooperation {
-  padding-top: 26px;
   background-color: $grey;
+
+  @include tw() {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  @include dw() {
+    position: relative;
+  }
 }
 
 .cooperation__header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 20px 26px;
+  padding: 26px 20px 26px;
+
+  @include tw() {
+    padding: 56px 70px;
+  }
+
+  @include dw() {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 565px;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 1);
+  }
 }
 
 .cooperation__title {
@@ -17,8 +37,42 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+
+  @include tw() {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .cooperation__address {
   font-style: normal;
+
+  @include tw() {
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  @include dw() {
+    text-align: left;
+  }
+}
+
+.cooperation__img {
+  border: none;
+  display: block;
+  margin: 0;
+  height: 362px;
+  width: 100%;
+
+  @include tw() {
+    height: 400px;
+  }
+}
+
+.cooperation--color {
+  background-color: rgba(242, 242, 242, 1);
 }

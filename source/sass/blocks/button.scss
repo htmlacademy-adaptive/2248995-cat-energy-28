@@ -1,6 +1,20 @@
 .button {
-  background-color: $green;
+  background-color: rgba(104, 183, 56, 1);
   color: $white;
   text-transform: uppercase;
   font-family: $fontoswald;
+  text-align: center;
+
+  @include tw() {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+button:hover {
+  background-color: rgba(94, 170, 47, 1);
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
