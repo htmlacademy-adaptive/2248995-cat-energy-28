@@ -10,7 +10,6 @@
   &::before {
     position: absolute;
     content: "";
-    width: calc(100% + 60px);
     height: 1px;
     background-color: $greydark;
     top: -15px;

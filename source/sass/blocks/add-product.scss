@@ -5,20 +5,20 @@
   &::after {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 100vw;
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
     top: 40px;
-    left: 270px;
-    display: none;
+    z-index: -1;
+    box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
 
     @include tw() {
-      left: 468px;
       top: 50px;
+      width: 100vw;
+      right: 0;
     }
 
     @include dw() {
-      left: 547px;
       top: 47px;
     }
   }
@@ -35,12 +35,17 @@
   line-height: 24px;
   margin: 0;
   margin-bottom: 36px;
+  background-color: #ffffff;
+  width: 253px;
+
 
   @include tw() {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
-    margin-left: 37px;
+    width: 411px;
+    padding-left: 37px;
+
   }
 
   @include dw() {

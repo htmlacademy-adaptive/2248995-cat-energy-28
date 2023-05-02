@@ -62,7 +62,7 @@
   row-gap: 13px;
   position: relative;
   padding-top: 22px;
-  padding-right: 40px;
+  padding-right: 23px;
 
   @include tw() {
     border: 1px solid rgba(231, 231, 231, 1);
@@ -156,46 +156,103 @@
   }
 }
 
-.form__fieldset--add .form__border {
-  border-bottom: 2px solid rgba(104, 183, 56, 1);
-  width: calc(100% + 40px);
-  position: absolute;
-  top: -10px;
+.form__fieldset--user .form__title {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: 16px;
+    z-index: -2;
+    box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
 
-  @include tw() {
-    width: calc(100% + 60px);
-    left: -30px;
-    top: -17px;
+    @include tw() {
+      top: 19px;
+      right: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 220px;
+    height: 60px;
+    background-color: #ffffff;
+    top: 0;
+    left: -20px;
+    z-index: -1;
+
+    @include tw() {
+      width: 559px;
+    }
   }
 }
 
-.form__comment-text .form__border {
-  border-bottom: 2px solid rgba(104, 183, 56, 1);
-  width: calc(100% + 40px);
-  position: absolute;
-  top: 15px;
+.form__comment-text .form__title {
 
-  @include tw() {
-    width: calc(100% + 60px);
-    left: -30px;
-    top: 15px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: 16px;
+    z-index: -2;
+    box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
+
+    @include tw() {
+      right: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 165px;
+    height: 40px;
+    background-color: #ffffff;
+    top: 0;
+    left: -20px;
+    z-index: -1;
+
+    @include tw() {
+      width: 222px;
+    }
   }
 }
 
-.form__fieldset--user .form__border {
-  border-top: 2px solid rgba(104, 183, 56, 1);
-  width: calc(100% + 40px);
-  position: absolute;
-  top: -71px;
+.form__fieldset--add .form__title {
 
-  @include tw() {
-    width: calc(100% + 60px);
-    left: -30px;
-    top: -52px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: 16px;
+    z-index: -2;
+    box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
+
+    @include tw() {
+      top: 21px;
+      right: 0;
+    }
   }
 
-  @include dw() {
-    width: calc(100% + 138px);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 185px;
+    height: 40px;
+    background-color: #ffffff;
+    top: 0;
+    left: -20px;
+    z-index: -1;
+
+    @include tw() {
+      width: 262px;
+    }
   }
 }
 
@@ -314,18 +371,10 @@
 
   &:hover {
     border: 1px solid rgba(205, 205, 205, 1);
-    outline: none;
   }
 
   &:focus {
-    border: none;
-    outline: 1px solid #000000;
-  }
-
-  &:focus-visible {
-    border: none;
-    outline: 2px solid #000000;
-    outline-offset: 2px;
+    border: 1px solid #000000;
   }
 }
 

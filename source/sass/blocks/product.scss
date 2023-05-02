@@ -25,6 +25,7 @@
   background-color: rgba(235, 235, 235, 1);
   height: 1px;
   left: -20px;
+  top: 0;
 
   @include tw() {
     display: none;
