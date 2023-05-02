@@ -235,6 +235,15 @@
   z-index: 3;
 }
 
+.header__body:hover {
+  opacity: 80%;
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
+
 .header__logo-text:focus-visible,
 .header__logo:focus-visible,
 .header__link:focus-visible,
