@@ -105,7 +105,7 @@
                     name="e-mail" required>
                   <svg class="form__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Емэил.">
-                    <path d="M1.5 8.5V16.5H18.5V8.5M1.5 3.5H18.5V5.5L10 11.5L1.5 5.5V3.5Z" stroke="black"
+                    <path d="M1.5 8.5V16.5H18.5V8.5M1.5 3.5H18.5V5.5L10 11.5L1.5 5.5V3.5Z" stroke="currentColor"
                       stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </label>
@@ -119,7 +119,7 @@
                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Телефон.">
                     <path d="M7 8H15.5M15.5 8L13 5.5M15.5 8L13 10.5M5.5
                       0.5V5.5H2.5V10.5H5.5V15.5H3C1.5
-                      15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z" stroke="black" stroke-linecap="round"
+                      15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z" stroke="currentColor" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
                 </label>
@@ -486,6 +486,14 @@
       </div>
     </div>
   </footer>
+  <script>
+    const header = document.querySelector('.header');
+    const button = header.querySelector('.header__burger');
+
+    button.addEventListener('click', () => {
+      header.classList.toggle('header--nav-opened')
+    })
+  </script>
 </body>
 
 </html>

@@ -574,6 +574,14 @@
       </div>
     </div>
   </footer>
+  <script>
+    const header = document.querySelector('.header');
+    const button = header.querySelector('.header__burger');
+
+    button.addEventListener('click', () => {
+      header.classList.toggle('header--nav-opened')
+    })
+  </script>
 </body>
 
 </html>

@@ -79,15 +79,49 @@
   top: 0;
   left: 122px;
   padding: 0;
+  background-color: transparent;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 256px;
+    width: 4px;
+    background-color: rgba(102, 102, 102, 1);
+    border-radius: 2px;
+    cursor: pointer;
+
+    @include tw() {
+      height: 512px;
+    }
+  }
 
   @include tw() {
     left: 335px;
   }
 
   @include dw() {
-    left: 926px;
+    left: 921px;
     top: -599px;
   }
+}
+
+.example__button:hover::after {
+  background-color: rgba(104, 183, 56, 1);
+}
+
+.example__button:active::after {
+  background-color: rgba(94, 170, 47, 1);
+}
+
+.example__button:focus::after {
+  background-color: rgba(94, 170, 47, 1);
+}
+
+.example__button:focus {
+  outline: none;
 }
 
 .example__button svg {
@@ -97,6 +131,15 @@
     width: 40px;
     height: 512px;
   }
+}
+
+.example__button:hover svg {
+  color: rgba(104, 183, 56, 1);
+  fill: rgba(104, 183, 56, 1);
+}
+
+.example__button:focus svg {
+  color: rgba(94, 170, 47, 1);
 }
 
 .example__img {

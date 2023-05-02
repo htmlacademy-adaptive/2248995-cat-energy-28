@@ -357,13 +357,17 @@
 }
 
 .form__input--error {
-  outline: 1px solid red;
+  border: 1px solid red;
+  outline: none;
 }
 
-// .form__input--error:focus-visible svg {
-//   stroke: red;
-//   fill: red;
-// }
+.form__input--error+svg {
+  color: red;
+}
+
+.form__input--error+svg {
+  color: #000000;
+}
 
 .form__input {
   border: 1px solid $greydark;
@@ -378,14 +382,8 @@
   }
 }
 
-.form-input:focus-visible+.form-mark::after {
-  position: absolute;
-  content: "";
-  top: -3px;
-  left: -3px;
-  width: 40px;
-  height: 40px;
-  outline: 5px solid #AF4FFF;
+.form__input:focus+svg {
+  color: rgba(104, 183, 56, 1);
 }
 
 [placeholder] {
