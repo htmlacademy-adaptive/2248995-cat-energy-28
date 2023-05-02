@@ -239,7 +239,7 @@
   }
 }
 
-.product__link-img img {
+.product__link-img {
   padding-left: 36px;
   padding-top: 8px;
   grid-column: 1/2;
@@ -257,6 +257,7 @@
     border: none;
     outline: 2px solid orange;
   }
+
 
   @include tw() {
     display: flex;
