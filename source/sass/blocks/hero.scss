@@ -15,6 +15,10 @@
   @include tw() {
     display: none;
   }
+}
+
+.hero__header--dw {
+  display: none;
 
   @include dw() {
     position: absolute;

@@ -110,12 +110,29 @@
   }
 }
 
+.header--nojs .header__list {
+  position: absolute;
+  z-index: 100;
+  display: none;
+  width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  background-color: #ffffff;
+
+  @include tw() {
+    position: static;
+    display: flex;
+    text-align: center;
+  }
+}
+
 .header .header__list {
   list-style-type: none;
   padding: 0;
   text-align: center;
   margin: 0;
   display: none;
+  background-color: transparent;
 
   @include tw() {
     display: flex;
@@ -131,6 +148,7 @@
   width: 100%;
   margin-left: -20px;
   margin-right: -20px;
+
 }
 
 .header--nav-opened .header__burger {
@@ -143,6 +161,8 @@
     transform: rotate(-45deg);
   }
 }
+
+
 
 .header__list a {
   list-style: none;
@@ -253,6 +273,10 @@
 .header__logo-text {
   padding-top: 24px;
   padding-bottom: 24px;
+
+  @include dw() {
+    padding: 9px 0;
+  }
 }
 
 .header__body:hover {
@@ -272,8 +296,7 @@
 .variants-food__link:focus-visible,
 .variants-food__link:focus-visible:after,
 .logo-text:focus-visible,
-.footer__copyright-link:focus-visible,
-.form__textarea:focus-visible {
+.footer__copyright-link:focus-visible {
   border: none;
   outline: 2px solid orange;
   outline-offset: 7px;

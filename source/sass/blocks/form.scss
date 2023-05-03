@@ -371,7 +371,6 @@
 
 .form__input {
   border: 1px solid $greydark;
-  outline: none;
 
   &:hover {
     border: 1px solid rgba(205, 205, 205, 1);
@@ -463,6 +462,17 @@
   }
 }
 
+.form__input--checkbox:focus-visible+.form__mark {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 0;
+  outline: 2px solid orange;
+  outline-offset: 2px;
+  width: 40px;
+  height: 40px;
+}
+
 .form__input[type="checkbox"]:checked+.form__mark::before {
   background-image: url("./../img/main/checked-small.svg");
   background-repeat: no-repeat;
@@ -507,6 +517,17 @@
     top: -15px;
     left: 0;
   }
+}
+
+.form__input--radio:focus-visible+.form__mark {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 0;
+  outline: 2px solid orange;
+  outline-offset: 2px;
+  width: 40px;
+  height: 40px;
 }
 
 .form__input[type="radio"]:checked+.form__mark::before {
