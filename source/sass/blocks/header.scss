@@ -41,7 +41,7 @@
   }
 }
 
-.header__burger {
+.header--nav-opened .header__burger {
   position: absolute;
   top: 24px;
   right: 20px;
@@ -58,7 +58,7 @@
   }
 }
 
-.header__burger::after {
+.header--nav-opened .header__burger::after {
   content: "";
   position: absolute;
   background-color: $black;
@@ -73,25 +73,25 @@
   }
 }
 
-.header__burger:hover:after {
+.header--nav-opened .header__burger:hover:after {
   background-color: rgba(104, 183, 56, 1);
   box-shadow: 0 8px 0 0 rgba(104, 183, 56, 1), 0 16px 0 0 rgba(104, 183, 56, 1);
 }
 
-.header__burger:hover::before {
+.header--nav-opened .header__burger:hover::before {
   background-color: rgba(104, 183, 56, 1);
 }
 
-.header__burger:active::after {
+.header--nav-opened .header__burger:active::after {
   background-color: rgba(104, 183, 56, 0.3);
   box-shadow: 0 8px 0 0 rgba(104, 183, 56, 0.3), 0 16px 0 0 rgba(104, 183, 56, 0.3);
 }
 
-.header__burger:active::before {
+.header--nav-opened .header__burger:active::before {
   background-color: rgba(104, 183, 56, 0.3);
 }
 
-.header__burger {
+.header--nav-opened .header__burger {
 
   &::after,
   &::before {
@@ -110,22 +110,6 @@
   }
 }
 
-.header--nojs .header__list {
-  position: absolute;
-  z-index: 100;
-  display: none;
-  width: 100%;
-  margin-left: -20px;
-  margin-right: -20px;
-  background-color: #ffffff;
-
-  @include tw() {
-    position: static;
-    display: flex;
-    text-align: center;
-  }
-}
-
 .header .header__list {
   list-style-type: none;
   padding: 0;
@@ -137,6 +121,22 @@
   @include tw() {
     display: flex;
     gap: 33px;
+  }
+}
+
+.header--nojs .header__list {
+  position: absolute;
+  z-index: 100;
+  display: block;
+  width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  background-color: #ffffff;
+
+  @include tw() {
+    position: static;
+    display: flex;
+    text-align: center;
   }
 }
 
@@ -161,8 +161,6 @@
     transform: rotate(-45deg);
   }
 }
-
-
 
 .header__list a {
   list-style: none;
@@ -191,7 +189,7 @@
   &::after {
     position: absolute;
     content: "";
-    width: calc(100% + 40px);
+    width: calc(100% + 20px);
     left: -20px;
     top: 0;
     background-color: rgba(230, 230, 230, 1);
