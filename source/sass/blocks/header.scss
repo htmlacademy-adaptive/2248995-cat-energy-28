@@ -41,7 +41,7 @@
   }
 }
 
-.header--nav-opened .header__burger {
+.header .header__burger {
   position: absolute;
   top: 24px;
   right: 20px;
@@ -52,62 +52,55 @@
   display: block;
   background-color: #ffffff;
 
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 1.5px;
+    background-color: #000000;
+    top: 0;
+    right: 0;
+  }
+
+  &::after {
+    top: 16px;
+    box-shadow: 0 -8px 0 0 #000000;
+  }
+
   @include tw() {
     display: none;
     position: relative;
   }
 }
 
-.header--nav-opened .header__burger::after {
-  content: "";
-  position: absolute;
-  background-color: $black;
-  width: 24px;
-  height: 1.5px;
-  right: 0;
-  top: 0;
-  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
-
-  @include tw() {
-    display: none;
-  }
-}
-
-.header--nav-opened .header__burger:hover:after {
-  background-color: rgba(104, 183, 56, 1);
-  box-shadow: 0 8px 0 0 rgba(104, 183, 56, 1), 0 16px 0 0 rgba(104, 183, 56, 1);
-}
-
-.header--nav-opened .header__burger:hover::before {
-  background-color: rgba(104, 183, 56, 1);
-}
-
-.header--nav-opened .header__burger:active::after {
-  background-color: rgba(104, 183, 56, 0.3);
-  box-shadow: 0 8px 0 0 rgba(104, 183, 56, 0.3), 0 16px 0 0 rgba(104, 183, 56, 0.3);
-}
-
-.header--nav-opened .header__burger:active::before {
-  background-color: rgba(104, 183, 56, 0.3);
-}
-
 .header--nav-opened .header__burger {
-
-  &::after,
-  &::before {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 1.5px;
-    background-color: $black;
-    top: 2px;
+  &::after {
+    transform: rotate(-45deg);
+    width: 29px;
+    top: 8px;
     right: -3px;
-    transition: transform 0.3s ease-in;
-
-    @include tw() {
-      display: none;
-    }
+    box-shadow: none;
   }
+
+  &::before {
+    transform: rotate(45deg);
+    width: 29px;
+    top: 8px;
+    right: -3px;
+
+  }
+}
+
+.header__burger:hover:after,
+.header__burger:hover::before {
+  background-color: rgba(104, 183, 56, 1);
+}
+
+.header__burger:active::after,
+.header__burger:active::before {
+  background-color: rgba(104, 183, 56, 0.3);
+  width: 28px;
 }
 
 .header .header__list {
@@ -122,6 +115,10 @@
     display: flex;
     gap: 33px;
   }
+}
+
+.header--nojs .header__burger {
+  display: none;
 }
 
 .header--nojs .header__list {
@@ -149,17 +146,6 @@
   margin-left: -20px;
   margin-right: -20px;
 
-}
-
-.header--nav-opened .header__burger {
-  &::after {
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &::before {
-    transform: rotate(-45deg);
-  }
 }
 
 .header__list a {

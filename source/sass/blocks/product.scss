@@ -201,6 +201,10 @@
       left: 56px;
     }
   }
+
+  &::after {
+    transform: rotate(90deg);
+  }
 }
 
 .product__text {
