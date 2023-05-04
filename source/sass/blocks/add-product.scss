@@ -9,19 +9,32 @@
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
     top: 40px;
-    z-index: -1;
+    left: 0;
+    z-index: -2;
     box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
-
-    @include tw() {
-      top: 50px;
-      width: 100vw;
-      right: 0;
-    }
-
-    @include dw() {
-      top: 47px;
-    }
   }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 293px;
+    height: 40px;
+    background-color: #ffffff;
+    top: 20px;
+    left: -20px;
+    z-index: -1;
+  }
+
+  @include tw() {
+    top: 50px;
+    width: 100vw;
+    right: 0;
+  }
+
+  @include dw() {
+    top: 47px;
+  }
+
 
   @include tw() {
     margin-bottom: 76px;
