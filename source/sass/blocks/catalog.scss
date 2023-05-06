@@ -5,10 +5,9 @@
   &::after {
     position: absolute;
     content: "";
-    width: calc(100% + 20px);
+    width: 100%;
     background-color: rgba(235, 235, 235, 1);
     height: 1px;
-    bottom: 0;
     left: 0;
     top: 20px;
 
@@ -22,7 +21,7 @@
   }
 
   @include dw() {
-    margin-bottom: 51px;
+    margin-bottom: 0;
   }
 }
 

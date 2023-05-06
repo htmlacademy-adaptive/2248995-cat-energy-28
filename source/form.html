@@ -3,15 +3,16 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Kat energy</title>
+
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="favicon.ico ">
+  <link rel="icon" type="image/png" href="img/favicon/152.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <title>Kat energy</title>
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--nojs">
     <div class="header__block wrapper">
       <div class=" header__body ">
         <a class=" header__logo logo" href="index.html">
@@ -73,21 +74,24 @@
               <ul class="form__list">
                 <li class="form__radio">
                   <label class="form__label form__control-radio">
-                    <input class="form__input visually-hidden" type="radio" checked name="choice" value="weight-loss">
+                    <input class="form__input form__input--radio visually-hidden" type="radio" checked name="choice"
+                      value="weight-loss">
                     <span class="form__mark"></span>
                     <span class="form__text">похудение</span>
                   </label>
                 </li>
                 <li class="form__radio">
                   <label class="form__label form__control-radio">
-                    <input class="form__input visually-hidden" type="radio" name="choice" value="weight-gain">
+                    <input class="form__input form__input--radio
+                    visually-hidden" type="radio" name="choice" value="weight-gain">
                     <span class="form__mark"></span>
                     <span class="form__text">Набор массы</span>
                   </label>
                 </li>
                 <li class="form__radio">
                   <label class="form__label form__control-radio">
-                    <input class="form__input visually-hidden" type="radio" name="choice" value="dont-know">
+                    <input class="form__input form__input--radio visually-hidden" type="radio" name="choice"
+                      value="dont-know">
                     <span class="form__mark"></span>
                     <span class="form__text">Не знаю (Нужен ваш совет)</span>
                   </label>
@@ -95,9 +99,8 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="form__fieldset form__fieldset--user">
+          <fieldset class="form__fieldset form__fieldset--user form__line">
             <legend class="form__title">Контактные данные (владельца кота)</legend>
-            <span class="form__border"></span>
             <ul class="form__list">
               <li class="form__input-user">
                 <label class="form__label">
@@ -106,7 +109,7 @@
                     name="e-mail" required>
                   <svg class="form__svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Емэил.">
-                    <path d="M1.5 8.5V16.5H18.5V8.5M1.5 3.5H18.5V5.5L10 11.5L1.5 5.5V3.5Z" stroke="black"
+                    <path d="M1.5 8.5V16.5H18.5V8.5M1.5 3.5H18.5V5.5L10 11.5L1.5 5.5V3.5Z" stroke="currentColor"
                       stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </label>
@@ -120,49 +123,49 @@
                     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Телефон.">
                     <path d="M7 8H15.5M15.5 8L13 5.5M15.5 8L13 10.5M5.5
                       0.5V5.5H2.5V10.5H5.5V15.5H3C1.5
-                      15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z" stroke="black" stroke-linecap="round"
+                      15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z" stroke="currentColor" stroke-linecap="round"
                       stroke-linejoin="round" />
                   </svg>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <div class="form__comment">
+          <div class="form__comment form__line">
             <label class="form__comment-text">
-              <span class="form__title">Комментарий</span>
-              <span class="form__border"></span>
+              <legend class="form__title">Комментарий</legend>
               <textarea class="form__textarea" name="comment" cols="35" rows="7"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </div>
-          <fieldset class="form__fieldset form__fieldset--add">
+          <fieldset class="form__fieldset form__fieldset--add form__line">
             <legend class="form__title">Дополнительно</legend>
-            <span class="form__border"></span>
             <ul class="form__list">
               <li class="form__checkbox">
                 <label class="form__label form__control-input">
-                  <input class="form__input visually-hidden" type="checkbox" name="sweetener" checked>
+                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="sweetener"
+                    checked>
                   <span class="form__mark"></span>
                   <span class="form__text">сахарозаменитель</span>
                 </label>
               </li>
               <li class="form__checkbox">
                 <label class="form__label form__control-input ">
-                  <input class="form__input visually-hidden" type="checkbox" name="drinking-water">
+                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox"
+                    name="drinking-water">
                   <span class="form__mark"></span>
                   <span class="form__text">питьевая вода</span>
                 </label>
               </li>
               <li class="form__checkbox">
                 <label class="form__label form__control-input">
-                  <input class="form__input visually-hidden" type="checkbox" name="milk">
+                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="milk">
                   <span class="form__mark"></span>
                   <span class="form__text">молоко</span>
                 </label>
               </li>
               <li class="form__checkbox">
                 <label class="form__label form__control-input">
-                  <input class="form__input visually-hidden" type="checkbox" name="vitamins">
+                  <input class="form__input form__input--checkbox visually-hidden" type="checkbox" name="vitamins">
                   <span class="form__mark"></span>
                   <span class="form__text">витамины</span>
                 </label>
@@ -180,9 +183,12 @@
       <div class="cooperation__wrapper">
         <div class="cooperation__header">
           <h3 class="cooperation__title">приглашаем <br> к сотрудничеству <br> дилеров!</h3>
-          <address class="cooperation__address">ул. Большая <br>
-            Конюшенная, д. 19/8 <br>
-            Санкт-Петербург
+          <address class="cooperation__address">
+            <span>
+              ул. Большая<br>
+              Конюшенная, д. 19/8 <br>
+            </span>
+            <span>Санкт-Петербург</span>
           </address>
         </div>
         <iframe class="cooperation__img" width="320" allowfullscreen height="362" alt="Адресс компании:ул. Большая
@@ -489,6 +495,17 @@
       </div>
     </div>
   </footer>
+  <script>
+    const header = document.querySelector('.header');
+    const button = header.querySelector('.header__burger');
+
+    button.addEventListener('click', () => {
+      header.classList.toggle('header--nav-opened')
+    })
+  </script>
+  <script>
+    document.querySelector('.header').classList.remove('header--nojs');
+  </script>
 </body>
 
 </html>

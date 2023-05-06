@@ -25,6 +25,7 @@
   background-color: rgba(235, 235, 235, 1);
   height: 1px;
   left: -20px;
+  top: 0;
 
   @include tw() {
     display: none;
@@ -50,7 +51,7 @@
 }
 
 .product__link {
-  width: 76px;
+  width: 85px;
 
   &:hover {
     opacity: 60%;
@@ -200,25 +201,9 @@
       left: 56px;
     }
   }
-}
 
-.product__button:hover {
-  background-color: rgba(94, 170, 47, 1);
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
-}
-
-.product__button-all::after {
-  transform: rotate(90deg);
-}
-
-.product__button-all:hover {
-  background-color: rgba(235, 235, 235, 1);
-
-  &:active {
-    color: rgba(68, 68, 68, 0.3);
+  &::after {
+    transform: rotate(90deg);
   }
 }
 

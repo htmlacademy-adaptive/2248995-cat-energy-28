@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--nojs">
     <div class="header__block wrapper">
       <div class="header__body">
         <a class="header__logo logo" href="index.html">
@@ -574,6 +574,17 @@
       </div>
     </div>
   </footer>
+  <script>
+    const header = document.querySelector('.header');
+    const button = header.querySelector('.header__burger');
+
+    button.addEventListener('click', () => {
+      header.classList.toggle('header--nav-opened')
+    })
+  </script>
+  <script>
+    document.querySelector('.header').classList.remove('header--nojs');
+  </script>
 </body>
 
 </html>

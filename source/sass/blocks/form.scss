@@ -62,7 +62,7 @@
   row-gap: 13px;
   position: relative;
   padding-top: 22px;
-  padding-right: 40px;
+  padding-right: 23px;
 
   @include tw() {
     border: 1px solid rgba(231, 231, 231, 1);
@@ -156,46 +156,110 @@
   }
 }
 
-.form__fieldset--add .form__border {
-  border-bottom: 2px solid rgba(104, 183, 56, 1);
-  width: calc(100% + 40px);
-  position: absolute;
-  top: -10px;
+.form__fieldset--user.form__line {
+  position: relative;
 
-  @include tw() {
-    width: calc(100% + 60px);
-    left: -30px;
-    top: -17px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: -69px;
+    z-index: -2;
+    right: 0;
+    box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
+
+    @include tw() {
+      top: -50px;
+      // left: -69px;
+      right: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 220px;
+    height: 60px;
+    background-color: #ffffff;
+    top: -89px;
+    left: -21px;
+    z-index: -1;
+
+    @include tw() {
+      width: 559px;
+    }
   }
 }
 
-.form__comment-text .form__border {
-  border-bottom: 2px solid rgba(104, 183, 56, 1);
-  width: calc(100% + 40px);
-  position: absolute;
-  top: 15px;
+.form__comment.form__line {
+  position: relative;
 
-  @include tw() {
-    width: calc(100% + 60px);
-    left: -30px;
-    top: 15px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: 16px;
+    right: 0;
+    z-index: -2;
+    box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
+
+    @include tw() {
+      right: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 165px;
+    height: 40px;
+    background-color: #ffffff;
+    top: 0;
+    left: -21px;
+    z-index: -1;
+
+    @include tw() {
+      width: 222px;
+    }
   }
 }
 
-.form__fieldset--user .form__border {
-  border-top: 2px solid rgba(104, 183, 56, 1);
-  width: calc(100% + 40px);
-  position: absolute;
-  top: -71px;
+.form__fieldset--add.form__line {
+  position: relative;
 
-  @include tw() {
-    width: calc(100% + 60px);
-    left: -30px;
-    top: -52px;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: rgba(104, 183, 56, 1);
+    top: -10px;
+    right: 0;
+    z-index: -2;
+    box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
+
+    @include tw() {
+      top: -15px;
+    }
   }
 
-  @include dw() {
-    width: calc(100% + 138px);
+  &::before {
+    position: absolute;
+    content: "";
+    width: 185px;
+    height: 40px;
+    background-color: #ffffff;
+    top: -20px;
+    left: -21px;
+    z-index: -1;
+
+    @include tw() {
+      width: 262px;
+    }
   }
 }
 
@@ -300,43 +364,32 @@
 }
 
 .form__input--error {
-  outline: 1px solid red;
+  border: 1px solid red;
+  outline: none;
 }
 
-// .form__input--error:focus-visible svg {
-//   stroke: red;
-//   fill: red;
-// }
+.form__input--error+svg {
+  color: red;
+}
+
+.form__input--error+svg {
+  color: #000000;
+}
 
 .form__input {
   border: 1px solid $greydark;
-  outline: none;
 
   &:hover {
     border: 1px solid rgba(205, 205, 205, 1);
-    outline: none;
   }
 
   &:focus {
-    border: none;
-    outline: 1px solid #000000;
-  }
-
-  &:focus-visible {
-    border: none;
-    outline: 2px solid #000000;
-    outline-offset: 2px;
+    border: 1px solid #000000;
   }
 }
 
-.form-input:focus-visible+.form-mark::after {
-  position: absolute;
-  content: "";
-  top: -3px;
-  left: -3px;
-  width: 40px;
-  height: 40px;
-  outline: 5px solid #AF4FFF;
+.form__input:focus+svg {
+  color: rgba(104, 183, 56, 1);
 }
 
 [placeholder] {
@@ -416,6 +469,17 @@
   }
 }
 
+.form__input--checkbox:focus-visible+.form__mark {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 0;
+  outline: 2px solid orange;
+  outline-offset: 2px;
+  width: 40px;
+  height: 40px;
+}
+
 .form__input[type="checkbox"]:checked+.form__mark::before {
   background-image: url("./../img/main/checked-small.svg");
   background-repeat: no-repeat;
@@ -460,6 +524,17 @@
     top: -15px;
     left: 0;
   }
+}
+
+.form__input--radio:focus-visible+.form__mark {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 0;
+  outline: 2px solid orange;
+  outline-offset: 2px;
+  width: 40px;
+  height: 40px;
 }
 
 .form__input[type="radio"]:checked+.form__mark::before {

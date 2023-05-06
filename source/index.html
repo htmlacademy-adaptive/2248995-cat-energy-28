@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header class="header header--nojs">
     <div class="header__block wrapper">
       <div class="header__body">
         <a class="header__logo logo" href="index.html">
@@ -23,7 +23,7 @@
       </div>
       <nav class="header__nav">
         <button class="header__burger" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span></span>
         </button>
         <ul class="header__list">
           <li class="header__item header__item--current header__item--index header__item--color">
@@ -42,6 +42,7 @@
   <main>
     <section class="hero hero__wrapper">
       <img class="hero__header" src="img/main/cat.jpg" width="320" height="302" alt="Облизывающийся кот.">
+      <img class="hero__header--dw" src="img/main/cat-dw.jpg" width="320" height="302" alt="Облизывающийся кот.">
       <div class="hero__main">
         <div class="hero__title-slogan">
           <h2 class="hero__title"> Функциональное<br> питание для котов</h2>
@@ -136,12 +137,11 @@
           <img class="example__img" src="img/main/slides.svg" alt="Худой или толстый кот." width="280" height="256"
             decoding="async" loading="lazy">
           <button class="example__button">
-            <svg width="40" height="226" viewBox="0 0 40 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="18" width="4" height="256" rx="2" fill="#666666" />
-              <rect x="1" y="109" width="38" height="38" rx="19" fill="white" />
-              <path d="M16 119L8 128L16 137V119Z" fill="#666666" />
-              <path d="M32 128L24 119V137L32 128Z" fill="#666666" />
-              <rect x="1" y="109" width="38" height="38" rx="19" stroke="#666666" stroke-width="2" />
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="38" height="38" rx="19" />
+              <path d="M16 11L8 20L16 29V11Z" fill="#666666" />
+              <path d="M32 20L24 11V29L32 20Z" fill="#666666" />
+              <rect x="1" y="1" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
             </svg>
           </button>
         </div>
@@ -460,7 +460,6 @@
       </div>
     </div>
   </footer>
-
   <script>
     const header = document.querySelector('.header');
     const button = header.querySelector('.header__burger');
@@ -468,6 +467,9 @@
     button.addEventListener('click', () => {
       header.classList.toggle('header--nav-opened')
     })
+  </script>
+  <script>
+    document.querySelector('.header').classList.remove('header--nojs');
   </script>
 </body>
 
