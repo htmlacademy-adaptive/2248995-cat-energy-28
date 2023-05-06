@@ -2217,6 +2217,7 @@ a {
 }
 
 .data__section {
+  padding: 0 20px;
   padding-bottom: 32px;
 }
 @media (min-width: 768px) {
@@ -2448,7 +2449,7 @@ a {
   height: 60px;
   background-color: #ffffff;
   top: -89px;
-  left: -20px;
+  left: -21px;
   z-index: -1;
 }
 @media (min-width: 768px) {
@@ -2483,7 +2484,7 @@ a {
   height: 40px;
   background-color: #ffffff;
   top: 0;
-  left: -20px;
+  left: -21px;
   z-index: -1;
 }
 @media (min-width: 768px) {
@@ -2509,7 +2510,6 @@ a {
 @media (min-width: 768px) {
   .form__fieldset--add.form__line::after {
     top: -15px;
-    left: 0;
   }
 }
 .form__fieldset--add.form__line::before {
@@ -2519,7 +2519,7 @@ a {
   height: 40px;
   background-color: #ffffff;
   top: -20px;
-  left: -20px;
+  left: -21px;
   z-index: -1;
 }
 @media (min-width: 768px) {
