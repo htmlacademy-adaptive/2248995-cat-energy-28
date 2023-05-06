@@ -156,20 +156,23 @@
   }
 }
 
-.form__fieldset--user .form__title {
+.form__fieldset--user.form__line {
+  position: relative;
+
   &::after {
     position: absolute;
     content: "";
     width: 100vw;
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
-    top: 16px;
+    top: -69px;
     z-index: -2;
-    left: 0;
+    right: 0;
     box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
 
     @include tw() {
-      top: 19px;
+      top: -50px;
+      // left: -69px;
       right: 0;
     }
   }
@@ -180,7 +183,7 @@
     width: 220px;
     height: 60px;
     background-color: #ffffff;
-    top: 0;
+    top: -89px;
     left: -20px;
     z-index: -1;
 
@@ -190,7 +193,8 @@
   }
 }
 
-.form__comment-text .form__title {
+.form__comment.form__line {
+  position: relative;
 
   &::after {
     position: absolute;
@@ -199,7 +203,7 @@
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
     top: 16px;
-    left: 0;
+    right: 0;
     z-index: -2;
     box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
 
@@ -224,7 +228,8 @@
   }
 }
 
-.form__fieldset--add .form__title {
+.form__fieldset--add.form__line {
+  position: relative;
 
   &::after {
     position: absolute;
@@ -232,14 +237,14 @@
     width: 100vw;
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
-    top: 16px;
-    left: 0;
+    top: -10px;
+    right: 0;
     z-index: -2;
     box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
 
     @include tw() {
-      top: 21px;
-      right: 0;
+      top: -15px;
+      left: 0;
     }
   }
 
@@ -249,7 +254,7 @@
     width: 185px;
     height: 40px;
     background-color: #ffffff;
-    top: 0;
+    top: -20px;
     left: -20px;
     z-index: -1;
 
