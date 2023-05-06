@@ -1561,7 +1561,7 @@ a {
 }
 @media (min-width: 1440px) {
   .catalog {
-    margin-bottom: 51px;
+    margin-bottom: 0;
   }
 }
 
@@ -1663,7 +1663,7 @@ a {
 }
 
 .product__link {
-  width: 76px;
+  width: 85px;
 }
 .product__link:hover {
   opacity: 60%;
@@ -1908,17 +1908,32 @@ a {
   top: 40px;
   left: 0;
   z-index: -2;
-  box-shadow: 100vw 0 0 0 #68b738;
+  box-shadow: -100vw 0 0 0 #68b738;
+}
+@media (min-width: 768px) {
+  .add-product::after {
+    top: 46px;
+  }
 }
 .add-product::before {
   position: absolute;
   content: "";
-  width: 293px;
+  width: 273px;
   height: 40px;
   background-color: #ffffff;
   top: 20px;
   left: -20px;
   z-index: -1;
+}
+@media (min-width: 768px) {
+  .add-product::before {
+    left: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .add-product::before {
+    left: 70px;
+  }
 }
 @media (min-width: 768px) {
   .add-product {
@@ -1946,7 +1961,7 @@ a {
   margin: 0;
   margin-bottom: 36px;
   background-color: #ffffff;
-  width: 253px;
+  width: 263px;
 }
 @media (min-width: 768px) {
   .add-product__main-title {
@@ -1961,6 +1976,8 @@ a {
   .add-product__main-title {
     margin-bottom: 81px;
     margin-left: 0;
+    padding: 0;
+    width: 375px;
   }
 }
 
@@ -2044,7 +2061,7 @@ a {
 
 .add-product__description {
   display: grid;
-  grid-template-columns: 200px 81px;
+  grid-template-columns: 200px 85px;
   margin: 0;
   margin-bottom: 15px;
   font-size: 14px;
@@ -2059,6 +2076,10 @@ a {
   .add-product__description {
     align-self: end;
   }
+}
+
+.add-product__desc {
+  justify-self: end;
 }
 
 .add-product__button {
@@ -2400,56 +2421,62 @@ a {
   }
 }
 
-.form__fieldset--user .form__title::after {
+.form__fieldset--user.form__line {
+  position: relative;
+}
+.form__fieldset--user.form__line::after {
   position: absolute;
   content: "";
   width: 100vw;
   height: 2px;
   background-color: #68b738;
-  top: 16px;
+  top: -69px;
   z-index: -2;
-  left: 0;
+  right: 0;
   box-shadow: 100vw 0 0 0 #68b738;
 }
 @media (min-width: 768px) {
-  .form__fieldset--user .form__title::after {
-    top: 19px;
+  .form__fieldset--user.form__line::after {
+    top: -50px;
     right: 0;
   }
 }
-.form__fieldset--user .form__title::before {
+.form__fieldset--user.form__line::before {
   position: absolute;
   content: "";
   width: 220px;
   height: 60px;
   background-color: #ffffff;
-  top: 0;
+  top: -89px;
   left: -20px;
   z-index: -1;
 }
 @media (min-width: 768px) {
-  .form__fieldset--user .form__title::before {
+  .form__fieldset--user.form__line::before {
     width: 559px;
   }
 }
 
-.form__comment-text .form__title::after {
+.form__comment.form__line {
+  position: relative;
+}
+.form__comment.form__line::after {
   position: absolute;
   content: "";
   width: 100vw;
   height: 2px;
   background-color: #68b738;
   top: 16px;
-  left: 0;
+  right: 0;
   z-index: -2;
   box-shadow: 100vw 0 0 0 #68b738;
 }
 @media (min-width: 768px) {
-  .form__comment-text .form__title::after {
+  .form__comment.form__line::after {
     right: 0;
   }
 }
-.form__comment-text .form__title::before {
+.form__comment.form__line::before {
   position: absolute;
   content: "";
   width: 165px;
@@ -2460,40 +2487,43 @@ a {
   z-index: -1;
 }
 @media (min-width: 768px) {
-  .form__comment-text .form__title::before {
+  .form__comment.form__line::before {
     width: 222px;
   }
 }
 
-.form__fieldset--add .form__title::after {
+.form__fieldset--add.form__line {
+  position: relative;
+}
+.form__fieldset--add.form__line::after {
   position: absolute;
   content: "";
   width: 100vw;
   height: 2px;
   background-color: #68b738;
-  top: 16px;
-  left: 0;
+  top: -10px;
+  right: 0;
   z-index: -2;
   box-shadow: 100vw 0 0 0 #68b738;
 }
 @media (min-width: 768px) {
-  .form__fieldset--add .form__title::after {
-    top: 21px;
-    right: 0;
+  .form__fieldset--add.form__line::after {
+    top: -15px;
+    left: 0;
   }
 }
-.form__fieldset--add .form__title::before {
+.form__fieldset--add.form__line::before {
   position: absolute;
   content: "";
   width: 185px;
   height: 40px;
   background-color: #ffffff;
-  top: 0;
+  top: -20px;
   left: -20px;
   z-index: -1;
 }
 @media (min-width: 768px) {
-  .form__fieldset--add .form__title::before {
+  .form__fieldset--add.form__line::before {
     width: 262px;
   }
 }
