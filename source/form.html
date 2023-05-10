@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-  <link rel="icon" href="img/favicons/32.svg" type="img/favicons/image/svg+xml">
+  <link rel="icon" type="image/svg+xml" href="img/favicons/icon.svg">
   <link rel="stylesheet" type="image/png" href="favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
@@ -33,7 +33,11 @@
     <div class="header__block wrapper">
       <div class=" header__body ">
         <a class=" header__logo logo" href="index.html">
-          <img width="33" height="37" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
+          <picture>
+            <source media="(min-width:1440px)" srcset="img/header/logotype-desctop.svg" width="202" height="59">
+            <source media="(min-width:768px)" srcset="img/header/logotype-tablet.svg" width="174" height="52">
+            <img width="33" height="37" src="img/header/logotype.svg" alt="Магазин Кэт-энерджи.">
+          </picture>
         </a>
         <a class="header__logo-text logo-text" href="index.html">
           <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17">

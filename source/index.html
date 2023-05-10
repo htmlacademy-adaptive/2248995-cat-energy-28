@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-  <link rel="icon" href="img/favicons/32.svg" type="img/favicons/image/svg+xml">
+  <link rel="icon" type="image/svg+xml" href="img/favicons/icon.svg">
   <link rel="stylesheet" type="image/png" href="favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
@@ -33,7 +33,11 @@
     <div class="header__block wrapper">
       <div class="header__body">
         <a class="header__logo logo" href="index.html">
-          <img width="33" height="37" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
+          <picture>
+            <source media="(min-width:1440px)" srcset="img/header/logotype-desctop.svg" width="202" height="59">
+            <source media="(min-width:768px)" srcset="img/header/logotype-tablet.svg" width="174" height="52">
+            <img width="33" height="37" src="img/header/logotype.svg" alt="Магазин Кэт-энерджи.">
+          </picture>
         </a>
         <a class="header__logo-text logo-text" href="index.html">
           <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17">
@@ -59,14 +63,25 @@
   </header>
   <main>
     <section class="hero hero__wrapper">
-      <img class="hero__header" src="img/main/cat.jpg" width="320" height="302" alt="Облизывающийся кот.">
-      <img class="hero__header--dw" src="img/main/cat-dw.jpg" width="320" height="302" alt="Облизывающийся кот.">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/main/catdesctop.jpg 1px, img/main/catdesctop@2x.jpg 2px"
+          width="720" height="694">
+        <img class="hero__header" src="img/main/cat.jpg" srcset="img/main/cat@2x.jpg 2x" width="320" height="302"
+          alt="Облизывающийся кот.">
+      </picture>
       <div class="hero__main">
         <div class="hero__title-slogan">
           <h2 class="hero__title"> Функциональное<br> питание для котов</h2>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
         </div>
-        <img class="hero__img" src="img/main/cat-energy.png" width="280" height="270" alt="Корм для кота в стаканчике.">
+        <picture>
+          <source media="(min-width: 1440px)"
+            srcset="img/main/cat-energydesctop.png 1x, img/main/cat-energydesctop@2x.png 2x" width="552" height="499">
+          <source media="(min-width: 768px)"
+            srcset="img/main/cat-energytablet.png 1x, img/main/cat-energytablet@2x.png 2x" width="709" height="609">
+          <img class="hero__img" src="img/main/cat-energy.png" srcset="img/main/cat-energy@2x.png 2x" width="280"
+            height="270" alt="Корм для кота в стаканчике.">
+        </picture>
       </div>
       <a class="hero__button button" href="form.html">Подобрать программу</a>
     </section>
@@ -152,8 +167,12 @@
           </div>
         </div>
         <div class="example__img-button">
-          <img class="example__img" src="img/main/slides.svg" alt="Худой или толстый кот." width="280" height="256"
-            decoding="async" loading="lazy">
+          <picture>
+            <source media="(min-width=" 768px") srcset="img/main/slidestablet.png 1x, img/main/slidestablet@2x.png 2x"
+              width="560" height="512">
+            <img class="example__img" src="img/main/slides.svg" srcset="img/main/slides@2x.png 2x"
+              alt="Худой или толстый кот." width="280" height="256" decoding="async" loading="lazy">
+          </picture>
           <button class="example__button">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="1" y="1" width="38" height="38" rx="19" />
