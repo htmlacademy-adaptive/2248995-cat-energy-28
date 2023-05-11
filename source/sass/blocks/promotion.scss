@@ -2,7 +2,12 @@
   position: relative;
   margin-bottom: 35px;
   height: 290px;
-  background-image: url("../img/main/promotion-cat.svg");
+  background-image: url("../img/main/promotion-cat.jpg");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/main/promotion-cat@2x.jpg");
+  }
+
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
@@ -31,6 +36,11 @@
   @include tw() {
     background-position: 100% 62%;
     height: 200px;
+    background-image: url("../img/main/promotion-cattablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main/promotion-cattablet@2x.jpg");
+    }
   }
 
   @include dw() {
@@ -40,6 +50,11 @@
     padding: 0;
     background-size: 110%;
     background-position: 136% 0%;
+    background-image: url("../img/main/promotion-cat.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/main/promotion-cat@2x.jpg");
+    }
   }
 }
 
