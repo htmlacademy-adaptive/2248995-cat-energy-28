@@ -103,14 +103,15 @@
 }
 
 .example__button:hover svg {
-  color: rgba(104, 183, 56, 1);
-  fill: rgba(104, 183, 56, 1);
-  stroke: rgba(104, 183, 56, 1);
+  color: rgba(94, 170, 47, 1);
 }
 
 .example__button:focus svg {
   color: rgba(94, 170, 47, 1);
-  stroke: rgba(104, 183, 56, 1);
+}
+
+.example__button:active svg {
+  color: rgba(104, 183, 56, 1);
 }
 
 .example__img {
