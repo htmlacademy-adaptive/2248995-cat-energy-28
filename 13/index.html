@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
   <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href=img/favicons//apple-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
@@ -65,7 +65,7 @@
   <main>
     <section class="hero hero__wrapper">
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/main/catdesctop.jpg 1px, img/main/catdesctop@2x.jpg 2px"
+        <source media="(min-width: 1440px)" srcset="img/main/catdesctop.jpg 1x, img/main/catdesctop@2x.jpg 2x"
           width="720" height="694">
         <img class="hero__header" src="img/main/cat.jpg" srcset="img/main/cat@2x.jpg 2x" width="320" height="302"
           alt="Облизывающийся кот.">
@@ -169,18 +169,20 @@
         </div>
         <div class="example__img-button">
           <picture>
-            <source media="(min-width=" 768px") srcset="img/main/slidestablet.png 1x, img/main/slidestablet@2x.png 2x"
+            <source media="(min-width: 768px)" srcset="img/main/slidertablet.png 1x, img/main/slidertablet@2x.png 2x"
               width="560" height="512">
-            <img class="example__img" src="img/main/slides.svg" srcset="img/main/slides@2x.png 2x"
+            <img class="example__img" src="img/main/slider.png" srcset="img/main/slider@2x.png 2x"
               alt="Худой или толстый кот." width="280" height="256" decoding="async" loading="lazy">
           </picture>
           <button class="example__button">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="1" width="38" height="38" rx="19" />
-              <path d="M16 11L8 20L16 29V11Z" fill="#666666" />
-              <path d="M32 20L24 11V29L32 20Z" fill="#666666" />
-              <rect x="1" y="1" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
+            <svg width="40" height="256" viewBox="0 0 40 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="18" width="4" height="256" rx="2" fill="currentColor" />
+              <rect x="1" y="109" width="38" height="38" rx="19" fill="white" />
+              <path d="M16 119L8 128L16 137V119Z" fill="currentColor" />
+              <path d="M32 128L24 119V137L32 128Z" fill="currentColor" />
+              <rect x="1" y="109" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
             </svg>
+
           </button>
         </div>
       </div>

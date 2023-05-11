@@ -315,12 +315,11 @@
 .socials__link:focus-visible,
 .button:focus-visible,
 .variants-food__link:focus-visible,
-.variants-food__link:focus-visible:after,
 .logo-text:focus-visible,
 .footer__copyright-link:focus-visible {
-  border: none;
   outline: 2px solid orange;
   outline-offset: 7px;
+  border: none;
 }
 
 .wrapper {
@@ -1100,23 +1099,8 @@ a {
   left: 122px;
   padding: 0;
   background-color: transparent;
-}
-.example__button::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  height: 256px;
-  width: 4px;
-  background-color: #666666;
-  border-radius: 2px;
-  cursor: pointer;
-}
-@media (min-width: 768px) {
-  .example__button::after {
-    height: 512px;
-  }
+  color: #666666;
+  outline: none;
 }
 @media (min-width: 768px) {
   .example__button {
@@ -1128,22 +1112,6 @@ a {
     left: 921px;
     top: -599px;
   }
-}
-
-.example__button:hover::after {
-  background-color: #68b738;
-}
-
-.example__button:active::after {
-  background-color: #5eaa2f;
-}
-
-.example__button:focus::after {
-  background-color: #5eaa2f;
-}
-
-.example__button:focus {
-  outline: none;
 }
 
 .example__button svg {
@@ -1159,10 +1127,12 @@ a {
 .example__button:hover svg {
   color: #68b738;
   fill: #68b738;
+  stroke: #68b738;
 }
 
 .example__button:focus svg {
   color: #5eaa2f;
+  stroke: #68b738;
 }
 
 .example__img {
@@ -2105,11 +2075,16 @@ a {
   position: relative;
   margin-bottom: 35px;
   height: 290px;
-  background-image: url("../img/main/promotion-cat.svg");
+  background-image: url("../img/main/promotion-cat.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
   padding-top: 186px;
+}
+@media (min-resolution: 2dppx) {
+  .promotion {
+    background-image: url("../img/main/promotion-cat@2x.jpg");
+  }
 }
 .promotion::before {
   position: absolute;
@@ -2136,6 +2111,12 @@ a {
   .promotion {
     background-position: 100% 62%;
     height: 200px;
+    background-image: url("../img/main/promotion-cattablet.jpg");
+  }
+}
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  .promotion {
+    background-image: url("../img/main/promotion-cattablet@2x.jpg");
   }
 }
 @media (min-width: 1440px) {
@@ -2146,6 +2127,12 @@ a {
     padding: 0;
     background-size: 110%;
     background-position: 136% 0%;
+    background-image: url("../img/main/promotion-cat.jpg");
+  }
+}
+@media (min-width: 1440px) and (min-resolution: 2dppx) {
+  .promotion {
+    background-image: url("../img/main/promotion-cat@2x.jpg");
   }
 }
 
