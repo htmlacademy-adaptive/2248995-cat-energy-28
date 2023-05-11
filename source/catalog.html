@@ -3,11 +3,29 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Kat energy</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="favicon.ico ">
+  <link rel="icon" type="image/png" href="img/favicon/152.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicons/icon.svg">
+  <link rel="stylesheet" type="image/png" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Kat energy</title>
 </head>
 
 <body>
@@ -15,7 +33,11 @@
     <div class="header__block wrapper">
       <div class="header__body">
         <a class="header__logo logo" href="index.html">
-          <img width="33" height="37" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
+          <picture>
+            <source media="(min-width:1440px)" srcset="img/header/logotype-desctop.svg" width="202" height="59">
+            <source media="(min-width:768px)" srcset="img/header/logotype-tablet.svg" width="174" height="52">
+            <img width="33" height="37" src="img/header/logotype.svg" alt="Магазин Кэт-энерджи.">
+          </picture>
         </a>
         <a class="header__logo-text logo-text" href="index.html">
           <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17">
@@ -45,7 +67,13 @@
       <ul class="catalog__list">
         <li class="catalog__product product">
           <a class="product__link-img" href="#">
-            <img src="img/main/chicken-500.png" alt="" width="68" height="86">
+            <picture>
+              <source media="(min-width:768px)"
+                srcset="img/main/chicken-500tablet.png 1x, img/main/chicken-500tablet@2x.png 2x" width="168"
+                height="172">
+              <img src="img/main/chicken-500.png" srcset="img/main/chicken-500@2x.png 2x"
+                alt="Упаковка Cat-energy PRO 500 грамм с курицей" width="68" height="86">
+            </picture>
           </a>
           <a class="product__link" href="#">
             <h3 class="product__title">Cat Energy PRO 500 г</h3>
@@ -68,7 +96,16 @@
         </li>
         <li class="catalog__product product">
           <a class="product__link-img product__link-img--lg" href="#">
-            <img src="img/main/chicken-1000.png" alt="" width="" height="" decoding="async">
+            <picture>
+              <source media="(min-width:1440px)"
+                srcset="img/main/chicken-1000desctop.png 1x, img/main/chicken-1000desctop@2x.png 2x" width="172"
+                height="196">
+              <source media="(min-width:768px)"
+                srcset="img/main/chicken-1000tablet.png 1x, img/main/chicken-1000tablet@2x.png 2x" width="168"
+                height="206">
+              <img src="img/main/chicken-1000.png" srcset="img/main/chicken-1000@2x.png 2x"
+                alt="Упаковка Cat-energy PRO 1000 грамм с курицей" width="84" height="100" decoding="async">
+            </picture>
           </a>
           <a class="product__link" href="#">
             <h3 class="product__title">Cat Energy PRO 1000 г</h3>
@@ -91,7 +128,12 @@
         </li>
         <li class="catalog__product product">
           <a class="product__link-img" href="#">
-            <img src="img/main/fish-500.png" alt="" width="" height="" decoding="async">
+            <picture>
+              <source media="(min-width:768px)"
+                srcset="img/main/fish-500tablet.png 1x, img/main/fish-500tablet@2x.png 2x" width="163" height="174">
+              <img src="img/main/fish-500.png" srcset="img/main/fish-500@2x.png 2x"
+                alt="Упаковка Cat-energy PRO 500 грамм с рыбой" width="68" height="78" decoding="async">
+            </picture>
           </a>
           <a class="product__link" href="#">
             <h3 class="product__title">Cat Energy PRO 500 г</h3>
@@ -114,7 +156,14 @@
         </li>
         <li class="catalog__product product">
           <a class="product__link-img product__link-img--lg" href="#">
-            <img src="img/main/fish-1000.png" alt="" width="" height="" decoding="async">
+            <picture>
+              <source media="(min-width:1440px)"
+                srcset="img/main/fish-1000desctop.png 1x, img/main/fish-1000desctop@2x.png 2x" width="172" height="196">
+              <source media="(min-width:768px)"
+                srcset="img/main/fish-1000tablet.png 1x, img/main/fish-1000tablet@2x.png 2x" width="168" height="200">
+              <img src="img/main/fish-1000.png" srcset="img/main/fish-1000@2x.png 2x"
+                alt="Упаковка Cat-energy PRO 1000 грамм с рыбой" width="84" height="100" decoding="async">
+            </picture>
           </a>
           <a class="product__link" href="#">
             <h3 class="product__title">Cat Energy PRO 1000 г</h3>
@@ -137,7 +186,13 @@
         </li>
         <li class="catalog__product product">
           <a class="product__link-img" href="#">
-            <img src="img/main/buckwheat-500.png" alt="" width="" height="" decoding="async">
+            <picture>
+              <source media="(min-width:768px)"
+                srcset="img/main/buckwheat-500tablet.png 1x, img/main/buckwheat-500tablet@2x.png 2x" width="161"
+                height="171">
+              <img src="img/main/buckwheat-500.png" srcset="img/main/buckwheat-500@2x.png 2x"
+                alt="Упаковка Cat-energy PRO 500 грамм с гречкой" width="68" height="78" decoding="async">
+            </picture>
           </a>
           <a class="product__link" href="#">
             <h3 class="product__title">Cat Energy SLIM 500 г</h3>
@@ -160,7 +215,16 @@
         </li>
         <li class="catalog__product product">
           <a class="product__link-img product__link-img--lg" href="#">
-            <img src="img/main/buckwheat-1000.png" alt="" width="" height="" decoding="async">
+            <picture>
+              <source media="(min-width:1440px)"
+                srcset="img/main/buckwheat-1000desctop.png 1x, img/main/buckwheat-1000desctop@2x.png 2x" width="172"
+                height="196">
+              <source media="(min-width:768px)"
+                srcset="img/main/buckwheat-1000tablet.png 1x, img/main/buckwheat-1000tablet@2x.png 2x" width="168"
+                height="200">
+              <img src="img/main/buckwheat-1000.png" srcset="img/main/buckwheat-1000@2x.png 2x"
+                alt="Упаковка Cat-energy PRO 1000 грамм с гречкой" width="84" height="100" decoding="async">
+            </picture>
           </a>
           <a class="product__link" href="#">
             <h3 class="product__title">Cat Energy SLIM 1000 г</h3>
@@ -183,7 +247,12 @@
         </li>
         <li class="catalog__product product">
           <a class="product__link-img" href="#">
-            <img src="img/main/rice-500.png" alt="" width="" height="" decoding="async">
+            <picture>
+              <source media="(min-width:768px)"
+                srcset="img/main/rice-500tablet.png 1x, img/main/rice-500tablet@2x.png 2x" width="163" height="174">
+              <img src="img/main/rice-500.png" srcset="img/main/rice-500@2x.png 2x"
+                alt="Упаковка Cat-energy PRO 500 грамм с рисом" width="72" height="84" decoding="async">
+            </picture>
           </a>
           <a class="product__link" href="#">
             <h3 class="product__title">Cat Energy SLIM 500 г</h3>

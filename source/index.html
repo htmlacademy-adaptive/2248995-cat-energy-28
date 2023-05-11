@@ -3,11 +3,29 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Kat energy</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" href="favicon.ico ">
+  <link rel="icon" type="image/png" href="img/favicon/152.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicons/icon.svg">
+  <link rel="stylesheet" type="image/png" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Kat energy</title>
 </head>
 
 <body>
@@ -15,7 +33,11 @@
     <div class="header__block wrapper">
       <div class="header__body">
         <a class="header__logo logo" href="index.html">
-          <img width="33" height="37" src="img/header/svg/logo.svg" alt="Магазин Кэт-энерджи.">
+          <picture>
+            <source media="(min-width:1440px)" srcset="img/header/logotype-desctop.svg" width="202" height="59">
+            <source media="(min-width:768px)" srcset="img/header/logotype-tablet.svg" width="174" height="52">
+            <img width="33" height="37" src="img/header/logotype.svg" alt="Магазин Кэт-энерджи.">
+          </picture>
         </a>
         <a class="header__logo-text logo-text" href="index.html">
           <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="101" height="17">
@@ -41,14 +63,25 @@
   </header>
   <main>
     <section class="hero hero__wrapper">
-      <img class="hero__header" src="img/main/cat.jpg" width="320" height="302" alt="Облизывающийся кот.">
-      <img class="hero__header--dw" src="img/main/cat-dw.jpg" width="320" height="302" alt="Облизывающийся кот.">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/main/catdesctop.jpg 1x, img/main/catdesctop@2x.jpg 2x"
+          width="720" height="694">
+        <img class="hero__header" src="img/main/cat.jpg" srcset="img/main/cat@2x.jpg 2x" width="320" height="302"
+          alt="Облизывающийся кот.">
+      </picture>
       <div class="hero__main">
         <div class="hero__title-slogan">
           <h2 class="hero__title"> Функциональное<br> питание для котов</h2>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
         </div>
-        <img class="hero__img" src="img/main/cat-energy.png" width="280" height="270" alt="Корм для кота в стаканчике.">
+        <picture>
+          <source media="(min-width: 1440px)"
+            srcset="img/main/cat-energydesctop.png 1x, img/main/cat-energydesctop@2x.png 2x" width="552" height="499">
+          <source media="(min-width: 768px)"
+            srcset="img/main/cat-energytablet.png 1x, img/main/cat-energytablet@2x.png 2x" width="709" height="609">
+          <img class="hero__img" src="img/main/cat-energy.png" srcset="img/main/cat-energy@2x.png 2x" width="280"
+            height="270" alt="Корм для кота в стаканчике.">
+        </picture>
       </div>
       <a class="hero__button button" href="form.html">Подобрать программу</a>
     </section>
@@ -134,15 +167,21 @@
           </div>
         </div>
         <div class="example__img-button">
-          <img class="example__img" src="img/main/slides.svg" alt="Худой или толстый кот." width="280" height="256"
-            decoding="async" loading="lazy">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/main/slidertablet.png 1x, img/main/slidertablet@2x.png 2x"
+              width="560" height="512">
+            <img class="example__img" src="img/main/slider.png" srcset="img/main/slider@2x.png 2x"
+              alt="Худой или толстый кот." width="280" height="256" decoding="async" loading="lazy">
+          </picture>
           <button class="example__button">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="1" width="38" height="38" rx="19" />
-              <path d="M16 11L8 20L16 29V11Z" fill="#666666" />
-              <path d="M32 20L24 11V29L32 20Z" fill="#666666" />
-              <rect x="1" y="1" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
+            <svg width="40" height="256" viewBox="0 0 40 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="18" width="4" height="256" rx="2" fill="currentColor" />
+              <rect x="1" y="109" width="38" height="38" rx="19" fill="white" />
+              <path d="M16 119L8 128L16 137V119Z" fill="currentColor" />
+              <path d="M32 128L24 119V137L32 128Z" fill="currentColor" />
+              <rect x="1" y="109" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
             </svg>
+
           </button>
         </div>
       </div>

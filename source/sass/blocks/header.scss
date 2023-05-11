@@ -5,7 +5,7 @@
 
   @include dw() {
     max-width: 1440px;
-    padding-top: 70px;
+    padding-top: 50px;
     margin: 0 auto;
   }
 }
@@ -145,7 +145,6 @@
   width: 100%;
   margin-left: -20px;
   margin-right: -20px;
-
 }
 
 .header__list a {
@@ -258,6 +257,10 @@
   padding-top: 24px;
   padding-bottom: 24px;
 
+  @include tw() {
+    display: none;
+  }
+
   @include dw() {
     padding: 9px 0;
   }
@@ -271,17 +274,15 @@
   }
 }
 
-
 .header__logo-text:focus-visible,
 .header__logo:focus-visible,
 .header__link:focus-visible,
 .socials__link:focus-visible,
 .button:focus-visible,
 .variants-food__link:focus-visible,
-.variants-food__link:focus-visible:after,
 .logo-text:focus-visible,
 .footer__copyright-link:focus-visible {
-  border: none;
   outline: 2px solid orange;
   outline-offset: 7px;
+  border: none;
 }

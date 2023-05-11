@@ -15,10 +15,6 @@
   @include tw() {
     display: none;
   }
-}
-
-.hero__header--dw {
-  display: none;
 
   @include dw() {
     position: absolute;
@@ -61,6 +57,7 @@
 }
 
 .hero__title-slogan {
+
   @include dw() {
     margin-right: 100px;
   }
@@ -134,7 +131,7 @@
     height: 499px;
     width: 552px;
     position: absolute;
-    top: -119px;
+    top: -101px;
     left: 529px;
     z-index: 2;
   }
