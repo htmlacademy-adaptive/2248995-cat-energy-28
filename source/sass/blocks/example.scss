@@ -73,45 +73,57 @@
   }
 }
 
-.example__button {
-  position: absolute;
-  border: none;
-  top: 0;
-  left: 122px;
-  padding: 0;
-  background-color: transparent;
-  color: #666666;
-  outline: none;
+.example__img-button {
+  position: relative;
+  height: 256px;
+  width: 280px;
 
   @include tw() {
-    left: 335px;
+    width: 560px;
+    height: 512px;
+  }
+}
+
+.example__button {
+  position: relative;
+  border: none;
+  height: 100%;
+  width: 4px;
+  border-radius: 2px;
+  padding: 0;
+  background-color: #666666;
+  cursor: pointer;
+  outline: none;
+  top: -261px;
+  left: 138px;
+
+  svg {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #666666;
+    transition: color 0.255s ease-in-out;
+
+    &:hover {
+      background-color: #68B738;
+
+      svg {
+        color: #68B738;
+      }
+    }
+  }
+
+  @include tw() {
+    left: 353px;
+    top: -515px;
   }
 
   @include dw() {
     left: 921px;
     top: -599px;
   }
-}
-
-.example__button svg {
-  height: 246px;
-
-  @include tw() {
-    width: 40px;
-    height: 512px;
-  }
-}
-
-.example__button:hover svg {
-  color: rgba(94, 170, 47, 1);
-}
-
-.example__button:focus svg {
-  color: rgba(94, 170, 47, 1);
-}
-
-.example__button:active svg {
-  color: rgba(104, 183, 56, 1);
 }
 
 .example__img {
@@ -129,7 +141,7 @@
   @include dw() {
     position: absolute;
     top: -600px;
-    right: 0;
+    right: -642px;
     background-image: linear-gradient(to bottom, #ffffff 120px, #eaeaea 120px);
   }
 }
@@ -264,8 +276,4 @@
     justify-content: flex-end;
     margin: 0;
   }
-}
-
-.example__img-button {
-  position: relative;
 }
