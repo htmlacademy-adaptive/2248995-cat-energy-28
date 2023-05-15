@@ -75,13 +75,6 @@
 
 .example__img-button {
   position: relative;
-  height: 256px;
-  width: 280px;
-
-  @include tw() {
-    width: 560px;
-    height: 512px;
-  }
 }
 
 .example__button {
@@ -141,7 +134,7 @@
   @include dw() {
     position: absolute;
     top: -600px;
-    right: -642px;
+    right: 0;
     background-image: linear-gradient(to bottom, #ffffff 120px, #eaeaea 120px);
   }
 }
