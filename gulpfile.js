@@ -1,29 +1,58 @@
-import gulp, { dest } from 'gulp';
+import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
+// import csso from 'postcss-csso';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+// import del from 'del';
+import rename from 'gulp-rename';
+import squoosh from 'gulp-libsquoosh';
+// import browser from 'browser-sync';
+
+const { dest, src } = gulp;
 
 // Styles
 
 export const styles = () => {
-  return gulp.src('source/sass/style.scss', { sourcemaps: true })
+  return src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(rename('style.min.css'))
+    .pipe(dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
 // HTML
 export const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin(options: { collapseWhitespace: true }))
-    .pipe(dest("build"))
+  return src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('build'))
+}
+
+//Scripts
+export const scripts = () => {
+  return src('source/js/*.js')
+    .pipe(terser())
+    .pipe(dest('build/js'))
+}
+
+// Images
+
+export const optimizeImages = () => {
+  return src('sourсe/img/**/*.{jpg,png}')
+    .pipe(squoosh())
+    .pipe(dest('build/img'))
+}
+
+export const copyImages = () => {
+  return src('sourсe/img/**/*.{jpg,png}')
+    .pipe(dest('build/img'))
 }
 
 // Server
@@ -49,5 +78,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  html, styles, server, watcher
+  images, html, styles, server, watcher
 );
