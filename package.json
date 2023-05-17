@@ -27,10 +27,11 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "lint": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
+    "build": "gulp build",
     "start": "gulp",
     "scripts": "gulp scripts",
-    "images": "gulp images"
+    "images": "gulp images",
+    "copy": "gulp copy"
   },
   "browserslist": [
     "last 2 versions",

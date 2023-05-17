@@ -1,1 +1,0 @@
-const header=document.querySelector(".header"),button=header.querySelector(".header__burger");button.addEventListener("click",(()=>{header.classList.toggle("header__nav-nojs")}));
