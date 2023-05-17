@@ -36,6 +36,13 @@
   }
 }
 
+.example__wrapper {
+
+  @include dw() {
+    display: flex;
+  }
+}
+
 .example__title {
   position: relative;
   font-family: $fontoswald;
@@ -98,25 +105,26 @@
     transform: translate(-50%, -50%);
     color: #666666;
     transition: color 0.255s ease-in-out;
+  }
 
-    &:hover {
-      background-color: #68B738;
+  &:hover {
+    background-color: #68B738;
 
-      svg {
-        color: #68B738;
-      }
+    svg {
+      color: #68B738;
     }
   }
 
   @include tw() {
-    left: -286px;
+    left: -281px;
     top: -257px;
     height: 512px;
   }
 
   @include dw() {
-    left: 939px;
-    top: -599px;
+    left: 343px;
+    top: 0;
+    position: absolute;
   }
 }
 
@@ -133,9 +141,6 @@
   }
 
   @include dw() {
-    position: absolute;
-    top: -600px;
-    right: 0;
     background-image: linear-gradient(to bottom, #ffffff 120px, #eaeaea 120px);
   }
 }
@@ -149,6 +154,8 @@
 
   @include dw() {
     flex-direction: column;
+    grid-column: 1/2;
+
   }
 }
 
