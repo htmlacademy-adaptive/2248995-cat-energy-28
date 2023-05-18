@@ -63,7 +63,7 @@
 
   &:focus-visible {
     border: none;
-    outline: 2px solid orange;
+    outline: 2px solid rgba(255, 165, 0);
   }
 
   @include tw() {
@@ -73,7 +73,6 @@
     margin-top: -125px;
     margin-bottom: 23px;
   }
-
 }
 
 .product__link--to-all {
@@ -240,7 +239,7 @@
 
   &:focus-visible {
     border: none;
-    outline: 2px solid orange;
+    outline: 2px solid rgba(255, 165, 0);
   }
 
 

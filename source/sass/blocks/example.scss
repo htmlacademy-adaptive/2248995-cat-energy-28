@@ -37,7 +37,6 @@
 }
 
 .example__wrapper {
-
   @include dw() {
     display: flex;
   }
@@ -104,14 +103,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #666666;
-    transition: color 0.255s ease-in-out;
+    transition: color 0.26s ease-in-out;
   }
 
   &:hover {
-    background-color: #68B738;
+    background-color: #68b738;
 
     svg {
-      color: #68B738;
+      color: #68b738;
     }
   }
 
@@ -155,7 +154,6 @@
   @include dw() {
     flex-direction: column;
     grid-column: 1/2;
-
   }
 }
 

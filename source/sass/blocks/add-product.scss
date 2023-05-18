@@ -63,14 +63,12 @@
   background-color: #ffffff;
   width: 263px;
 
-
   @include tw() {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
     width: 411px;
     padding-left: 37px;
-
   }
 
   @include dw() {

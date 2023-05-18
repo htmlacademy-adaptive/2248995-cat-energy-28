@@ -4,7 +4,6 @@
   position: relative;
   padding: 0;
 
-
   &::after {
     position: absolute;
     content: "";
@@ -103,7 +102,6 @@
   @include dw() {
     margin-left: 0;
     margin-top: -70px;
-
   }
 }
 

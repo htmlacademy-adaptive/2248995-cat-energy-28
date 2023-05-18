@@ -6,7 +6,11 @@
   @include dw() {
     padding-top: 50px;
     margin: 0 auto;
+  }
+}
 
+.header--preview {
+  @include dw() {
     &::after {
       position: absolute;
       content: "";
@@ -106,16 +110,22 @@
     width: 29px;
     top: 8px;
     right: -3px;
-
   }
 }
 
-.header__burger:hover:after,
+.header__burger:hover::after {
+  background-color: rgba(104, 183, 56, 1);
+}
+
 .header__burger:hover::before {
   background-color: rgba(104, 183, 56, 1);
 }
 
-.header__burger:active::after,
+.header__burger:active::after {
+  background-color: rgba(104, 183, 56, 0.3);
+  width: 28px;
+}
+
 .header__burger:active::before {
   background-color: rgba(104, 183, 56, 0.3);
   width: 28px;
@@ -215,7 +225,6 @@
   }
 }
 
-
 .header__item--current a {
   position: relative;
 
@@ -228,11 +237,13 @@
       height: 2px;
       top: 34px;
       left: 0;
-
-      @include dw() {
-        top: 37px;
-      }
     }
+  }
+}
+
+.header__item--current::after a {
+  @include dw() {
+    top: 37px;
   }
 }
 
@@ -300,7 +311,7 @@
 .variants-food__link:focus-visible,
 .logo-text:focus-visible,
 .footer__copyright-link:focus-visible {
-  outline: 2px solid orange;
+  outline: 2px solid rgba(255, 165, 0);
   outline-offset: 7px;
   border: none;
 }

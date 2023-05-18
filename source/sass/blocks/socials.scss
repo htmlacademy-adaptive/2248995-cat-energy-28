@@ -11,8 +11,8 @@
 
 .socials__link:hover {
   color: rgba(104, 183, 56, 1);
+}
 
-  &:active {
-    opacity: 30%;
-  }
+.socials__link:active {
+  opacity: 30%;
 }
