@@ -4,9 +4,23 @@
   position: relative;
 
   @include dw() {
-    max-width: 1440px;
     padding-top: 50px;
     margin: 0 auto;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/main/catdesctop.jpg");
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: cover;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 50%;
+      min-height: 694px;
+      z-index: -3;
+    }
   }
 }
 
@@ -17,6 +31,10 @@
   @include tw() {
     flex-direction: row;
     width: 100%;
+  }
+
+  @include dw() {
+    max-width: 1440px;
   }
 }
 

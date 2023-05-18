@@ -29,7 +29,7 @@
 </head>
 
 <body>
-  <header class="header header--nojs">
+  <header class="header header--nojs header--preview">
     <div class="header__block wrapper">
       <div class="header__body">
         <a class="header__logo logo" href="index.html">
@@ -63,15 +63,6 @@
   </header>
   <main>
     <section class="hero hero__wrapper">
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)"
-          srcset="img/main/catdesctop.webp 1x, img/main/catdesctop@2x.webp 2x">
-        <source type="image/webp" srcset="img/main/cat.webp 1x, img/main/cat@2x.webp 2x">
-        <source media="(min-width: 1440px)" srcset="img/main/catdesctop.jpg 1x, img/main/catdesctop@2x.jpg 2x"
-          width="720" height="694">
-        <img class="hero__header" src="img/main/cat.jpg" srcset="img/main/cat@2x.jpg 2x" width="320" height="302"
-          alt="Облизывающийся кот.">
-      </picture>
       <div class="hero__main">
         <div class="hero__title-slogan">
           <h2 class="hero__title"> Функциональное<br> питание для котов</h2>
@@ -80,7 +71,7 @@
         <picture>
           <source type="image/webp" media="(min-width:1440px)"
             srcset="img/main/cat-energydesctop.webp 1x, img/main/cat-energydesctop@2x.webp 2x">
-          <source type="image/webp" media="(min-width:768)"
+          <source type="image/webp" media="(min-width:768px)"
             srcset="img/main/cat-energytablet.webp 1x, img/main/cat-energytablet@2x.webp 2x">
           <source type="image/webp" srcset="img/main/cat-energy.webp 1x, img/main/cat-energy@2x.webp 2x">
           <source media="(min-width: 1440px)"
@@ -178,7 +169,7 @@
         </div>
         <div class="example__img-button">
           <picture>
-            <source type="image/webp" media="(min-width:768)"
+            <source type="image/webp" media="(min-width:768px)"
               srcset="img/main/slider.webp 1x, img/main/cat-slidertablet@2x.webp 2x">
             <source type="image/webp" srcset="img/main/slider.webp 1x, img/main/slider@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/main/slidertablet.png 1x, img/main/slidertablet@2x.png 2x">
@@ -205,18 +196,16 @@
             Санкт-Петербург
           </address>
         </div>
-        <iframe class="cooperation__img" width="320" allowfullscreen height="362" alt="Адресс компании:ул. Большая
-              Конюшенная, д. 19/8
-              Санкт-Петербург." decoding="async" loading="lazy"
+        <iframe class="cooperation__img" width="320" allowfullscreen height="362"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1681643351719!5m2!1sru!2sru"
-          allowfullscreen loading="lazy">
+          loading="lazy">
         </iframe>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
-      <a class="footer__logo-text logo-text" href="index.html" width="128" height="24">
+      <a class="footer__logo-text logo-text" href="index.html">
         <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="128" height="24" decoding="async"
           loading="lazy">
       </a>

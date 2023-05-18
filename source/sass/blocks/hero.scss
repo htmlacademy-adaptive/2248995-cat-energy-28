@@ -4,8 +4,27 @@
   position: relative;
   padding: 0;
 
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/main/cat.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    @include tw() {
+      display: none;
+    }
+  }
+
   @include dw() {
     margin-top: 111px;
+    z-index: -3;
   }
 }
 
@@ -26,7 +45,7 @@
 }
 
 .hero__main {
-  top: 40px;
+  padding-top: 27px;
   margin-bottom: 100px;
 
   @include tw() {
@@ -39,9 +58,7 @@
   }
 
   div {
-    position: absolute;
-    top: 27px;
-    margin-bottom: 20px;
+    margin-bottom: 29px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,6 +73,7 @@
 }
 
 .hero__title-slogan {
+  margin-bottom: 50px;
 
   @include dw() {
     margin-right: 100px;
@@ -117,7 +135,6 @@
 
 .hero__img {
   width: 100%;
-  margin-top: -131px;
 
   @include tw() {
     width: 709px;
@@ -127,9 +144,9 @@
   }
 
   @include dw() {
+    position: absolute;
     height: 499px;
     width: 552px;
-    position: absolute;
     top: -101px;
     left: 529px;
     z-index: 2;
