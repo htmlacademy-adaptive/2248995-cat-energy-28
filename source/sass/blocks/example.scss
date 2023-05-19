@@ -36,6 +36,12 @@
   }
 }
 
+.example__wrapper {
+  @include dw() {
+    display: flex;
+  }
+}
+
 .example__title {
   position: relative;
   font-family: $fontoswald;
@@ -80,15 +86,15 @@
 .example__button {
   position: relative;
   border: none;
-  height: 100%;
+  height: 256px;
   width: 4px;
   border-radius: 2px;
   padding: 0;
   background-color: #666666;
   cursor: pointer;
   outline: none;
-  top: -261px;
-  left: 138px;
+  top: -127px;
+  left: -148px;
 
   svg {
     position: absolute;
@@ -97,25 +103,27 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #666666;
-    transition: color 0.255s ease-in-out;
+    transition: color 0.26s ease-in-out;
+  }
 
-    &:hover {
-      background-color: #68B738;
+  &:hover {
+    background-color: #68b738;
 
-      svg {
-        color: #68B738;
-      }
+    svg {
+      color: #68b738;
     }
   }
 
   @include tw() {
-    left: 353px;
-    top: -515px;
+    left: -281px;
+    top: -257px;
+    height: 512px;
   }
 
   @include dw() {
-    left: 921px;
-    top: -599px;
+    left: 343px;
+    top: 0;
+    position: absolute;
   }
 }
 
@@ -132,9 +140,6 @@
   }
 
   @include dw() {
-    position: absolute;
-    top: -600px;
-    right: 0;
     background-image: linear-gradient(to bottom, #ffffff 120px, #eaeaea 120px);
   }
 }
@@ -148,6 +153,7 @@
 
   @include dw() {
     flex-direction: column;
+    grid-column: 1/2;
   }
 }
 

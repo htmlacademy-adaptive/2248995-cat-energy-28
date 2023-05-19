@@ -24,12 +24,12 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <title>Kat energy</title>
 </head>
 
 <body>
-  <header class="header header--nojs">
+  <header class="header header--nojs header--preview">
     <div class="header__block wrapper">
       <div class="header__body">
         <a class="header__logo logo" href="index.html">
@@ -63,15 +63,6 @@
   </header>
   <main>
     <section class="hero hero__wrapper">
-      <picture>
-        <source type="image/webp" media="(min-width: 1440px)"
-          srcset="img/main/catdesctop.webp 1x, img/main/catdesctop@2x.webp 2x">
-        <source type="image/webp" srcset="img/main/cat.webp 1x, img/main/cat@2x.webp 2x">
-        <source media="(min-width: 1440px)" srcset="img/main/catdesctop.jpg 1x, img/main/catdesctop@2x.jpg 2x"
-          width="720" height="694">
-        <img class="hero__header" src="img/main/cat.jpg" srcset="img/main/cat@2x.jpg 2x" width="320" height="302"
-          alt="Облизывающийся кот.">
-      </picture>
       <div class="hero__main">
         <div class="hero__title-slogan">
           <h2 class="hero__title"> Функциональное<br> питание для котов</h2>
@@ -80,7 +71,7 @@
         <picture>
           <source type="image/webp" media="(min-width:1440px)"
             srcset="img/main/cat-energydesctop.webp 1x, img/main/cat-energydesctop@2x.webp 2x">
-          <source type="image/webp" media="(min-width:768)"
+          <source type="image/webp" media="(min-width:768px)"
             srcset="img/main/cat-energytablet.webp 1x, img/main/cat-energytablet@2x.webp 2x">
           <source type="image/webp" srcset="img/main/cat-energy.webp 1x, img/main/cat-energy@2x.webp 2x">
           <source media="(min-width: 1440px)"
@@ -153,29 +144,34 @@
     </section>
     <section class="example">
       <div class="example__wrapper wrapper">
-        <h3 class="example__title subtitle">Живой пример</h3>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
-          по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="example__stats-total">
-          <div class="example__stats">
-            <dl class="example__stats-item">
-              <dt class="example__stats-number">5 кг</dt>
-              <dd class="example__stats-description">снижение веса</dd>
-            </dl>
-            <dl class="example__stats-item">
-              <dt class="example__stats-number">60 дней</dt>
-              <dd class="example__stats-description">затрачено времени</dd>
-            </dl>
-          </div>
-          <div class="example__eat">
-            <p class="example__total">Затраты на питание:</p>
-            <p class="example__total">15 000 РУБ.</p>
+        <div class="example-block">
+          <h3 class="example__title subtitle">Живой пример</h3>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
+            по-прежнему спит по 16 часов в день.
+          </p>
+          <div class="example__stats-total">
+            <div class="example__stats">
+              <dl class="example__stats-item">
+                <dt class="example__stats-number">5 кг</dt>
+                <dd class="example__stats-description">снижение веса</dd>
+              </dl>
+              <dl class="example__stats-item">
+                <dt class="example__stats-number">60 дней</dt>
+                <dd class="example__stats-description">затрачено времени</dd>
+              </dl>
+            </div>
+            <div class="example__eat">
+              <p class="example__total">Затраты на питание:</p>
+              <p class="example__total">15 000 РУБ.</p>
+            </div>
           </div>
         </div>
         <div class="example__img-button">
           <picture>
+            <source type="image/webp" media="(min-width:768px)"
+              srcset="img/main/slidertablet.webp 1x, img/main/slidertablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/main/slider.webp 1x, img/main/slider@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/main/slidertablet.png 1x, img/main/slidertablet@2x.png 2x">
             <img class="example__img" src="img/main/slider.png" srcset="img/main/slider@2x.png 2x"
               alt="Худой или толстый кот." decoding="async" loading="lazy">
@@ -200,39 +196,37 @@
             Санкт-Петербург
           </address>
         </div>
-        <iframe class="cooperation__img" width="320" allowfullscreen height="362" alt="Адресс компании:ул. Большая
-              Конюшенная, д. 19/8
-              Санкт-Петербург." decoding="async" loading="lazy"
+        <iframe class="cooperation__img" width="320" allowfullscreen height="362"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1681643351719!5m2!1sru!2sru"
-          allowfullscreen loading="lazy">
+          loading="lazy">
         </iframe>
       </div>
     </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
-      <a class="footer__logo-text logo-text" href="index.html" width="128" height="24">
+      <a class="footer__logo-text logo-text" href="index.html">
         <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="128" height="24" decoding="async"
           loading="lazy">
       </a>
       <ul class="footer__socials socials">
         <li class="socials__item">
           <a class="socials__link socials__link--VK" href="#">
-            <svg viewBox="0 0 28 17" width="28" height="22">
-              <use href="img/sprite.svg#VK"></use>
+            <svg viewBox="0 0 28 22" width="28" height="22">
+              <use href="img/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
         <li class="socials__item">
           <a class="socials__link socials__link--you-tube" href="https://www.youtube.com/user/htmlacademy.ru">
-            <svg viewBox="0 0 25 19" width="28" height="22">
+            <svg viewBox="0 0 28 22" width="28" height="22">
               <use href="img/sprite.svg#you-tube"></use>
             </svg>
           </a>
         </li>
         <li class="socials__item">
           <a class="socials__link socials__link--telegramm" href="https://t.me/htmlacademy.ru">
-            <svg viewBox="0 0 25 19" width="28" height="22">
+            <svg viewBox="0 0 28 22" width="28" height="22">
               <use href="img/sprite.svg#telegramm"></use>
             </svg>
           </a>
@@ -240,11 +234,9 @@
       </ul>
       <div class="footer__copyright">
         <a class="footer__copyright-link" href="https://htmlacademy.ru">
-          <svg viewBox="0 0 112 16" width="112" height="16">
-            <use href="img/sprite.svg#htmlacademy"></use>
-          </svg>
+          <span> HTML Academy</span>
           <svg viewBox="0 0 27 34" width="27" height="34">
-            <use href="img/sprite.svg#logohtmlacademy"></use>
+            <use href="img/sprite.svg#logo-html-academy"></use>
           </svg>
         </a>
       </div>
