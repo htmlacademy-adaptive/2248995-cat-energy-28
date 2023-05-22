@@ -65,7 +65,7 @@
 
 .header .header__burger {
   position: absolute;
-  top: 24px;
+  top: 22px;
   right: 20px;
   cursor: pointer;
   border: none;
@@ -283,8 +283,8 @@
 }
 
 .header__logo-text {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 22px;
+  padding-bottom: 23px;
 
   @include tw() {
     display: none;

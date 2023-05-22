@@ -350,17 +350,6 @@
   }
 }
 
-.form__label svg {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-
-  @include tw() {
-    right: 20px;
-    top: 20px;
-  }
-}
-
 .form__input--error {
   border: 1px solid rgba(255, 130, 130, 1);
   outline: none;
@@ -382,9 +371,22 @@
   }
 }
 
+.form__label svg {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #000000;
+
+  @include tw() {
+    right: 20px;
+    top: 20px;
+  }
+}
+
 .form__input:focus + svg {
   color: rgba(104, 183, 56, 1);
 }
+
 
 [placeholder] {
   text-transform: uppercase;
@@ -418,6 +420,7 @@
   max-width: 400px;
   padding: 9px 15px;
   margin-bottom: 21px;
+  cursor: pointer;
 
 
   @include tw() {

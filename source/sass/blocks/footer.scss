@@ -82,6 +82,14 @@
 }
 
 .footer__copyright-link {
+  color: #666666;
+  span {
+  color: #444444;
+  }
+}
+
+
+.footer__copyright-link {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -90,6 +98,10 @@
   @include tw() {
     padding: 0;
     width: 167px;
+  }
+
+  &:hover span {
+    color: rgba(104, 183, 56, 1);
   }
 
   &:hover {

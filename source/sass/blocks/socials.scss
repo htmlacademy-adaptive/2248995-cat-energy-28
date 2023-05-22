@@ -9,10 +9,13 @@
   justify-content: center;
 }
 
-.socials__link:hover {
-  color: rgba(104, 183, 56, 1);
-}
+.socials__link {
+color: #666666;
 
-.socials__link:active {
-  opacity: 30%;
+  &:hover {
+    color: rgba(104, 183, 56, 1);
+  }
+  &:active {
+    opacity: 30%;
+  }
 }

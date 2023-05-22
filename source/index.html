@@ -19,10 +19,13 @@
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
   <link rel="icon" type="image/svg+xml" href="img/favicons/icon.svg">
   <link rel="stylesheet" type="image/png" href="favicon.ico">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="./manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.min.css">
   <title>Kat energy</title>
 </head>
@@ -64,7 +67,7 @@
     <section class="hero hero__wrapper">
       <div class="hero__main">
         <div class="hero__title-slogan">
-          <h2 class="hero__title"> Функциональное<br> питание для котов</h2>
+          <h2 class="hero__title">Функциональное<br>питание для котов</h2>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
         </div>
         <picture>
@@ -74,9 +77,9 @@
             srcset="img/main/cat-energytablet.webp 1x, img/main/cat-energytablet@2x.webp 2x">
           <source type="image/webp" srcset="img/main/cat-energy.webp 1x, img/main/cat-energy@2x.webp 2x">
           <source media="(min-width: 1440px)"
-            srcset="img/main/cat-energydesctop.png 1x, img/main/cat-energydesctop@2x.png 2x" width="552" height="499">
+            srcset="img/main/cat-energydesctop.png 1x, img/main/cat-energydesctop@2x.png 2x">
           <source media="(min-width: 768px)"
-            srcset="img/main/cat-energytablet.png 1x, img/main/cat-energytablet@2x.png 2x" width="709" height="609">
+            srcset="img/main/cat-energytablet.png 1x, img/main/cat-energytablet@2x.png 2x">
           <img class="hero__img" src="img/main/cat-energy.png" srcset="img/main/cat-energy@2x.png 2x" width="280"
             height="270" alt="Корм для кота в стаканчике.">
         </picture>
@@ -182,6 +185,7 @@
               <path d="M32 20L24 11V29L32 20Z" fill="currentColor" />
               <rect x="1" y="1" width="38" height="38" rx="19" stroke="currentColor" stroke-width="2" />
             </svg>
+            <span class="visually-hidden">Кнопка-слайдер</span>
           </button>
         </div>
       </div>
@@ -205,7 +209,7 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <a class="footer__logo-text logo-text" href="index.html">
-        <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи" width="128" height="24" decoding="async"
+        <img src="img/footer/footer-logo.svg" alt="Логотип Кэт-энерджи." width="128" height="24" decoding="async"
           loading="lazy">
       </a>
       <ul class="footer__socials socials">
@@ -214,6 +218,7 @@
             <svg viewBox="0 0 28 22" width="28" height="22">
               <use href="img/sprite.svg#vk"></use>
             </svg>
+            <span class="visually-hidden">Сайт Вконтакте.</span>
           </a>
         </li>
         <li class="socials__item">
@@ -221,6 +226,7 @@
             <svg viewBox="0 0 28 22" width="28" height="22">
               <use href="img/sprite.svg#you-tube"></use>
             </svg>
+            <span class="visually-hidden">Сайт Ютуб".</span>
           </a>
         </li>
         <li class="socials__item">
@@ -228,6 +234,7 @@
             <svg viewBox="0 0 28 22" width="28" height="22">
               <use href="img/sprite.svg#telegramm"></use>
             </svg>
+            <span class="visually-hidden">Приложение телеграмм.</span>
           </a>
         </li>
       </ul>
@@ -237,6 +244,7 @@
           <svg viewBox="0 0 27 34" width="27" height="34">
             <use href="img/sprite.svg#logo-html-academy"></use>
           </svg>
+          <span class="visually-hidden">Сайт HTML Academy.</span>
         </a>
       </div>
     </div>
