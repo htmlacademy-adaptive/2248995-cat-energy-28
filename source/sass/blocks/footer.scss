@@ -1,5 +1,5 @@
 .footer {
-  padding: 40px 20px;
+  padding: 38px 20px;
   background-color: $grey;
 
   @include tw() {
@@ -34,7 +34,7 @@
   }
 
   &::after {
-    bottom: 115px;
+    bottom: 118px;
   }
 
   @include tw() {
@@ -52,7 +52,7 @@
 }
 
 .footer__logo-text img {
-  padding-bottom: 40px;
+  padding-bottom: 43px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -74,7 +74,7 @@
 }
 
 .footer__socials {
-  padding-bottom: 40px;
+  padding-bottom: 36px;
 
   @include tw() {
     padding: 0;
@@ -85,6 +85,7 @@
   color: #666666;
   span {
   color: #444444;
+  letter-spacing: 1px;
   }
 }
 

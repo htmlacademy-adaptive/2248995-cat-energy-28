@@ -18,7 +18,7 @@
   }
 }
 
-.form__fieldset-dw {
+.form__block-dw {
   @include dw() {
     display: grid;
     grid-template-columns: 1fr 1fr;

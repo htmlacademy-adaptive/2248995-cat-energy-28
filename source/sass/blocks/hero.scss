@@ -47,8 +47,8 @@
   margin-bottom: 100px;
 
   @include tw() {
-    margin-bottom: 40px;
-    padding-top: 39px;
+    margin-bottom: 0;
+    padding-top: 64px;
   }
 
   @include dw() {
@@ -87,15 +87,16 @@
   line-height: 36px;
   font-weight: 400;
   margin: 0 0 25px 3px;
-  justify-content: center;
+  text-align: center;
 
   @include tw() {
     color: $black;
     font-size: 60px;
     line-height: 60px;
     display: block;
-    margin-left: 100px;
+    margin-left: 118px;
     margin-bottom: 41px;
+    text-align: start;
   }
 
   @include dw() {
@@ -120,7 +121,7 @@
     color: $black;
     font-size: 20px;
     line-height: 20px;
-    margin-left: 100px;
+    margin-left: 120px;
     display: inline-block;
   }
 
@@ -131,13 +132,16 @@
 }
 
 .hero__img {
-  margin-left: 21px;
+  margin-left: 1px;
+  height: 267px;
+  width: 300px;
 
   @include tw() {
     width: 709px;
     height: 609px;
     margin: 0;
-    margin-left: 32px;
+    margin-left: 30px;
+    margin-top: -13px;
   }
 
   @include dw() {
@@ -157,18 +161,18 @@
   padding-bottom: 11px;
   justify-content: center;
   margin-bottom: 20px;
-  margin-top: -97px;
+  margin-top: -94px;
   margin-left: 20px;
   margin-right: 20px;
 
 
   @include tw() {
     position: absolute;
-    top: 357px;
-    left: 102px;
+    top: 388px;
+    left: 121px;
     width: 244px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     align-items: center;
     margin-left: 0;
   }
@@ -180,4 +184,3 @@
     margin-left: 190px;
   }
 }
-

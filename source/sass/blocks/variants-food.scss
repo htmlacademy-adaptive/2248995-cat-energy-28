@@ -26,23 +26,23 @@
   row-gap: 20px;
   padding-left: 20px;
   padding-right: 33px;
-  padding-bottom: 22px;
+  padding-bottom: 20px;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
     background-repeat: no-repeat;
-    left: 22px;
-    top: 24px;
+    left: 23px;
+    top: 23px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
     background-color: rgba(104, 183, 56, 1);
 
     @include tw() {
-      left: 452px;
-      top: 87px;
+      left: 447px;
+      top: 92px;
       width: 200px;
       height: 200px;
     }
@@ -70,7 +70,7 @@
 }
 
 .variants-food__item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   @include dw() {
     margin: 0;
@@ -89,13 +89,14 @@
   padding-left: 72px;
   margin: 0;
   margin-bottom: 29px;
-  padding-top: 30px;
+  padding-top: 29px;
 
   @include tw() {
     font-size: 36px;
     line-height: 36px;
     padding-top: 77px;
     padding-left: 0;
+    margin-bottom: 24px;
   }
 
   @include dw() {
@@ -108,13 +109,13 @@
 .variants-food__img {
   position: absolute;
   top: 21px;
-  left: 28px;
+  left: 30px;
   z-index: 1;
 
   @include tw() {
-    left: 410px;
-    top: 70px;
-    width: 268px;
+    left: 477px;
+    top: 81px;
+    width: 140px;
     height: 194px;
   }
 
@@ -126,14 +127,15 @@
   }
 }
 
-
 .variants-food__img--pro {
   top: 35px;
-  left: 12px;
+  left: 14px;
 
   @include tw() {
-    left: 420px;
-    top: 95px;
+    left: 413px;
+    top: 135px;
+    width: 268px;
+    height: 112px;
   }
 
   @include dw() {
@@ -163,14 +165,19 @@
     width: 24px;
     height: 12px;
     background-image: url("../img/main/cat-arrow.svg");
-    top: 5px;
-    left: 100px;
+    top: 7px;
+    left: 102px;
 
     @include tw() {
-      top: 10px;
-      left: 125px;
+      top: 9px;
+      left: 134px;
     }
   }
+}
+
+.variants-food__link--pro::after {
+  top: 9px;
+  left: 130px;
 }
 
 .variants-food__link:hover::after {
