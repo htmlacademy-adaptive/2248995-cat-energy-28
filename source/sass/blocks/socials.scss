@@ -15,7 +15,8 @@
 }
 
 .socials__link {
-color: #666666;
+  color: #666666;
+  transition: color 0.26s ease-in-out;
 
   &:hover {
     color: rgba(104, 183, 56, 1);

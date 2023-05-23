@@ -76,6 +76,7 @@
   height: 16px;
   display: block;
   background-color: #ffffff;
+  transition: 0.26s ease-in-out;
 
   &::after,
   &::before {
@@ -106,6 +107,7 @@
     top: 8px;
     right: -3px;
     box-shadow: none;
+    transition: 0.50s ease-in-out;
   }
 
   &::before {
@@ -113,6 +115,7 @@
     width: 29px;
     top: 8px;
     right: -3px;
+    transition: 0.50s ease-in-out;
   }
 }
 

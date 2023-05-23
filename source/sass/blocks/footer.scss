@@ -68,8 +68,10 @@
   }
 }
 
-.footer__logo-text:hover {
-  opacity: 80%;
+.footer__logo-text {
+  &:hover{
+    opacity: 80%;
+  }
 
   &:active {
     opacity: 60%;
@@ -90,11 +92,11 @@
   span {
   color: #444444;
   letter-spacing: 1px;
+  transition: color 0.26s ease-in-out;
   }
 }
 
 .footer__copyright {
-
   @include tw() {
     display: flex;
     justify-content: flex-end;
@@ -106,6 +108,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  transition: color 0.26s ease-in-out;
+
 
   @include tw() {
     padding: 0;
