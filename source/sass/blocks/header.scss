@@ -52,6 +52,9 @@
   @include tw() {
     gap: 13px;
   }
+  @include dw() {
+  padding-top: 2px;
+  }
 }
 
 .header__nav {
@@ -66,7 +69,7 @@
 .header .header__burger {
   position: absolute;
   top: 22px;
-  right: 20px;
+  right: 23px;
   cursor: pointer;
   border: none;
   width: 24px;
@@ -171,7 +174,7 @@
   background-color: #ffffff;
   display: block;
   width: 100%;
-  margin-left: -20px;
+  margin-left: -22px;
   margin-right: -20px;
 }
 
@@ -196,7 +199,7 @@
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
-  padding-top: 22px;
+  padding-top: 23px;
   padding-bottom: 24px;
 
   &::after {
@@ -228,18 +231,6 @@
   }
 }
 
-.header__item--main {
-  @include tw() {
-    margin-right: 34px;
-  }
-}
-
-.header__item--catalog {
-  @include tw() {
-    margin-right: 36px;
-  }
-}
-
 .header__item--current a {
   position: relative;
 
@@ -252,6 +243,10 @@
       height: 2px;
       top: 33px;
       left: 0;
+
+      @include dw() {
+          top: 37px;
+      }
     }
   }
 }
@@ -275,6 +270,7 @@
     }
   }
 }
+
 
 .header__item--color a {
   @include dw() {
@@ -311,11 +307,19 @@
   }
 }
 
-.header__body:hover {
-  opacity: 80%;
+.header__body {
+  &:hover {
+    opacity: 80%;
+  }
 
   &:active {
     opacity: 60%;
+  }
+}
+
+.header__nav .header__list li:not(:last-child) {
+  @include tw() {
+    margin-right: 34px;
   }
 }
 

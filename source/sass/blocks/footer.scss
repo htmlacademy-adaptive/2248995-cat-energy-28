@@ -13,7 +13,7 @@
   flex-direction: column;
 
   @include tw() {
-    padding: 56px 30px;
+    padding: 57px 30px;
   }
 
   @include dw() {
@@ -39,15 +39,18 @@
 
   @include tw() {
     display: grid;
-    grid-template-columns: 150px 150px 170px;
-    justify-content: space-between;
+    grid-template-columns: 145px 398px 167px;
     align-items: center;
-
+    justify-content: space-between;
 
     &::after,
     &::before {
       display: none;
     }
+  }
+  @include dw() {
+  justify-content: space-between;
+  column-gap: 0;
   }
 }
 
@@ -78,6 +81,7 @@
 
   @include tw() {
     padding: 0;
+    margin-left: 20px;
   }
 }
 
@@ -89,6 +93,13 @@
   }
 }
 
+.footer__copyright {
+
+  @include tw() {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 
 .footer__copyright-link {
   display: flex;

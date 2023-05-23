@@ -1,5 +1,6 @@
 .socials {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
   list-style: none;
   display: flex;
@@ -7,6 +8,10 @@
   gap: 26px;
   align-items: center;
   justify-content: center;
+
+  @include tw() {
+  padding-top: 9px;
+  }
 }
 
 .socials__link {

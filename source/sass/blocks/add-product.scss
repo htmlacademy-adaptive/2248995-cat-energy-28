@@ -41,15 +41,13 @@
     top: 50px;
     width: 100vw;
     right: 0;
+    padding-top: 23px;
+    margin-bottom: 124px;
   }
 
   @include dw() {
-    top: 47px;
-  }
-
-
-  @include tw() {
-    margin-bottom: 76px;
+    top: 60px;
+    margin-bottom: 73px;
   }
 }
 
@@ -61,7 +59,7 @@
   margin: 0;
   margin-bottom: 36px;
   background-color: #ffffff;
-  width: 263px;
+  width: 247px;
 
   @include tw() {
     font-size: 36px;
@@ -72,7 +70,7 @@
   }
 
   @include dw() {
-    margin-bottom: 81px;
+    margin-bottom: 90px;
     margin-left: 0;
     padding: 0;
     width: 375px;
@@ -90,6 +88,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 38px;
 
   @include tw() {
     border: 1px solid rgba(205, 205, 205, 1);
@@ -107,7 +106,7 @@
 
 .add-product__item {
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 17px;
   position: relative;
 
   &::after {
@@ -123,13 +122,15 @@
   @include tw() {
     display: grid;
     grid-template-columns: 325px 1fr;
+    padding-top: 25px;
+    padding-bottom: 30px;
   }
 
   @include dw() {
     grid-template-columns: 288px 285px 244px;
     column-gap: 40px;
-    padding-top: 15px;
-    padding-bottom: 17px;
+    padding-top: 8px;
+    padding-bottom: 23px;
   }
 }
 
@@ -140,32 +141,39 @@
   line-height: 16px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 
   @include tw() {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 24px;
   }
 
   @include dw() {
     align-self: end;
+    margin-bottom: 0;
+    padding-bottom: 10px ;
   }
 }
 
 .add-product__description {
   display: grid;
-  grid-template-columns: 200px 85px;
+  grid-template-columns: 195px 85px;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
   font-size: 14px;
   line-height: 20px;
 
   @include tw() {
     font-size: 16px;
+    grid-template-columns: 212px 91px;
   }
 
   @include dw() {
     align-self: end;
+    margin-bottom: 8px;
+    grid-template-columns: 198px 84px;
+    justify-content: left;
   }
 }
 
@@ -173,13 +181,26 @@
   justify-self: end;
 }
 
+.add-product__value {
+  @include tw() {
+    justify-self: end;
+  }
+
+  @include dw() {
+    justify-self: start;
+  }
+}
+
 .add-product__button {
   margin: 0;
   display: flex;
   justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
 
   @include tw() {
     width: 100%;
+    max-width: 750px;
   }
 
   @include dw() {

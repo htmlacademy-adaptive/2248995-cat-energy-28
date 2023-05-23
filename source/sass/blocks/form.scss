@@ -36,7 +36,11 @@
 }
 
 .form__list .form__input-text:not(:last-child) {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
+
+  @include tw() {
+  margin-bottom: 20px;
+  }
 }
 
 .form__input-text {
@@ -61,13 +65,13 @@
   grid-template-columns: 1fr;
   row-gap: 13px;
   position: relative;
-  padding-top: 22px;
+  padding-top: 27px;
   padding-right: 23px;
 
   @include tw() {
     border: 1px solid rgba(231, 231, 231, 1);
     height: 196px;
-    padding-top: 25px;
+    padding-top: 29px;
     padding-bottom: 25px;
     padding-left: 40px;
     margin-bottom: 75px;
@@ -78,7 +82,7 @@
     content: "";
     width: calc(100% + 40px);
     height: 1px;
-    top: 156px;
+    top: 154px;
     left: -20px;
     background-color: $greydark;
 
@@ -88,9 +92,12 @@
   }
 }
 
-
 .form__input-user:not(:last-child) {
   margin-bottom: 14px;
+
+  @include tw() {
+  margin-bottom: 20px;
+  }
 }
 
 .form__text {
@@ -99,12 +106,19 @@
   font-family: $fontoswald;
   line-height: 16px;
   text-transform: uppercase;
-  margin-right: 13px;
+  margin-right: 8px;
   flex-shrink: 0;
 
   @include tw() {
     font-size: 20px;
     line-height: 30px;
+    margin-right: 19px;
+  }
+}
+
+.form__input-text .form__text {
+  @include tw() {
+    margin-right: 11px;
   }
 }
 
@@ -112,7 +126,7 @@
   padding-left: 45px;
 
   @include tw() {
-    padding-left: 60px;
+    padding-left: 46px;
   }
 }
 
@@ -132,7 +146,7 @@
 }
 
 .form__fieldset--add .form__title {
-  width: 160px;
+  width: 156px;
 
   @include tw() {
     width: 250px;
@@ -149,9 +163,12 @@
 
 .form__fieldset--user .form__title {
   width: 200px;
+  margin-right: -4px;
 
   @include tw() {
-    width: 540px;
+    width: 555px;
+    margin: 0;
+    margin-bottom: 76px;
   }
 }
 
@@ -164,13 +181,13 @@
     width: 100vw;
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
-    top: -69px;
+    top: -70px;
     z-index: -2;
     right: 0;
     box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
 
     @include tw() {
-      top: -50px;
+      top: -90px;
       right: 0;
     }
   }
@@ -187,6 +204,8 @@
 
     @include tw() {
       width: 559px;
+      top: -114px;
+      left: -42px;
     }
   }
 }
@@ -200,7 +219,7 @@
     width: 100vw;
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
-    top: 16px;
+    top: 12px;
     right: 0;
     z-index: -2;
     box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
@@ -284,10 +303,14 @@
 
 .form__fieldset--user {
   margin-top: 26px;
+
+  @include tw() {
+  margin-top: 0;
+  }
 }
 
 .form__fieldset--user legend {
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
 .form__fieldset--user,
@@ -297,9 +320,9 @@
 
 .form__fieldset--add ul {
   display: block;
-  margin-top: 50px;
+  margin-top: 42px;
   padding: 0;
-  margin-bottom: 50px;
+  margin-bottom: 39px;
 
   @include tw() {
     display: grid;
@@ -317,7 +340,7 @@
 }
 
 .form__fieldset--add .form__checkbox:not(:last-child) {
-  margin-bottom: 42px;
+  margin-bottom: 23px;
 
   @include dw() {
     margin-bottom: 0;
@@ -325,7 +348,7 @@
 }
 
 .form__fieldset--choice .form__radio:not(:last-child) {
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 
   @include dw() {
     margin: 0;
@@ -373,13 +396,13 @@
 
 .form__label svg {
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 12px;
+  top: 16px;
   color: #000000;
 
   @include tw() {
-    right: 20px;
-    top: 20px;
+    right: 16px;
+    top: 22px;
   }
 }
 
@@ -402,6 +425,10 @@
     line-height: 30px;
     padding: 10px 55px 10px 20px;
   }
+}
+
+.form__textarea[placeholder] {
+  padding-top: 7px;
 }
 
 .form__button-tip {
@@ -518,8 +545,8 @@
   @include tw() {
     width: 40px;
     height: 40px;
-    top: -15px;
-    left: 0;
+    top: -16px;
+    left: -14px;
   }
 }
 

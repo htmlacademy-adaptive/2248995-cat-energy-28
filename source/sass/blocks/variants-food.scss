@@ -70,7 +70,11 @@
 }
 
 .variants-food__item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+
+  @include tw() {
+    margin-bottom: 30px;
+  }
 
   @include dw() {
     margin: 0;
@@ -102,7 +106,7 @@
   @include dw() {
     padding-top: 77px;
     padding-left: 164px;
-    margin-bottom: 50px;
+    margin-bottom: 74px;
   }
 }
 
@@ -139,13 +143,12 @@
   }
 
   @include dw() {
-    left: 36px;
-    top: 73px;
+    left: 33px;
+    top: 69px;
     width: 134px;
     height: 56px;
   }
 }
-
 
 .variants-food__link {
   font-family: $fontoswald;
@@ -176,8 +179,13 @@
 }
 
 .variants-food__link--pro::after {
-  top: 9px;
-  left: 130px;
+  top: 7px;
+  left: 98px;
+
+  @include tw() {
+    top: 9px;
+    left: 130px;
+  }
 }
 
 .variants-food__link:hover::after {
@@ -191,6 +199,10 @@
   @include tw() {
     top: 10px;
     left: 125px;
+  }
+
+  @include dw() {
+    top: 9px;
   }
 }
 
@@ -209,7 +221,6 @@
   }
 }
 
-
 .variants-food__text {
   position: relative;
   margin: 0;
@@ -223,7 +234,8 @@
   }
 
   @include dw() {
-    margin-top: 20px;
+    width: 455px;
+    margin-bottom: 27px;
   }
 
   &::after {

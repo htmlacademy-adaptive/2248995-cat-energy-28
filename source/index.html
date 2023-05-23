@@ -50,10 +50,10 @@
           <span></span>
         </button>
         <ul class="header__list">
-          <li class="header__item header__item--main header__item--current header__item--index header__item--color">
+          <li class="header__item header__item--current header__item--index header__item--color">
             <a class="header__link" href="#">Главная</a>
           </li>
-          <li class="header__item header__item--catalog header__item--color">
+          <li class="header__item header__item--color">
             <a class="header__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="header__item header__item--color">
@@ -67,7 +67,7 @@
     <section class="hero hero__wrapper">
       <div class="hero__main">
         <div class="hero__title-slogan">
-          <h2 class="hero__title">Функциональное<br>питание для котов</h2>
+          <h2 class="hero__title">Функциональное <br> питание для котов</h2>
           <p class="hero__slogan">Занялся собой? Займись котом!</p>
         </div>
         <picture>
@@ -138,7 +138,7 @@
           <li class="advantages__item advantages__item--watch">
             <p class="advantages__text">
               Уже через месяц наслаждайтесь изменениями
-              к лучшему вашего питомца!
+              к лучшему <br> вашего питомца!
             </p>
           </li>
         </ul>
@@ -194,15 +194,17 @@
       <div class="cooperation__wrapper">
         <div class="cooperation__header">
           <h3 class="cooperation__title">приглашаем <br> к сотрудничеству <br> дилеров!</h3>
-          <address class="cooperation__address">ул. Большая <br>
-            Конюшенная, д. 19/8<br>
-            Санкт-Петербург
+          <address class="cooperation__address">
+            <span>
+              ул. Большая <br>
+              Конюшенная, д. 19/8<br>
+            </span>
+            <span>
+              Санкт-Петербург
+            </span>
           </address>
         </div>
-        <iframe class="cooperation__img" width="320" allowfullscreen height="362"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021609819!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1681643351719!5m2!1sru!2sru"
-          loading="lazy">
-        </iframe>
+        <div id="map" class="cooperation__img" width="320" height="362"></div>
       </div>
     </section>
   </main>
@@ -250,6 +252,7 @@
     </div>
   </footer>
   <script>
+    document.querySelector('.header').classList.remove('header--nojs');
     const header = document.querySelector('.header');
     const button = header.querySelector('.header__burger');
 
@@ -257,8 +260,34 @@
       header.classList.toggle('header--nav-opened')
     })
   </script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d2be319a-7225-41e4-aa9b-b09e630b7459" type="text/javascript">
+  </script>
   <script>
-    document.querySelector('.header').classList.remove('header--nojs');
+    const coords = [59.968516, 30.317768];
+    const hintContent = 'Текст при ховере на метку';
+    const placemarkUrl = 'img/main/pin.svg';
+    let mapInstance = null;
+
+    ymaps.ready(() => {
+      mapInstance = new ymaps.Map('map', {
+        center: coords,
+        zoom: 17,
+        mode: 'vector',
+        controls: []
+      });
+
+      const myPlacemark = new ymaps.Placemark(mapInstance.getCenter(), {
+        hintContent: hintContent,
+        balloonContent: coords
+      }, {
+        iconLayout: 'default#image',
+        iconImageHref: placemarkUrl,
+        iconImageSize: [100, 100],
+        iconImageOffset: [-50, -50]
+      });
+
+      mapInstance.geoObjects.add(myPlacemark);
+    })
   </script>
 </body>
 

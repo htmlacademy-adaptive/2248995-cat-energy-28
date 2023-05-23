@@ -22,7 +22,7 @@
   }
 
   @include dw() {
-    margin-top: 111px;
+    margin-top: 119px;
   }
 }
 
@@ -67,6 +67,10 @@
       position: static;
       display: block;
     }
+
+    @include dw() {
+      margin-bottom: -2px;
+    }
   }
 }
 
@@ -101,7 +105,7 @@
 
   @include dw() {
     margin-left: 0;
-    margin-top: -70px;
+    margin-top: -72px;
   }
 }
 
@@ -132,9 +136,9 @@
 }
 
 .hero__img {
-  margin-left: 1px;
-  height: 267px;
-  width: 300px;
+  margin-left: 21px;
+  height: 270px;
+  width: 280px;
 
   @include tw() {
     width: 709px;
@@ -148,7 +152,7 @@
     position: absolute;
     height: 499px;
     width: 552px;
-    top: -101px;
+    top: -77px;
     left: 529px;
     z-index: 2;
   }
@@ -158,17 +162,17 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 11px;
-  padding-bottom: 11px;
+  padding-bottom: 12px;
   justify-content: center;
   margin-bottom: 20px;
-  margin-top: -94px;
+  margin-top: -98px;
   margin-left: 20px;
   margin-right: 20px;
 
 
   @include tw() {
     position: absolute;
-    top: 388px;
+    top: 393px;
     left: 121px;
     width: 244px;
     padding-top: 17px;
@@ -180,7 +184,7 @@
   @include dw() {
     position: static;
     margin: 0;
-    margin-bottom: 208px;
+    margin-bottom: 267px;
     margin-left: 190px;
   }
 }
