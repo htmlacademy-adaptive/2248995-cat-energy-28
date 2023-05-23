@@ -14,7 +14,7 @@
   width: 100%;
 
   @include tw() {
-    padding-bottom: 72px;
+    padding-bottom: 70px;
   }
 }
 
@@ -32,6 +32,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 77px;
     align-items: start;
+    padding-bottom: 47px;
   }
 }
 
@@ -89,6 +90,11 @@
     @include tw() {
       display: none;
     }
+  }
+
+  @include dw() {
+  padding-top: 32px;
+  row-gap: 24px;
   }
 }
 
@@ -157,7 +163,7 @@
   width: 144px;
 
   @include tw() {
-    width: 214px;
+    width: 216px;
   }
 }
 
@@ -219,7 +225,7 @@
     width: 100vw;
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
-    top: 12px;
+    top: 19px;
     right: 0;
     z-index: -2;
     box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
@@ -241,6 +247,7 @@
 
     @include tw() {
       width: 222px;
+      left: -39px;
     }
   }
 }
@@ -262,6 +269,10 @@
     @include tw() {
       top: -15px;
     }
+
+    @include dw() {
+      top: -11px;
+    }
   }
 }
 
@@ -276,7 +287,9 @@
   z-index: -1;
 
   @include tw() {
-    width: 262px;
+    width: 271px;
+    top: -30px;
+    left: -40px;
   }
 }
 
@@ -288,8 +301,9 @@
   position: relative;
 
   @include tw() {
-    row-gap: 76px;
+    row-gap: 73px;
     margin-left: 3px;
+    margin-bottom: 8px;
   }
 }
 
@@ -328,14 +342,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 50px;
-    margin-top: 57px;
+    margin-top: 62px;
     max-width: 900px;
+    row-gap: 15px;
   }
 
   @include dw() {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 1440px;
-    margin-bottom: 61px;
+    margin-bottom: 68px;
+    column-gap: 80px;
   }
 }
 
@@ -404,12 +420,16 @@
     right: 16px;
     top: 22px;
   }
+
+  @include dw() {
+  right: 19px;
+  top: 17px;
+  }
 }
 
 .form__input:focus + svg {
   color: rgba(104, 183, 56, 1);
 }
-
 
 [placeholder] {
   text-transform: uppercase;
@@ -429,6 +449,10 @@
 
 .form__textarea[placeholder] {
   padding-top: 7px;
+
+  @include tw() {
+  padding-top: 10px;
+  }
 }
 
 .form__button-tip {
@@ -438,6 +462,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 72px;
+  }
+
+  @include dw() {
+    margin-bottom: 82px;
   }
 }
 
@@ -541,7 +569,6 @@
     border: 1px solid rgba(186, 186, 186, 1);
   }
 
-
   @include tw() {
     width: 40px;
     height: 40px;
@@ -579,6 +606,14 @@
     top: 10px;
     left: 10px;
   }
+}
+
+.form__input--checkbox:disabled ~ span{
+  color: #bababa;
+}
+
+.form__input--radio:disabled ~ span {
+  color: #bababa;
 }
 
 /*stylelint-disable-next-line*/
