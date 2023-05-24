@@ -92,8 +92,6 @@
 
   @include tw() {
     border: 1px solid rgba(205, 205, 205, 1);
-    padding-left: 38px;
-    padding-right: 38px;
     margin-bottom: 69px;
   }
 
@@ -112,11 +110,16 @@
   &::after {
     position: absolute;
     content: "";
-    width: 100%;
+    width: calc(100% + 76px);
     background-color: rgba(235, 235, 235, 1);
     height: 1px;
     top: 0;
+    left: -38px;
+
+    @include dw() {
+    width: 100%;
     left: 0;
+    }
   }
 
   @include tw() {
@@ -124,6 +127,8 @@
     grid-template-columns: 325px 1fr;
     padding-top: 25px;
     padding-bottom: 30px;
+    margin-left: 38px;
+    margin-right: 38px;
   }
 
   @include dw() {
@@ -131,6 +136,7 @@
     column-gap: 40px;
     padding-top: 8px;
     padding-bottom: 23px;
+    margin: 0;
   }
 }
 

@@ -148,6 +148,11 @@
   @include tw() {
     display: flex;
     flex-wrap: wrap;
+    width: 500px;
+  }
+
+  @include dw() {
+  width: 580px;
   }
 }
 
