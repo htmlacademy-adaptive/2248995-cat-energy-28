@@ -22,8 +22,7 @@
   }
 
   @include dw() {
-    margin-top: 111px;
-    z-index: -3;
+    margin-top: 119px;
   }
 }
 
@@ -48,8 +47,8 @@
   margin-bottom: 100px;
 
   @include tw() {
-    margin-bottom: 40px;
-    padding-top: 39px;
+    margin-bottom: 0;
+    padding-top: 64px;
   }
 
   @include dw() {
@@ -57,7 +56,7 @@
   }
 
   div {
-    margin-bottom: 29px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,6 +66,10 @@
     @include tw() {
       position: static;
       display: block;
+    }
+
+    @include dw() {
+      margin-bottom: -2px;
     }
   }
 }
@@ -87,21 +90,22 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin-bottom: 25px;
-  justify-content: center;
+  margin: 0 0 25px 3px;
+  text-align: center;
 
   @include tw() {
     color: $black;
     font-size: 60px;
     line-height: 60px;
     display: block;
-    margin-left: 100px;
+    margin-left: 118px;
     margin-bottom: 41px;
+    text-align: start;
   }
 
   @include dw() {
     margin-left: 0;
-    margin-top: -70px;
+    margin-top: -72px;
   }
 }
 
@@ -121,7 +125,7 @@
     color: $black;
     font-size: 20px;
     line-height: 20px;
-    margin-left: 100px;
+    margin-left: 120px;
     display: inline-block;
   }
 
@@ -132,20 +136,23 @@
 }
 
 .hero__img {
-  width: 100%;
+  margin-left: 21px;
+  height: 270px;
+  width: 280px;
 
   @include tw() {
     width: 709px;
     height: 609px;
     margin: 0;
-    margin-left: 32px;
+    margin-left: 30px;
+    margin-top: -13px;
   }
 
   @include dw() {
     position: absolute;
     height: 499px;
     width: 552px;
-    top: -101px;
+    top: -77px;
     left: 529px;
     z-index: 2;
   }
@@ -155,21 +162,21 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 11px;
-  padding-bottom: 11px;
+  padding-bottom: 12px;
   justify-content: center;
   margin-bottom: 20px;
-  margin-top: -96px;
+  margin-top: -98px;
   margin-left: 20px;
   margin-right: 20px;
 
 
   @include tw() {
     position: absolute;
-    top: 357px;
-    left: 102px;
+    top: 393px;
+    left: 121px;
     width: 244px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     align-items: center;
     margin-left: 0;
   }
@@ -177,15 +184,7 @@
   @include dw() {
     position: static;
     margin: 0;
-    margin-bottom: 208px;
+    margin-bottom: 267px;
     margin-left: 190px;
-  }
-}
-
-.hero__button:hover {
-  background-color: rgba(94, 170, 47, 1);
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
   }
 }

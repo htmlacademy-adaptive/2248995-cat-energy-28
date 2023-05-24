@@ -1,5 +1,6 @@
 .socials {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
   list-style: none;
   display: flex;
@@ -7,12 +8,20 @@
   gap: 26px;
   align-items: center;
   justify-content: center;
+
+  @include tw() {
+  padding-top: 9px;
+  }
 }
 
-.socials__link:hover {
-  color: rgba(104, 183, 56, 1);
-}
+.socials__link {
+  color: #666666;
+  transition: color 0.26s ease-in-out;
 
-.socials__link:active {
-  opacity: 30%;
+  &:hover {
+    color: rgba(104, 183, 56, 1);
+  }
+  &:active {
+    opacity: 30%;
+  }
 }

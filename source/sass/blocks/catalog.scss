@@ -9,7 +9,7 @@
     background-color: rgba(235, 235, 235, 1);
     height: 1px;
     left: 0;
-    top: 20px;
+    top: 0;
 
     @include tw() {
       display: none;
@@ -17,10 +17,6 @@
   }
 
   @include tw() {
-    margin-bottom: 43px;
-  }
-
-  @include dw() {
     margin-bottom: 0;
   }
 }
@@ -32,7 +28,7 @@
   font-size: 36px;
   line-height: 36px;
   margin: 0;
-  padding-top: 52px;
+  padding-top: 30px;
   padding-bottom: 41px;
   position: relative;
 
@@ -41,6 +37,10 @@
     line-height: 60px;
     padding-bottom: 163px;
     padding-top: 64px;
+  }
+
+  @include dw() {
+  padding-top: 76px;
   }
 }
 
@@ -51,7 +51,7 @@
 
   @include tw() {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 324px);
     column-gap: 60px;
     row-gap: 141px;
   }

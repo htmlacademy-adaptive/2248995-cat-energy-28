@@ -24,12 +24,13 @@
     background-repeat: no-repeat;
 
     @include tw() {
-      top: 59px;
+      top: 55px;
+      left: 79px;
     }
 
     @include dw() {
-      left: 83px;
-      top: 55px;
+      left: 86px;
+      top: 47px;
     }
   }
 
@@ -49,7 +50,7 @@
     height: 288px;
     padding: 0;
     background-size: 110%;
-    background-position: 136% 0%;
+    background-position: 110% 0%;
     background-image: url("../img/main/promotion-cat.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -67,14 +68,14 @@
 
   @include tw() {
     position: absolute;
-    top: 71px;
-    left: 439px;
+    top: 68px;
+    left: 423px;
     text-align: left;
   }
 
   @include dw() {
-    top: 184px;
-    left: 5px;
+    top: 176px;
+    left: -1px;
     text-align: center;
     width: 100%;
   }

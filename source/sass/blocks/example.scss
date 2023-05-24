@@ -1,11 +1,11 @@
 .example {
   position: relative;
-  padding: 25px 0 40px;
+  padding: 25px 0 36px;
   background-color: rgba(234, 234, 234, 1);
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 30px;
-  z-index: -2;
+
+  @include tw () {
+  padding-top: 31px;
+  }
 
   &::before {
     position: absolute;
@@ -26,13 +26,13 @@
   }
 
   @include tw() {
-    background-image: linear-gradient(to bottom, #ffffff 528px, #eaeaea 528px);
-    z-index: -2;
-    padding-bottom: 100px;
+    background-image: linear-gradient(to bottom, #ffffff 606px, #eaeaea 606px);
+    padding-bottom: 96px;
   }
 
   @include dw() {
-    background-image: linear-gradient(to bottom, #ffffff 150px, #eaeaea 150px);
+    background-image: linear-gradient(to bottom, #ffffff 169px, #eaeaea 169px);
+    padding-bottom: 0;
   }
 }
 
@@ -69,12 +69,12 @@
   @include tw() {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 69px;
+    margin-bottom: 66px;
     width: 708px;
   }
 
   @include dw() {
-    width: 436px;
+    width: 433px;
     margin-bottom: 84px;
   }
 }
@@ -84,7 +84,7 @@
 }
 
 .example__button {
-  position: relative;
+  position: absolute;
   border: none;
   height: 256px;
   width: 4px;
@@ -93,8 +93,8 @@
   background-color: #666666;
   cursor: pointer;
   outline: none;
-  top: -127px;
-  left: -148px;
+  top: 0;
+  left: 139px;
 
   svg {
     position: absolute;
@@ -112,16 +112,23 @@
     svg {
       color: #68b738;
     }
+
+  &:active {
+    background-color: #5eea2f;
+
+    svg {
+        color: #5eea2f;
+      }
+    }
   }
 
   @include tw() {
-    left: -281px;
-    top: -257px;
+    left: 354px;
     height: 512px;
   }
 
   @include dw() {
-    left: 343px;
+    left: 259px;
     top: 0;
     position: absolute;
   }
@@ -135,12 +142,12 @@
     height: 512px;
     width: 560px;
     background-image: linear-gradient(to bottom, #ffffff 150px, #eaeaea 150px);
-    z-index: -2;
     margin-left: 74px;
   }
 
   @include dw() {
-    background-image: linear-gradient(to bottom, #ffffff 120px, #eaeaea 120px);
+    background-image: linear-gradient(to bottom, #ffffff 138px, #eaeaea 138px);
+    margin-left: -11px;
   }
 }
 
@@ -161,10 +168,14 @@
   margin: 0;
   display: flex;
   margin-bottom: 20px;
-  gap: 32px;
+  gap: 43px;
+
+  @include tw() {
+    margin-bottom: 98px;
+  }
 
   @include dw() {
-    margin-bottom: 55px;
+    margin-bottom: 51px;
   }
 }
 
@@ -179,8 +190,8 @@
 
   @include tw() {
     font-size: 30px;
-    line-height: 37px;
-    margin-bottom: 13px;
+    line-height: 45px;
+    margin-bottom: 7px;
   }
 }
 

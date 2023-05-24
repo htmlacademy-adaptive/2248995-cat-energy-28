@@ -52,6 +52,9 @@
   @include tw() {
     gap: 13px;
   }
+  @include dw() {
+  padding-top: 2px;
+  }
 }
 
 .header__nav {
@@ -65,14 +68,15 @@
 
 .header .header__burger {
   position: absolute;
-  top: 24px;
-  right: 20px;
+  top: 22px;
+  right: 23px;
   cursor: pointer;
   border: none;
   width: 24px;
   height: 16px;
   display: block;
   background-color: #ffffff;
+  transition: 0.26s ease-in-out;
 
   &::after,
   &::before {
@@ -103,6 +107,7 @@
     top: 8px;
     right: -3px;
     box-shadow: none;
+    transition: 0.50s ease-in-out;
   }
 
   &::before {
@@ -110,6 +115,7 @@
     width: 29px;
     top: 8px;
     right: -3px;
+    transition: 0.50s ease-in-out;
   }
 }
 
@@ -141,7 +147,7 @@
 
   @include tw() {
     display: flex;
-    gap: 33px;
+    flex-wrap: wrap;
   }
 }
 
@@ -171,7 +177,7 @@
   background-color: #ffffff;
   display: block;
   width: 100%;
-  margin-left: -20px;
+  margin-left: -22px;
   margin-right: -20px;
 }
 
@@ -196,7 +202,7 @@
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
-  padding-top: 22px;
+  padding-top: 23px;
   padding-bottom: 24px;
 
   &::after {
@@ -217,6 +223,9 @@
     font-size: 18px;
     line-height: 24px;
     display: block;
+    padding: 0;
+    padding-top: 18px;
+    letter-spacing: -0.5px;
   }
 
   @include dw() {
@@ -235,8 +244,12 @@
       width: 100%;
       background-color: #68b738;
       height: 2px;
-      top: 34px;
+      top: 33px;
       left: 0;
+
+      @include dw() {
+          top: 37px;
+      }
     }
   }
 }
@@ -261,6 +274,7 @@
   }
 }
 
+
 .header__item--color a {
   @include dw() {
     color: #ffffff;
@@ -283,11 +297,12 @@
 }
 
 .header__logo-text {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 22px;
+  padding-bottom: 23px;
 
   @include tw() {
     display: none;
+    padding-top: 0;
   }
 
   @include dw() {
@@ -295,11 +310,19 @@
   }
 }
 
-.header__body:hover {
-  opacity: 80%;
+.header__body {
+  &:hover {
+    opacity: 80%;
+  }
 
   &:active {
     opacity: 60%;
+  }
+}
+
+.header__nav .header__list li:not(:last-child) {
+  @include tw() {
+    margin-right: 34px;
   }
 }
 
