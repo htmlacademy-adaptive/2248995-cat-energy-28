@@ -77,8 +77,13 @@
 .hero__title-slogan {
   margin-bottom: 50px;
 
+  @include tw() {
+    max-width: 600px;
+  }
+
   @include dw() {
     margin-right: 100px;
+    max-width: 450px;
   }
 }
 
