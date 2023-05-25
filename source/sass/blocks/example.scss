@@ -4,7 +4,7 @@
   background-color: rgba(234, 234, 234, 1);
 
   @include tw () {
-  padding-top: 31px;
+    padding-top: 31px;
   }
 
   &::before {
@@ -37,6 +37,9 @@
 }
 
 .example__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+
   @include dw() {
     display: flex;
   }
@@ -106,22 +109,6 @@
     transition: color 0.26s ease-in-out;
   }
 
-  &:hover {
-    background-color: #68b738;
-
-    svg {
-      color: #68b738;
-    }
-
-  &:active {
-    background-color: #5eea2f;
-
-    svg {
-        color: #5eea2f;
-      }
-    }
-  }
-
   @include tw() {
     left: 354px;
     height: 512px;
@@ -133,6 +120,23 @@
     position: absolute;
   }
 }
+
+.example__button:hover {
+  background-color: #68b738;
+
+  svg {
+    color: #68b738;
+  }
+}
+
+.example__button:active {
+  background-color: #5eea2f;
+
+  svg {
+    color: #5eea2f;
+  }
+}
+
 
 .example__img {
   background-color: rgba(234, 234, 234, 1);

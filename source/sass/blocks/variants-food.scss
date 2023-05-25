@@ -1,6 +1,7 @@
 .variants-food {
   display: flex;
-  margin-bottom: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   @include tw() {
     margin-bottom: 45px;
@@ -251,4 +252,10 @@
       display: none;
     }
   }
+}
+
+.variants-food__link:focus-visible {
+  outline: 2px solid rgba(255, 165, 0);
+  outline-offset: 7px;
+  border: none;
 }

@@ -64,7 +64,8 @@
     </div>
   </header>
   <main>
-    <section class="hero hero__wrapper">
+    <H1 class="visually-hidden">Магазин питания для котов</H1>
+    <section class="hero hero--wrapper">
       <div class="hero__main">
         <div class="hero__title-slogan">
           <h2 class="hero__title">Функциональное <br> питание для котов</h2>
@@ -204,7 +205,21 @@
             </span>
           </address>
         </div>
-        <div id="map" class="cooperation__img" width="320" height="362" title="Место нахождения HTML академии на карте."></div>
+        <div id="map" class="cooperation__img" title="Место нахождения HTML академии на карте.">
+          <noscript>
+            <picture>
+              <source type="image/webp" media="(min-width:1440px)"
+                srcset="img/main/map-desctop.webp 1x, img/main/map-desctop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:768px)"
+                srcset="img/main/map-tablet.webp 1x, img/main/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/main/map-mobile.webp 1x, img/main/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/main/map-desctop.png 1x, img/main/map-desctop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/main/map-tablet.png 1x, img/main/map-tablet@2x.png 2x">
+              <img src="img/main/map-mobile.png" srcset="img/main/map-mobile@2x.png 2x" type="image/png" width="320px" height="362px"
+                alt="Адресс HTML-академии" decoding="async" loading="lazy">
+            </picture>
+          </noscript>
+        </div>
       </div>
     </section>
   </main>
@@ -251,7 +266,7 @@
       </div>
     </div>
   </footer>
-  <script>
+  <!-- <script>
     document.querySelector('.header').classList.remove('header--nojs');
     const header = document.querySelector('.header');
     const button = header.querySelector('.header__burger');
@@ -260,7 +275,7 @@
       header.classList.toggle('header--nav-opened')
     })
   </script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d2be319a-7225-41e4-aa9b-b09e630b7459" type="text/javascript">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=d2be319a-7225-41e4-aa9b-b09e630b7459">
   </script>
   <script>
     const coords = [59.968516, 30.317768];
@@ -288,7 +303,7 @@
 
       mapInstance.geoObjects.add(myPlacemark);
     })
-  </script>
+  </script> -->
 </body>
 
 </html>

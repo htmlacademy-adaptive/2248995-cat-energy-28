@@ -9,9 +9,9 @@
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
     top: 40px;
-    left: 0;
+    right: 0;
     z-index: -2;
-    box-shadow: -100vw 0 0 0 rgba(104, 183, 56, 1);
+    box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
 
     @include tw() {
       top: 46px;
@@ -117,8 +117,8 @@
     left: -38px;
 
     @include dw() {
-    width: 100%;
-    left: 0;
+      width: 100%;
+      left: 0;
     }
   }
 
@@ -158,7 +158,7 @@
   @include dw() {
     align-self: end;
     margin-bottom: 0;
-    padding-bottom: 10px ;
+    padding-bottom: 10px;
   }
 }
 
@@ -206,7 +206,7 @@
 
   @include tw() {
     width: 100%;
-    max-width: 750px;
+    max-width: 1272px;
   }
 
   @include dw() {
@@ -214,4 +214,9 @@
     grid-column: 3/4;
     grid-row: 1/2;
   }
+}
+
+.add-product--wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
 }
