@@ -2,6 +2,7 @@
   position: relative;
   padding: 25px 0 36px;
   background-color: rgba(234, 234, 234, 1);
+  z-index: -2;
 
   @include tw () {
     padding-top: 31px;
@@ -172,10 +173,11 @@
   margin: 0;
   display: flex;
   margin-bottom: 20px;
-  gap: 43px;
+  gap: 35px;
 
   @include tw() {
     margin-bottom: 98px;
+    gap: 43px;
   }
 
   @include dw() {

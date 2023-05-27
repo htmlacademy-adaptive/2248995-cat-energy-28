@@ -101,7 +101,7 @@
           <a class="product-button button" href="#">Заказать</a>
         </li>
         <li class="catalog__product product">
-          <a class="product__link-img product__link-img--lg" href="#">
+          <a class="product__link-img product__link-img--lage" href="#">
             <picture>
               <source type="image/webp" media="(min-width:1440px)"
                 srcset="img/main/chicken-1000desctop.webp 1x, img/main/chicken-1000desctop@2x.webp 2x">
@@ -300,7 +300,7 @@
         </li>
         <li class="catalog__product product product--to-all">
           <a class="product__link product__link--to-all" href="#">
-            <p class="product__title">Показать еще 100500 товаров</p>
+            <h3 class="product__title">Показать еще 100500 товаров</h3>
           </a>
           <p class="product__text">На самом деле вкусов гораздо больше!</p>
           <a class="product-button product-button--all button" href="#">показать все</a>
@@ -369,7 +369,21 @@
             </span>
           </address>
         </div>
-        <div id="map" class="cooperation__img" title="Место нахождения HTML академии на карте."></div>
+        <div id="map" class="cooperation__img" title="Место нахождения HTML академии на карте.">
+          <noscript>
+            <picture>
+              <source type="image/webp" media="(min-width:1440px)"
+                srcset="img/main/map-desctop.webp 1x, img/main/map-desctop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:768px)"
+                srcset="img/main/map-tablet.webp 1x, img/main/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/main/map-mobile.webp 1x, img/main/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/main/map-desctop.png 1x, img/main/map-desctop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/main/map-tablet.png 1x, img/main/map-tablet@2x.png 2x">
+              <img src="img/main/map-mobile.png" srcset="img/main/map-mobile@2x.png 2x" type="image/png" width="320px"
+                height="362px" alt="Адресс HTML-академии" decoding="async" loading="lazy">
+            </picture>
+          </noscript>
+        </div>
       </div>
     </section>
   </main>

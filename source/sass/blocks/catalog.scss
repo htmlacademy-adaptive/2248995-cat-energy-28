@@ -50,14 +50,12 @@
 
   @include tw() {
     display: flex;
-    // grid-template-columns: repeat(2, 324px);
     column-gap: 60px;
     row-gap: 141px;
     flex-wrap: wrap;
   }
 
   @include dw() {
-    // grid-template-columns: repeat(4, 245px);
     row-gap: 143px;
     column-gap: 80px;
   }

@@ -29,8 +29,8 @@
     }
 
     @include dw() {
-      left: 86px;
-      top: 47px;
+      left: 85px;
+      top: 56px;
     }
   }
 
@@ -38,7 +38,7 @@
     background-position: 100% 62%;
     height: 200px;
     background-image: url("../img/main/promotion-cattablet.jpg");
-    margin-bottom: 124px;
+    margin-bottom: 117px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/main/promotion-cattablet@2x.jpg");
@@ -49,8 +49,8 @@
     width: 245px;
     height: 288px;
     padding: 0;
-    background-size: 110%;
-    background-position: 110% 0%;
+    background-size: 114%;
+    background-position: 100% 0%;
     background-image: url("../img/main/promotion-cat.jpg");
     margin-bottom: 140px;
 
@@ -75,7 +75,7 @@
   }
 
   @include dw() {
-    top: 176px;
+    top: 184px;
     left: -1px;
     text-align: center;
     width: 100%;

@@ -12,6 +12,7 @@
 .header--preview {
   @include dw() {
     margin-bottom: 119px;
+
     &::after {
       position: absolute;
       content: "";
@@ -97,7 +98,7 @@
     height: 1.5px;
     background-color: #000000;
     top: 0;
-    right: 0;
+    right: -4px;
   }
 
   &::after {
@@ -159,7 +160,7 @@
   @include tw() {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
+    width: 440px;
   }
 
   @include dw() {
@@ -261,15 +262,15 @@
       width: 100%;
       background-color: #68b738;
       height: 2px;
-      top: 33px;
-      left: 0;
+      top: 30px;
+      left: 3px;
     }
   }
 }
 
 .header__item--current a::after {
   @include dw() {
-    top: 37px;
+    top: 38px;
   }
 }
 

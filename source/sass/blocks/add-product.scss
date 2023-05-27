@@ -38,15 +38,13 @@
   }
 
   @include tw() {
-    top: 50px;
+    top: 44px;
     width: 100vw;
     right: 0;
-    padding-top: 23px;
-    margin-bottom: 124px;
   }
 
   @include dw() {
-    top: 60px;
+    top: 54px;
     margin-bottom: 73px;
   }
 }
@@ -70,7 +68,7 @@
   }
 
   @include dw() {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
     margin-left: 0;
     padding: 0;
     width: 375px;
@@ -99,22 +97,33 @@
     border: none;
     max-width: 895px;
     padding: 0;
+    padding-top: 10px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 896px;
+      background-color: rgba(235, 235, 235, 1);
+      height: 1px;
+      left: 110px;
+      bottom: 140px;
+    }
   }
 }
 
 .add-product__item {
   padding-top: 13px;
-  padding-bottom: 17px;
+  padding-bottom: 18px;
   position: relative;
 
-  &::after {
+  &::before {
     position: absolute;
     content: "";
-    width: calc(100% + 76px);
+    width: 100%;
     background-color: rgba(235, 235, 235, 1);
     height: 1px;
     top: 0;
-    left: -38px;
+    left: 0;
 
     @include dw() {
       width: 100%;
@@ -129,16 +138,30 @@
     padding-bottom: 30px;
     margin-left: 38px;
     margin-right: 38px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: calc(100% + 76px);
+      left: -38px;
+    }
   }
 
   @include dw() {
     grid-template-columns: 288px 285px 244px;
-    column-gap: 40px;
+    column-gap: 39px;
     padding-top: 8px;
     padding-bottom: 23px;
     margin: 0;
+
+    &::before {
+      width: 100%;
+      left: 0;
+      top: -10px;
+    }
   }
 }
+
 
 .add-product__title {
   font-family: $fontoswald;
@@ -166,7 +189,7 @@
   display: grid;
   grid-template-columns: 195px 85px;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   font-size: 14px;
   line-height: 20px;
 
@@ -178,13 +201,17 @@
   @include dw() {
     align-self: end;
     margin-bottom: 8px;
-    grid-template-columns: 198px 84px;
+    grid-template-columns: 201px 82px;
     justify-content: left;
   }
 }
 
 .add-product__desc {
   justify-self: end;
+
+  @include dw() {
+    justify-self: start;
+  }
 }
 
 .add-product__value {
