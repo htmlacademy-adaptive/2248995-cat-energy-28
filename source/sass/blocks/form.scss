@@ -12,9 +12,11 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-left: -2px;
 
   @include tw() {
     padding-bottom: 70px;
+    margin-left: 0;
   }
 }
 
@@ -33,6 +35,7 @@
     column-gap: 77px;
     align-items: start;
     padding-bottom: 47px;
+    margin-left: 2px;
   }
 }
 
@@ -40,7 +43,7 @@
   margin-bottom: 12px;
 
   @include tw() {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -71,7 +74,7 @@
 
   @include tw() {
     border: 1px solid rgba(231, 231, 231, 1);
-    height: 196px;
+    min-height: 196px;
     padding-top: 29px;
     padding-bottom: 25px;
     padding-left: 40px;
@@ -93,8 +96,8 @@
   }
 
   @include dw() {
-  padding-top: 32px;
-  row-gap: 24px;
+    padding-top: 32px;
+    row-gap: 24px;
   }
 }
 
@@ -102,7 +105,7 @@
   margin-bottom: 14px;
 
   @include tw() {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -112,7 +115,7 @@
   font-family: $fontoswald;
   line-height: 16px;
   text-transform: uppercase;
-  margin-right: 8px;
+  margin-right: 17px;
   flex-shrink: 0;
 
   @include tw() {
@@ -156,6 +159,7 @@
 
   @include tw() {
     width: 250px;
+    margin-left: -4px;
   }
 }
 
@@ -175,11 +179,17 @@
     width: 555px;
     margin: 0;
     margin-bottom: 76px;
+    margin-left: -4px;
+  }
+
+  @include dw() {
+    margin-bottom: 72px;
   }
 }
 
 .form__fieldset--user.form__line {
   position: relative;
+  margin-left: 0;
 
   &::after {
     position: absolute;
@@ -193,8 +203,12 @@
     box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
 
     @include tw() {
-      top: -90px;
+      top: -88px;
       right: 0;
+    }
+
+    @include dw() {
+      top: -92px;
     }
   }
 
@@ -216,6 +230,14 @@
   }
 }
 
+.form__fieldset--user .form__text {
+  margin-right: 12px;
+
+  @include tw() {
+    margin-right: 20px;
+  }
+}
+
 .form__comment.form__line {
   position: relative;
 
@@ -225,13 +247,14 @@
     width: 100vw;
     height: 2px;
     background-color: rgba(104, 183, 56, 1);
-    top: 19px;
+    top: 12px;
     right: 0;
     z-index: -2;
     box-shadow: 100vw 0 0 0 rgba(104, 183, 56, 1);
 
     @include tw() {
       right: 0;
+      top: 19px;
     }
   }
 
@@ -246,7 +269,7 @@
     z-index: -1;
 
     @include tw() {
-      width: 222px;
+      width: 258px;
       left: -39px;
     }
   }
@@ -302,8 +325,12 @@
 
   @include tw() {
     row-gap: 73px;
-    margin-left: 3px;
+    margin-left: -1px;
     margin-bottom: 8px;
+  }
+
+  @include dw() {
+    margin-bottom: 12px;
   }
 }
 
@@ -319,7 +346,7 @@
   margin-top: 26px;
 
   @include tw() {
-  margin-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -341,10 +368,11 @@
   @include tw() {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 50px;
+    column-gap: 57px;
     margin-top: 62px;
     max-width: 900px;
-    row-gap: 15px;
+    row-gap: 18px;
+    margin-bottom: 36px;
   }
 
   @include dw() {
@@ -422,8 +450,8 @@
   }
 
   @include dw() {
-  right: 19px;
-  top: 17px;
+    right: 19px;
+    top: 17px;
   }
 }
 
@@ -451,7 +479,7 @@
   padding-top: 7px;
 
   @include tw() {
-  padding-top: 10px;
+    padding-top: 10px;
   }
 }
 
@@ -474,8 +502,9 @@
   min-width: 282px;
   max-width: 400px;
   padding: 9px 15px;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
   cursor: pointer;
+  font-size: 16px;
 
   @include tw() {
     padding: 16px 40px;
@@ -488,13 +517,17 @@
   @include dw() {
     width: 568px;
     margin-right: 84px;
-    font-size: 16px;
   }
 }
 
 .form__tip {
   display: flex;
   justify-content: center;
+
+  @include tw() {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
 }
 
 .form__control-input {
@@ -581,8 +614,8 @@
 .form__input--radio:focus-visible + .form__mark {
   position: absolute;
   content: "";
-  top: -15px;
-  left: 0;
+  top: -16px;
+  left: -14px;
   outline: 2px solid rgba(255, 165, 0);
   outline-offset: 2px;
   width: 40px;
@@ -609,7 +642,7 @@
   }
 }
 
-.form__input--checkbox:disabled ~ span{
+.form__input--checkbox:disabled ~ span {
   color: #bababa;
 }
 
@@ -631,8 +664,6 @@
 /*stylelint-disable-next-line*/
 .form__input[type="number"] {
   /*stylelint-disable-next-line*/
-  -moz-appearance: textfield;
+  appearance: textfield;
   /*stylelint-disable-next-line*/
-  /*stylelint-disable-next-line*/
-    appearance: none;
 }

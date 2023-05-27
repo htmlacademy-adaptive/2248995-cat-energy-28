@@ -1,7 +1,6 @@
 .catalog {
   position: relative;
 
-
   &::after {
     position: absolute;
     content: "";
@@ -40,7 +39,7 @@
   }
 
   @include dw() {
-  padding-top: 76px;
+    padding-top: 76px;
   }
 }
 
@@ -50,15 +49,20 @@
   margin: 0;
 
   @include tw() {
-    display: grid;
-    grid-template-columns: repeat(2, 324px);
+    display: flex;
     column-gap: 60px;
     row-gap: 141px;
+    flex-wrap: wrap;
   }
 
   @include dw() {
-    grid-template-columns: repeat(4, 245px);
     row-gap: 143px;
     column-gap: 80px;
   }
+}
+
+.catalog--wrapper,
+.catalog__title {
+  max-width: 1440px;
+  margin: 0 auto;
 }

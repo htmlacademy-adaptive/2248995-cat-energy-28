@@ -89,13 +89,12 @@
 
 .hero__title {
   display: flex;
-  margin: 0;
-  font-family: "Oswald", sans-serif;
+  margin: 0 0 25px 3px;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
-  margin: 0 0 25px 3px;
   text-align: center;
 
   @include tw() {
@@ -174,7 +173,6 @@
   margin-left: 20px;
   margin-right: 20px;
 
-
   @include tw() {
     position: absolute;
     top: 393px;
@@ -184,6 +182,7 @@
     padding-bottom: 17px;
     align-items: center;
     margin-left: 0;
+    font-size: 20px;
   }
 
   @include dw() {
@@ -192,4 +191,9 @@
     margin-bottom: 267px;
     margin-left: 190px;
   }
+}
+
+.hero--wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
 }

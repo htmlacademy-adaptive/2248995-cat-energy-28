@@ -6,7 +6,7 @@
   }
 
   @include dw() {
-  padding-bottom: 11px;
+    padding-bottom: 11px;
   }
 }
 
@@ -34,15 +34,15 @@
   padding: 0;
 
   @include tw() {
-    display: grid;
-    grid-template-columns: 253px 250px;
-    column-gap: 130px;
+    display: flex;
+    column-gap: 150px;
     row-gap: 49px;
+    flex-wrap: wrap;
   }
 
   @include dw() {
     grid-template-columns: 237px 239px 237px 236px;
-    column-gap: 86px;
+    column-gap: 90px;
   }
 }
 
@@ -87,17 +87,21 @@
     width: 234px;
     padding-bottom: 86px;
     font-size: 16px;
-      line-height: 24px;
+    line-height: 24px;
   }
 }
 
-.advantages__item--watch .advantages__text{
-  br { display: none;}
+.advantages__item--watch .advantages__text {
+  br {
+    display: none;
+  }
 
   @include tw() {
     width: 245px;
 
-    br { display: block;}
+    br {
+      display: block;
+    }
   }
 }
 
@@ -162,4 +166,9 @@
   @include tw() {
     display: block;
   }
+}
+
+.advantages__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
 }

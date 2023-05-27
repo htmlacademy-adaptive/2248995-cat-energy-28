@@ -44,6 +44,8 @@
 .data__section {
   padding: 0 20px;
   padding-bottom: 32px;
+  max-width: 1440px;
+  margin: 0 auto;
 
   @include tw() {
     padding: 0 67px 0 70px;
