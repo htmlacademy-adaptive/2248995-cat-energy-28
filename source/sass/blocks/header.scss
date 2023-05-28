@@ -329,7 +329,7 @@
   }
 }
 
-.header__nav .header__list li:not(:last-child) {
+.header__nav li:not(:last-child) {
   @include tw() {
     margin-right: 34px;
   }

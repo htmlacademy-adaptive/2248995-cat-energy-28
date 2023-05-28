@@ -22,7 +22,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-  flex-shrink: 0;
+  object-fit: cover;
 }
 
 a {
