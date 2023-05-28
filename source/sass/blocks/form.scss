@@ -484,6 +484,7 @@
 
 .form__textarea[placeholder] {
   padding-top: 7px;
+  resize: none;
 
   @include tw() {
     padding-top: 10px;
