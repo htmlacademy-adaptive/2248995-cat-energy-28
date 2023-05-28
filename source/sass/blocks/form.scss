@@ -17,6 +17,7 @@
   @include tw() {
     padding-bottom: 70px;
     margin-left: 0;
+    align-items: flex-start;
   }
 }
 
@@ -25,6 +26,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
+  }
+}
+
+.form__block-dw .form__fieldset {
+  @include dw() {
+    align-items: flex-start;
   }
 }
 
@@ -477,6 +484,7 @@
 
 .form__textarea[placeholder] {
   padding-top: 7px;
+  resize: none;
 
   @include tw() {
     padding-top: 10px;
