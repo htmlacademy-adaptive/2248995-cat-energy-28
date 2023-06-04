@@ -97,11 +97,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  transition: color 0.26s ease-in-out;
 
   span {
     color: #444444;
-    transition: color 0.26s ease-in-out;
     font-size: 16px;
     letter-spacing: -0.2px;
     margin-right: auto;
@@ -127,7 +125,7 @@
     color: rgba(104, 183, 56, 1);
   }
 
-  &:hover {
+  &:hover svg{
     color: rgba(104, 183, 56, 1);
   }
 
