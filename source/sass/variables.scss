@@ -19,9 +19,3 @@ $mw: 767px;
     @content;
   }
 }
-
-@mixin mw {
-  @media (max-width: $dw) {
-    @content;
-  }
-}

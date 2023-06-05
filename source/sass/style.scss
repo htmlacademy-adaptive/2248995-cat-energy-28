@@ -1,10 +1,10 @@
 //базовые стили
 @import "./variables.scss";
+@import "./base/body.scss";
 @import "./base/fonts.scss";
 @import "./base/utils.scss";
 @import "./blocks/header.scss";
 @import "./blocks/wrapper.scss";
-@import "./base/body.scss";
 @import "./blocks/hero.scss";
 @import "./blocks/button.scss";
 @import "./blocks/variants-food.scss";

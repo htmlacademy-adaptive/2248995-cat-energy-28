@@ -1,68 +1,68 @@
 .catalog {
-  position: relative;
+	position: relative;
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    background-color: rgba(235, 235, 235, 1);
-    height: 1px;
-    left: 0;
-    top: 0;
+	&::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		background-color: rgba(235, 235, 235, 1);
+		height: 1px;
+		left: 0;
+		top: 0;
 
-    @include tw() {
-      display: none;
-    }
-  }
+		@include tw() {
+			display: none;
+		}
+	}
 
-  @include tw() {
-    margin-bottom: 0;
-  }
+	@include tw() {
+		margin-bottom: 0;
+	}
 }
 
 .catalog__title {
-  font-family: $fontoswald;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
-  margin: 0;
-  padding-top: 30px;
-  padding-bottom: 41px;
-  position: relative;
+	font-family: $fontoswald;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 36px;
+	margin: 0;
+	padding-top: 30px;
+	padding-bottom: 41px;
+	position: relative;
 
-  @include tw() {
-    font-size: 60px;
-    line-height: 60px;
-    padding-bottom: 163px;
-    padding-top: 64px;
-  }
+	@include tw() {
+		font-size: 60px;
+		line-height: 60px;
+		padding-bottom: 163px;
+		padding-top: 64px;
+	}
 
-  @include dw() {
-    padding-top: 76px;
-  }
+	@include dw() {
+		padding-top: 76px;
+	}
 }
 
 .catalog__list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 
-  @include tw() {
-    display: flex;
-    column-gap: 60px;
-    row-gap: 141px;
-    flex-wrap: wrap;
-  }
+	@include tw() {
+		display: flex;
+		column-gap: 60px;
+		row-gap: 141px;
+		flex-wrap: wrap;
+	}
 
-  @include dw() {
-    row-gap: 143px;
-    column-gap: 80px;
-  }
+	@include dw() {
+		row-gap: 143px;
+		column-gap: 80px;
+	}
 }
 
 .catalog--wrapper,
 .catalog__title {
-  max-width: 1440px;
-  margin: 0 auto;
+	max-width: 1440px;
+	margin: 0 auto;
 }
